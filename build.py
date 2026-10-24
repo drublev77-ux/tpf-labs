@@ -158,6 +158,7 @@ TPL = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070b14">
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <meta property="og:title" content="{title}">
@@ -201,7 +202,7 @@ TPL = """<!DOCTYPE html>
       <a class="btn sec" href="#tech">{cta2}</a>
     </div>
   </div>
-  <div class="hero-visual"><span class="c3"></span><img src="/img/hero.jpg" alt="CALIBER+ autonomous blueberry harvester concept render">
+  <div class="hero-visual"><span class="c3"></span><img src="/img/hero.jpg" alt="CALIBER+ autonomous blueberry harvester concept render" decoding="async" width="700" height="875">
     <div class="hero-cap"><b>CALIBER+</b> · concept render · 1:2 row architecture</div>
   </div></div>
 </div>
@@ -236,7 +237,7 @@ TPL = """<!DOCTYPE html>
 </section>
 <footer>
   <div class="wrap">
-  <img class="foot-logo" src="/img/logo.jpg" alt="TPFtechnology">
+  <img class="foot-logo" src="/img/logo.jpg" alt="TPFtechnology" loading="lazy" decoding="async" width="137" height="240">
   <div class="frow">
     <span>{foot_l}</span><span>{foot_r}</span>
   </div>

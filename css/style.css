@@ -8,7 +8,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{background:var(--bg);color:var(--tx);font-family:var(--font);line-height:1.6;overflow-x:hidden}
+body{background:var(--bg);color:var(--tx);font-family:var(--font);line-height:1.6;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
 ::selection{background:rgba(74,222,222,.3)}
 a{color:var(--acc);text-decoration:none}
 img,svg{display:block;max-width:100%}
@@ -135,15 +135,66 @@ h2::after{content:"";position:absolute;left:0;bottom:-10px;width:64px;height:3px
 .plan li{color:var(--mut);font-size:.93rem;padding:5px 0 5px 24px;position:relative}
 .plan li:before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:700}
 
-.logo img{height:34px;width:34px;border-radius:8px}
-.hero-flex{display:flex;gap:52px;align-items:center}
-.hero-flex .txt{flex:1;min-width:0}
-.hero-logo{flex:0 0 auto;width:min(300px,38vw);border-radius:18px;border:1px solid var(--line);box-shadow:0 24px 70px rgba(74,222,222,.16)}
-.foot-logo{display:block;height:120px;border-radius:12px;margin:0 auto 18px}
-@media(max-width:900px){.hero-logo{display:none}}
+/* contact */
+.contact{text-align:center}
+.contact h2{display:block}
+.contact h2::after{left:50%;transform:translateX(-50%)}
+.bigmail{display:inline-block;margin:18px 0 26px;font-size:1.2rem;font-weight:700;color:var(--acc);border:1px dashed rgba(74,222,222,.45);background:rgba(74,222,222,.05);padding:14px 30px;border-radius:12px;transition:all .2s}
+.bigmail:hover{border-style:solid;box-shadow:0 8px 30px rgba(74,222,222,.18);transform:translateY(-2px)}
+.note{font-size:.82rem;color:var(--mut)}
+.note a{color:var(--mut);border-bottom:1px dotted rgba(147,163,196,.5)}
+.note a:hover{color:var(--acc)}
 
-.frow.badge-row{margin-top:14px}
-.frow.badge-row img{display:inline-block}
+/* footer */
+footer{position:relative;border-top:1px solid var(--line);padding:38px 0;color:var(--mut);font-size:.85rem}
+footer::before{content:"";position:absolute;top:-1px;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(74,222,222,.55),transparent)}
+footer .frow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot-logo{display:block;height:96px;border-radius:12px;margin:0 auto 18px;filter:saturate(1.05) drop-shadow(0 6px 24px rgba(74,222,222,.12))}
 
+/* ---------- reveal on scroll (progressive) ---------- */
+.js .rev{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.js .rev.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3,.steps,.price{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  /* header: two rows — logo+langs on top, section links scrollable below */
+  .nav{flex-wrap:wrap;gap:10px 14px;padding:12px 0}
+  .nav .links{order:3;width:100%;margin-left:0;gap:18px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+  .nav .links::-webkit-scrollbar{display:none}
+  .nav .links a{display:inline-block;font-size:.92rem;white-space:nowrap;padding:9px 0}
+  .langs{margin-left:auto}
+  .langs a{display:inline-block;padding:8px 11px;font-size:.82rem}
+  .hero{padding:64px 0 60px}
+  .hero-flex{flex-direction:column-reverse;gap:34px}
+  .hero-visual{width:min(420px,88%)}
+  .step:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-24px;transform:translateX(-50%)}
+  html{scroll-padding-top:128px}
+  .stat{padding:20px 14px}
+  .stat .n{font-size:1.6rem}
+}
+@media(max-width:520px){
+  .g4{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr;gap:10px}
+  .btn{width:100%;text-align:center}
+  .hero{padding:48px 0 48px}
+  .wrap{padding:0 16px}
+  section{padding:54px 0}
+  .plan{padding:26px 20px}
+  .card{padding:22px 18px}
+  .step{padding:26px 20px 22px}
+  footer .frow{flex-direction:column;gap:6px}
+  .bigmail{font-size:1rem;padding:12px 20px}
+}
+
+/* ---------- motion preferences ---------- */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rev{opacity:1;transform:none}
+}
+
+/* footer badge */
 .frow.badge-row{margin-top:14px}
 .frow.badge-row img{display:inline-block}
