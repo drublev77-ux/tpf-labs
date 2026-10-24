@@ -171,7 +171,7 @@ TPL = """<!DOCTYPE html>
 <body>
 <header>
   <div class="wrap nav">
-    <a class="logo" href="/">{brand} <b>Labs</b></a>
+    <a class="logo" href="/"><img src="/img/logo-icon.png" alt="TPF Labs logo"> {brand} <b>Labs</b></a>
     <div class="links">
       <a href="#tech">{nav_tech}</a><a href="#pilot">{nav_pilot}</a><a href="#price">{nav_price}</a><a href="#contact">{nav_contact}</a>
     </div>
@@ -179,7 +179,7 @@ TPL = """<!DOCTYPE html>
   </div>
 </header>
 <div class="hero">
-  <div class="wrap">
+  <div class="wrap hero-flex"><div class="txt">
     <span class="tag">{hero_tag}</span>
     <h1>{h1}</h1>
     <p class="lead">{lead}</p>
@@ -187,7 +187,7 @@ TPL = """<!DOCTYPE html>
       <a class="btn pri" href="mailto:{mail}?subject=CALIBER%2B%20pilot%20request">{cta1}</a>
       <a class="btn sec" href="#tech">{cta2}</a>
     </div>
-  </div>
+  </div><img class="hero-logo" src="/img/logo.jpg" alt="TPFtechnology CALIBER+ robotics"></div>
 </div>
 <div class="wrap"><div class="stats">
   {stats_html}
@@ -219,8 +219,11 @@ TPL = """<!DOCTYPE html>
   </div>
 </section>
 <footer>
-  <div class="wrap frow">
+  <div class="wrap">
+  <img class="foot-logo" src="/img/logo.jpg" alt="TPFtechnology">
+  <div class="frow">
     <span>{foot_l}</span><span>{foot_r}</span>
+  </div>
   </div>
 </footer>
 </body>
