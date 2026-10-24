@@ -69,7 +69,7 @@ header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px
 
 /* hero visual: viewfinder frame */
 .hero-visual{position:relative;flex:0 0 auto;width:min(320px,30vw)}
-.hero-visual img{width:100%;border-radius:18px;border:1px solid rgba(74,222,222,.3);box-shadow:0 30px 80px rgba(74,222,222,.18),0 10px 30px rgba(0,0,0,.5);animation:float 7s ease-in-out infinite}
+.hero-visual img{width:100%;height:auto;border-radius:18px;border:1px solid rgba(74,222,222,.3);box-shadow:0 30px 80px rgba(74,222,222,.18),0 10px 30px rgba(0,0,0,.5);animation:float 7s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .hero-visual::before,.hero-visual::after,
 .hero-visual .c3::before,.hero-visual .c3::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--acc);opacity:.85;z-index:2;filter:drop-shadow(0 0 6px rgba(74,222,222,.6))}
