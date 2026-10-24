@@ -237,7 +237,7 @@ TPL = """<!DOCTYPE html>
 </section>
 <footer>
   <div class="wrap">
-  <img class="foot-logo" src="/img/logo.jpg" alt="TPFtechnology" loading="lazy" decoding="async" width="137" height="240">
+  <a class="logo foot-logo" href="/"><img src="/img/logo-icon.png" alt="TPF Labs logo" loading="lazy" decoding="async"> TPF<b>labs</b></a>
   <div class="frow">
     <span>{foot_l}</span><span>{foot_r}</span>
   </div>

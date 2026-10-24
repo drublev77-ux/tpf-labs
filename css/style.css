@@ -149,7 +149,8 @@ h2::after{content:"";position:absolute;left:0;bottom:-10px;width:64px;height:3px
 footer{position:relative;border-top:1px solid var(--line);padding:38px 0;color:var(--mut);font-size:.85rem}
 footer::before{content:"";position:absolute;top:-1px;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(74,222,222,.55),transparent)}
 footer .frow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.foot-logo{display:block;height:96px;border-radius:12px;margin:0 auto 18px;filter:saturate(1.05) drop-shadow(0 6px 24px rgba(74,222,222,.12))}
+.foot-logo{justify-content:center;margin:0 auto 18px;font-size:1.35rem;filter:drop-shadow(0 6px 24px rgba(74,222,222,.12))}
+.foot-logo img{height:44px;width:44px;border-radius:11px;box-shadow:0 0 14px rgba(74,222,222,.25)}
 
 /* ---------- reveal on scroll (progressive) ---------- */
 .js .rev{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
