@@ -165,6 +165,7 @@ TPL = """<!DOCTYPE html>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tpflabs.com{suffix}">
 <link rel="canonical" href="https://tpflabs.com{suffix}">
+<meta name="google-site-verification" content="Zr5OkmQBIum5PVhi6DNK-WUCK-wY8WJlHhbv-nSxepE">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/css/style.css">
 </head>
