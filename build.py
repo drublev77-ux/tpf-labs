@@ -177,7 +177,7 @@ TPL = """<!DOCTYPE html>
 <link rel="alternate" hreflang="zh" href="https://tpflabs.com/zh/">
 <link rel="alternate" hreflang="x-default" href="https://tpflabs.com/">
 <meta name="google-site-verification" content="Zr5OkmQBIum5PVhi6DNK-WUCK-wY8WJlHhbv-nSxepE">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/img/favicon-64.png" type="image/png" sizes="64x64">
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
