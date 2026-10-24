@@ -7,7 +7,7 @@ Static site for the **CALIBER+** autonomous blueberry harvester by TPF Labs (TPF
 - `ru/index.html` — Русский
 - `nl/index.html` — Nederlands
 - `zh/index.html` — 中文
-- `css/style.css`, `favicon.svg`, `robots.txt`, `sitemap.xml`
+- `css/style.css`, `favicon.svg`, `robots.txt`, `sitemap.xml`, `consent.js` (GDPR-gated GA4), `img/og.png` (social card)
 
 ## Rebuild
 Language pages are generated from one template:

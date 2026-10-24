@@ -79,25 +79,25 @@ C = {
 },
 "nl": {
  "title": "TPF Labs — CALIBER+ autonome blauwe-bessenoogstrobot",
- "desc": "CALIBER+ van TPF Labs: autonome selectieve oogstrobot voor verse blauwe bessen. 17 kg/u, >97% rijpheid nauwkeurigheid, 0% verlies, 12–14 uur autonomie. Pilotprogramma voor telers.",
+ "desc": "CALIBER+ van TPF Labs: autonome selectieve oogstrobot voor verse blauwe bessen. 17 kg/u, >97% nauwkeurigheid rijpheidsherkenning, 0% verlies, 12–14 uur autonomie. Pilotprogramma voor telers.",
  "nav": {"tech":"Technologie","pilot":"Pilot","price":"Prijzen","contact":"Contact"},
  "hero_tag": "TPF Labs · Autonome veldrobotica",
  "h1": "Maak kennis met <b>CALIBER+</b> — oogst zoals handmatig, werkt als een machine",
  "lead": "Een autonome robot voor selectieve oogst van verse blauwe bessen. Twee rijen tegelijk, bes voor bes, zonder verlies en 12–14 uur autonomie per dag.",
  "cta1": "Pilot aanvragen", "cta2": "Technologie",
- "stats": [("17 kg/u","oogsttempo per machine"),(">97%","rijpheid nauwkeurigheid"),("0%","verlies (oogrstmachines ~5%)"),("12–14 u","autonomie per dag")],
+ "stats": [("17 kg/u","oogsttempo per machine"),(">97%","nauwkeurigheid rijpheidsherkenning"),("0%","verlies (oogstmachines ~5%)"),("12–14 u","autonomie per dag")],
  "tech_h": "Gebouwd voor de versmarkt",
  "tech_s": "Vier SCARA-armen, AI-rijpheidsherkenning en een zachte hybride grijper behandelen elke bes als handgeplukt.",
  "cards": [
   ["🦾","Vier SCARA-armen","Twee manipulatoren per zijde op verticale sleden oogsten uit twee rijen tegelijk.","reikwijdte 800 mm · slede-slag 1500 mm · cyclus 0,5 s"],
   ["🧠","AI-rijpheidsherkenning","Deep learning vindt elke rijpe bes en laat groene staan — versmarktkwaliteit in elke passe.",">97% nauwkeurigheid · dieptecamera's + LiDAR + RTK-GPS"],
   ["🫐","Zachte hybride grijper","Siliconen vingers met vacuüm houden elke bes vast met minder dan 2 N. Geen beschadiging.","zachte greep ≤2 N · gekoelde 60 L hopper aan boord"],
-  ["☀️","De hele dag autonomie","LiFePO4-voeding met een 600 W zonne dak houdt de robot aan het werk in een volledige shift. Hot-swap batterijen.","48 V LiFePO4 · rupschassis voor zachte grond · 450 kg"],
+  ["☀️","De hele dag autonomie","LiFePO4-voeding met een 600 W zonnendak houdt de robot aan het werk in een volledige shift. Hot-swap batterijen.","48 V LiFePO4 · rupschassis voor zachte grond · 450 kg"],
  ],
  "pilot_h": "Pilotprogramma: 30 / 60 / 90 dagen",
  "pilot_s": "Geen financiële verplichtingen vóór een seizoensovereenkomst. Wij bewijzen de cijfers op uw veld.",
  "steps": [
-  ["Dag 0–30","Rij-scan en mapping","We scannen uw rijen, maken een RTG-kaart van het perceel en kalibreren de vision voor uw rassen."],
+  ["Dag 0–30","Rij-scan en mapping","We scannen uw rijen, maken een RTK-kaart van het perceel en kalibreren de vision voor uw rassen."],
   ["Dag 30–60","Autonome oogst op 1 ha","CALIBER+ werkt op uw perceel; we meten rijpheid, kaliber, verlies en kosten per kg."],
   ["Dag 60–90","Rapport & seizoensovereenkomst","U ontvangt een volledig pilootrapport en de optie op een RaaS-tarief of aankoop voor seizoen 2027."],
  ],
@@ -164,7 +164,18 @@ TPL = """<!DOCTYPE html>
 <meta property="og:description" content="{desc}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tpflabs.com{suffix}">
+<meta property="og:image" content="https://tpflabs.com/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TPF Labs — CALIBER+ autonomous blueberry harvester">
+<meta property="og:locale" content="{og_locale}">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://tpflabs.com{suffix}">
+<link rel="alternate" hreflang="en" href="https://tpflabs.com/">
+<link rel="alternate" hreflang="ru" href="https://tpflabs.com/ru/">
+<link rel="alternate" hreflang="nl" href="https://tpflabs.com/nl/">
+<link rel="alternate" hreflang="zh" href="https://tpflabs.com/zh/">
+<link rel="alternate" hreflang="x-default" href="https://tpflabs.com/">
 <meta name="google-site-verification" content="Zr5OkmQBIum5PVhi6DNK-WUCK-wY8WJlHhbv-nSxepE">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/css/style.css">
@@ -233,7 +244,7 @@ TPL = """<!DOCTYPE html>
 """
 
 def page(c, lang):
-    suffix = "" if lang=="en" else "/"+lang
+    suffix = "/" if lang=="en" else "/"+lang+"/"
     langlinks = ""
     for l,label in [("en","EN"),("ru","RU"),("nl","NL"),("zh","中文")]:
         href = "/" if l=="en" else "/"+l+"/"
@@ -250,6 +261,7 @@ def page(c, lang):
         plans_html += f'<div class="plan{hot}"><div class="ph">{name}</div><div class="pnum">{pr}</div><ul>{ul}</ul><a class="btn sec" href="mailto:{c["mail"]}?subject=CALIBER%2B">{ ("Request" if lang=="en" else ("Запрос" if lang=="ru" else ("Aanvraag" if lang=="nl" else "咨询"))) }</a></div>'
     html = TPL.format(
         lang=lang, brand="TPF", suffix=suffix, title=c["title"], desc=c["desc"],
+        og_locale={"en":"en_US","ru":"ru_RU","nl":"nl_NL","zh":"zh_CN"}[lang],
         nav_tech=c["nav"]["tech"], nav_pilot=c["nav"]["pilot"], nav_price=c["nav"]["price"], nav_contact=c["nav"]["contact"],
         langlinks=langlinks, hero_tag=c["hero_tag"], h1=c["h1"], lead=c["lead"],
         mail=c["mail"], cta1=c["cta1"], cta2=c["cta2"], stats_html=stats_html,

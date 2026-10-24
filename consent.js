@@ -34,7 +34,7 @@
     var t = T[lang()], box = document.createElement('div');
     box.id = 'tpf-consent'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Cookie');
     box.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:720px;margin:0 auto;padding:18px 20px;' +
-      'background:#0e1626;border:1px solid #1b2740;border-radius:14px;color:#e8eefc;font:15px/1.5 inherit;' +
+      'background:#0e1626;border:1px solid #1b2740;border-radius:14px;color:#e8eefc;font-family:inherit;font-size:15px;line-height:1.5;' +
       'box-shadow:0 10px 40px rgba(0,0,0,.5);display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center';
     var p = document.createElement('p'); p.style.cssText = 'margin:0;flex:1 1 320px;color:#93a3c4';
     p.textContent = t.text;
