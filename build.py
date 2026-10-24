@@ -241,6 +241,11 @@ TPL = """<!DOCTYPE html>
     <span>{foot_l}</span><span>{foot_r}</span>
   </div>
   </div>
+  <div class="frow badge-row">
+    <a href="https://websitelaunches.com/site/tpflabs.com" target="_blank" rel="noopener">
+      <img src="https://websitelaunches.com/badge/tpflabs.com.svg" alt="Website Launches — public launch record" width="255" height="55" loading="lazy">
+    </a>
+  </div>
 </footer>
 <script src="/site.js" defer></script>
 <script src="/consent.js" defer></script>
