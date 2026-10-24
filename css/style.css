@@ -68,7 +68,7 @@ header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px
 .btn.sec:hover{background:rgba(74,222,222,.1);box-shadow:0 8px 24px rgba(74,222,222,.14)}
 
 /* hero visual: viewfinder frame */
-.hero-visual{position:relative;flex:0 0 auto;width:min(400px,36vw)}
+.hero-visual{position:relative;flex:0 0 auto;width:min(320px,30vw)}
 .hero-visual img{width:100%;border-radius:18px;border:1px solid rgba(74,222,222,.3);box-shadow:0 30px 80px rgba(74,222,222,.18),0 10px 30px rgba(0,0,0,.5);animation:float 7s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .hero-visual::before,.hero-visual::after,
@@ -169,7 +169,7 @@ footer .frow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .langs a{display:inline-block;padding:8px 11px;font-size:.82rem}
   .hero{padding:64px 0 60px}
   .hero-flex{flex-direction:column-reverse;gap:34px}
-  .hero-visual{width:min(420px,88%)}
+  .hero-visual{width:min(300px,72%);margin:0 auto}
   .step:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-24px;transform:translateX(-50%)}
   html{scroll-padding-top:128px}
   .stat{padding:20px 14px}
