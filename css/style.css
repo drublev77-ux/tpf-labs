@@ -20,6 +20,7 @@ header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px
 .nav{display:flex;align-items:center;gap:28px;padding:15px 0}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;color:var(--tx);letter-spacing:.02em}
 .logo b{color:var(--acc)}
+.logo img{height:34px;width:34px;border-radius:9px;box-shadow:0 0 14px rgba(74,222,222,.25)}
 .nav .links{display:flex;gap:22px;margin-left:auto}
 .nav a{color:var(--mut);font-size:.95rem;transition:color .15s}
 .nav .links a{position:relative;padding:4px 0}
