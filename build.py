@@ -226,6 +226,7 @@ TPL = """<!DOCTYPE html>
   </div>
   </div>
 </footer>
+<script src="/consent.js" defer></script>
 </body>
 </html>
 """
