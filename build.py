@@ -183,7 +183,7 @@ TPL = """<!DOCTYPE html>
 <body>
 <header>
   <div class="wrap nav">
-    <a class="logo" href="/"><img src="/img/logo-icon.png" alt="TPFtechnology logo"> TPF<b>technology</b></a>
+    <a class="logo" href="/"><img src="/img/logo-icon.png" alt="TPF Labs logo"> TPF<b>labs</b></a>
     <div class="links">
       <a href="#tech">{nav_tech}</a><a href="#pilot">{nav_pilot}</a><a href="#price">{nav_price}</a><a href="#contact">{nav_contact}</a>
     </div>
