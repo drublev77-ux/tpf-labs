@@ -191,6 +191,7 @@ TPL = """<!DOCTYPE html>
   </div>
 </header>
 <div class="hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
   <div class="wrap hero-flex"><div class="txt">
     <span class="tag">{hero_tag}</span>
     <h1>{h1}</h1>
@@ -199,32 +200,35 @@ TPL = """<!DOCTYPE html>
       <a class="btn pri" href="mailto:{mail}?subject=CALIBER%2B%20pilot%20request">{cta1}</a>
       <a class="btn sec" href="#tech">{cta2}</a>
     </div>
-  </div><img class="hero-logo" src="/img/logo.jpg" alt="TPFtechnology CALIBER+ robotics"></div>
+  </div>
+  <div class="hero-visual"><span class="c3"></span><img src="/img/hero.jpg" alt="CALIBER+ autonomous blueberry harvester concept render">
+    <div class="hero-cap"><b>CALIBER+</b> · concept render · 1:2 row architecture</div>
+  </div></div>
 </div>
 <div class="wrap"><div class="stats">
   {stats_html}
 </div></div>
 <section id="tech">
   <div class="wrap">
-    <h2>{tech_h}</h2><p class="sub">{tech_s}</p>
+    <span class="over">{over_tech}</span><br><h2>{tech_h}</h2><p class="sub">{tech_s}</p>
     <div class="grid g4">{cards_html}</div>
   </div>
 </section>
 <section id="pilot" class="alt">
   <div class="wrap">
-    <h2>{pilot_h}</h2><p class="sub">{pilot_s}</p>
+    <span class="over">{over_pilot}</span><br><h2>{pilot_h}</h2><p class="sub">{pilot_s}</p>
     <div class="steps">{steps_html}</div>
   </div>
 </section>
 <section id="price">
   <div class="wrap">
-    <h2>{price_h}</h2><p class="sub">{price_s}</p>
+    <span class="over">{over_price}</span><br><h2>{price_h}</h2><p class="sub">{price_s}</p>
     <div class="price">{plans_html}</div>
   </div>
 </section>
 <section id="contact" class="alt contact">
   <div class="wrap">
-    <h2>{contact_h}</h2>
+    <span class="over">{over_contact}</span><br><h2>{contact_h}</h2>
     <p class="sub" style="margin-inline:auto">{contact_s}</p>
     <a class="bigmail" href="mailto:{mail}?subject=CALIBER%2B%20pilot%20request">{mail}</a>
     <p class="note"><a href="https://tpf-technology.com" target="_blank" rel="noopener">{site}</a></p>
@@ -238,6 +242,7 @@ TPL = """<!DOCTYPE html>
   </div>
   </div>
 </footer>
+<script src="/site.js" defer></script>
 <script src="/consent.js" defer></script>
 </body>
 </html>
@@ -261,6 +266,7 @@ def page(c, lang):
         plans_html += f'<div class="plan{hot}"><div class="ph">{name}</div><div class="pnum">{pr}</div><ul>{ul}</ul><a class="btn sec" href="mailto:{c["mail"]}?subject=CALIBER%2B">{ ("Request" if lang=="en" else ("Запрос" if lang=="ru" else ("Aanvraag" if lang=="nl" else "咨询"))) }</a></div>'
     html = TPL.format(
         lang=lang, brand="TPF", suffix=suffix, title=c["title"], desc=c["desc"],
+        over_tech=c["nav"]["tech"], over_pilot=c["nav"]["pilot"], over_price=c["nav"]["price"], over_contact=c["nav"]["contact"],
         og_locale={"en":"en_US","ru":"ru_RU","nl":"nl_NL","zh":"zh_CN"}[lang],
         nav_tech=c["nav"]["tech"], nav_pilot=c["nav"]["pilot"], nav_price=c["nav"]["price"], nav_contact=c["nav"]["contact"],
         langlinks=langlinks, hero_tag=c["hero_tag"], h1=c["h1"], lead=c["lead"],
