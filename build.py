@@ -153,6 +153,58 @@ C = {
 },
 }
 
+
+INV = {
+"en": {
+ "nav": "Investors",
+ "h": "Invest in the future of fresh-market harvesting",
+ "s": "CALIBER+ is raising a Seed round (€1.0–1.2M) to take the validated gripper and vision stack into the field prototype and the 2028 commercial launch. Industrial and go-to-market partners are welcome.",
+ "cta": "Request the investor deck",
+ "cards": [
+  ["🧩","Traction today","Signed NDA and a DFM package under review with contract manufacturer WayKen (CN); third-party validation talks with AgriFoodTEF nodes ILVO and INRIA (EU); first farm interest from Poland's largest blueberry GPO.","Seed round · EU company · 2026–2027"],
+  ["📈","Market window","Manual picking costs ≈€2.4/kg with a chronic labor shortage. At ≈€1.9/kg under RaaS, CALIBER+ pays back within one season per robot.","fresh-market blueberries · EU first"],
+  ["🤝","Partner with us","Pilot farms for season 2027, RaaS channel and service partners, component suppliers for the EU assembly chain.","farms · integrators · suppliers"],
+  ["🚀","Roadmap","Gripper prototype: built and lab-tested. Field prototype: 2027. Commercial launch: 2028.","prototype → pilot fleet → launch"],
+ ],
+},
+"ru": {
+ "nav": "Инвесторам",
+ "h": "Инвестиции в будущее уборки свежего рынка",
+ "s": "CALIBER+ открывает Seed-раунд (1,0–1,2 млн €), чтобы вывести проверенные захват и ИИ-зрение в полевой прототип и к коммерческому запуску 2028 года. Мы также открыты к промышленным и партнёрским альянсам.",
+ "cta": "Запросить инвесторскую презентацию",
+ "cards": [
+  ["🧩","Трекшн","Подписан NDA, техпакет на DFM-ревью у контрактного производителя WayKen (КНР); сторонняя валидация с нодами AgriFoodTEF ILVO и INRIA (ЕС); первый интерес от крупнейшего польского GPO по голубике.","Seed-раунд · компания в ЕС · 2026–2027"],
+  ["📈","Окно рынка","Ручной сбор ≈2,4 €/кг при хронической нехватке рабочих. При RaaS ≈1,9 €/кг робот окупается за один сезон.","свежая голубика · сначала ЕС"],
+  ["🤝","Стать партнёром","Хозяйства-пилоты на сезон 2027, канальные и сервисные партнёры RaaS, поставщики компонентов для сборки в ЕС.","хозяйства · интеграторы · поставщики"],
+  ["🚀","Дорожная карта","Прототип захвата: собран и протестирован. Полевой прототип: 2027. Коммерческий запуск: 2028.","прототип → пилотный флот → запуск"],
+ ],
+},
+"nl": {
+ "nav": "Investeerders",
+ "h": "Investeren in de toekomst van verse oogst",
+ "s": "CALIBER+ opent een Seed-ronde (€1,0–1,2 mln) om de gevalideerde grijper en vision-stack naar het veldprototype en de commerciële lancering in 2028 te brengen. Industriële en go-to-market partners zijn welkom.",
+ "cta": "Investeerdersdeck opvragen",
+ "cards": [
+  ["🧩","Tractie","Ondertekende NDA en DFM-pakket in review bij contractproducent WayKen (CN); validatiegesprekken met AgriFoodTEF-nodes ILVO en INRIA (EU); eerste belang van Polens grootste blauwe-bessen-GPO.","Seed-ronde · EU-bedrijf · 2026–2027"],
+  ["📈","Marktkans","Handmatig plukken kost ≈€2,4/kg bij chronisch arbeidstekort. Bij ≈€1,9/kg RaaS verdient CALIBER+ zich per robot in één seizoen terug.","verse blauwe bessen · eerst EU"],
+  ["🤝","Partner worden","Pilotbedrijven voor seizoen 2027, RaaS-kanaal- en servicepartners, componentleveranciers voor EU-assemblage.","telers · integrators · leveranciers"],
+  ["🚀","Roadmap","Grijper-prototype: gebouwd en getest. Veldprototype: 2027. Commerciële lancering: 2028.","prototype → pilotvloot → lancering"],
+ ],
+},
+"zh": {
+ "nav": "投资人",
+ "h": "投资新鲜市场采摘的未来",
+ "s": "CALIBER+ 正开启种子轮（100–120万欧元），将已验证的夹爪与视觉系统推进到田间原型和2028年商业化发布。同时欢迎产业与市场合作伙伴。",
+ "cta": "获取投资人资料",
+ "cards": [
+  ["🧩","现有进展","已与合同制造商WayKen签署保密协议，DFM技术包在审；与欧盟AgriFoodTEF节点ILVO和INRIA进行第三方验证洽谈；波兰最大蓝莓GPO已表达合作意向。","种子轮 · 欧盟公司 · 2026–2027"],
+  ["📈","市场窗口","人工采摘成本约2.4欧元/公斤，劳动力长期短缺。RaaS模式约1.9欧元/公斤，单台机器人一个产季即可回本。","新鲜蓝莓 · 优先欧洲市场"],
+  ["🤝","合作方式","2027产季试点农场、RaaS渠道与服务伙伴、欧盟组装的零部件供应商。","农场 · 集成商 · 供应商"],
+  ["🚀","路线图","夹爪原型：已完成并测试。田间原型：2027年。商业化发布：2028年。","原型 → 试点车队 → 发布"],
+ ],
+},
+}
+
 TPL = """<!DOCTYPE html>
 <html lang="{lang}">
 <head>
@@ -186,7 +238,7 @@ TPL = """<!DOCTYPE html>
   <div class="wrap nav">
     <a class="logo" href="/"><img src="/img/logo-icon.png" alt="TPF Labs logo"> TPF<b>labs</b></a>
     <div class="links">
-      <a href="#tech">{nav_tech}</a><a href="#pilot">{nav_pilot}</a><a href="#price">{nav_price}</a><a href="#contact">{nav_contact}</a>
+      <a href="#tech">{nav_tech}</a><a href="#pilot">{nav_pilot}</a><a href="#price">{nav_price}</a><a href="#invest">{nav_inv}</a><a href="#contact">{nav_contact}</a>
     </div>
     <div class="langs">{langlinks}</div>
   </div>
@@ -227,6 +279,15 @@ TPL = """<!DOCTYPE html>
     <div class="price">{plans_html}</div>
   </div>
 </section>
+<section id="invest" class="alt">
+  <div class="wrap">
+    <span class="over">{over_inv}</span><br><h2>{inv_h}</h2><p class="sub">{inv_s}</p>
+    <div class="grid g4">{inv_cards}</div>
+    <div class="cta-row" style="justify-content:center;margin-top:28px">
+      <a class="btn pri" href="mailto:{mail}?subject=CALIBER%2B%20investors">{inv_cta}</a>
+    </div>
+  </div>
+</section>
 <section id="contact" class="alt contact">
   <div class="wrap">
     <span class="over">{over_contact}</span><br><h2>{contact_h}</h2>
@@ -264,6 +325,8 @@ def page(c, lang):
     stats_html = "".join(f'<div class="stat"><div class="n">{n}</div><div class="l">{l}</div></div>' for n,l in c["stats"])
     cards_html = "".join(f'<div class="card"><div class="ic">{ic}</div><h3>{h}</h3><p>{p}</p><div class="spec">{s}</div></div>' for ic,h,p,s in c["cards"])
     steps_html = "".join(f'<div class="step"><div class="num">{d}</div><h3>{t}</h3><p>{p}</p></div>' for d,t,p in c["steps"])
+    inv = INV[lang]
+    inv_cards = "".join(f'<div class="card"><div class="ic">{ic}</div><h3>{h}</h3><p>{p}</p><div class="spec">{s}</div></div>' for ic,h,p,s in inv["cards"])
     plans_html = ""
     for plan in c["plans"]:
         name, pr, feats = plan[0], plan[1], plan[3] if len(plan)>3 and plan[2]=="hot" else plan[2]
@@ -281,6 +344,7 @@ def page(c, lang):
         pilot_h=c["pilot_h"], pilot_s=c["pilot_s"], steps_html=steps_html,
         price_h=c["price_h"], price_s=c["price_s"], plans_html=plans_html,
         contact_h=c["contact_h"], contact_s=c["contact_s"], site=c["site"],
+        nav_inv=inv["nav"], over_inv=inv["nav"], inv_h=inv["h"], inv_s=inv["s"], inv_cta=inv["cta"], inv_cards=inv_cards,
         foot_l=c["foot_l"], foot_r=c["foot_r"])
     return html
 
