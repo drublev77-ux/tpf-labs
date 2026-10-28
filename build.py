@@ -157,6 +157,7 @@ C = {
 INV = {
 "en": {
  "nav": "Investors",
+ "cta2": "Download deck (PDF)",
  "h": "Invest in the future of fresh-market harvesting",
  "s": "CALIBER+ is raising a Seed round (€1.0–1.2M) to take the validated gripper and vision stack into the field prototype and the 2028 commercial launch. Industrial and go-to-market partners are welcome.",
  "cta": "Request the investor deck",
@@ -169,6 +170,7 @@ INV = {
 },
 "ru": {
  "nav": "Инвесторам",
+ "cta2": "Скачать деку (PDF)",
  "h": "Инвестиции в будущее уборки свежего рынка",
  "s": "CALIBER+ открывает Seed-раунд (1,0–1,2 млн €), чтобы вывести проверенные захват и ИИ-зрение в полевой прототип и к коммерческому запуску 2028 года. Мы также открыты к промышленным и партнёрским альянсам.",
  "cta": "Запросить инвесторскую презентацию",
@@ -181,6 +183,7 @@ INV = {
 },
 "nl": {
  "nav": "Investeerders",
+ "cta2": "Deck downloaden (PDF)",
  "h": "Investeren in de toekomst van verse oogst",
  "s": "CALIBER+ opent een Seed-ronde (€1,0–1,2 mln) om de gevalideerde grijper en vision-stack naar het veldprototype en de commerciële lancering in 2028 te brengen. Industriële en go-to-market partners zijn welkom.",
  "cta": "Investeerdersdeck opvragen",
@@ -193,6 +196,7 @@ INV = {
 },
 "zh": {
  "nav": "投资人",
+ "cta2": "下载资料 (PDF)",
  "h": "投资新鲜市场采摘的未来",
  "s": "CALIBER+ 正开启种子轮（100–120万欧元），将已验证的夹爪与视觉系统推进到田间原型和2028年商业化发布。同时欢迎产业与市场合作伙伴。",
  "cta": "获取投资人资料",
@@ -285,6 +289,7 @@ TPL = """<!DOCTYPE html>
     <div class="grid g4">{inv_cards}</div>
     <div class="cta-row" style="justify-content:center;margin-top:28px">
       <a class="btn pri" href="mailto:{mail}?subject=CALIBER%2B%20investors">{inv_cta}</a>
+      <a class="btn sec" href="/caliber-investor-deck.pdf" target="_blank" rel="noopener">{inv_cta2}</a>
     </div>
   </div>
 </section>
@@ -344,7 +349,7 @@ def page(c, lang):
         pilot_h=c["pilot_h"], pilot_s=c["pilot_s"], steps_html=steps_html,
         price_h=c["price_h"], price_s=c["price_s"], plans_html=plans_html,
         contact_h=c["contact_h"], contact_s=c["contact_s"], site=c["site"],
-        nav_inv=inv["nav"], over_inv=inv["nav"], inv_h=inv["h"], inv_s=inv["s"], inv_cta=inv["cta"], inv_cards=inv_cards,
+        nav_inv=inv["nav"], over_inv=inv["nav"], inv_h=inv["h"], inv_s=inv["s"], inv_cta=inv["cta"], inv_cta2=inv["cta2"], inv_cards=inv_cards,
         foot_l=c["foot_l"], foot_r=c["foot_r"])
     return html
 
