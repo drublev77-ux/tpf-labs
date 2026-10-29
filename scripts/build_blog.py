@@ -273,9 +273,12 @@ def main() -> None:
     (ROOT / "blog").mkdir(exist_ok=True)
     for lang in ["en", "ru", "nl", "zh"]:
         items = arts.get(lang, [])
-        outdir = ROOT / "blog" / lang
+        outdir = ROOT / "blog" if lang == "en" else ROOT / "blog" / lang
         outdir.mkdir(parents=True, exist_ok=True)
         (outdir / "index.html").write_text(index_page(lang, items, all_en), encoding="utf-8")
+        if lang == "en":
+            (ROOT / "blog" / "en").mkdir(exist_ok=True)
+            (ROOT / "blog" / "en" / "index.html").write_text(index_page(lang, items, all_en), encoding="utf-8")
         url = f"{BASE}/blog/{'' if lang == 'en' else lang + '/'}"
         sitemap_rows.append(f"  <url><loc>{url}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>")
         print("built", outdir / "index.html")
