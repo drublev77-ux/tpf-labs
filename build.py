@@ -271,7 +271,7 @@ TPL = """<!DOCTYPE html>
   <div class="wrap nav">
     <a class="logo" href="/"><img src="/img/logo-icon.png" alt="TPF Labs logo"> TPF<b>labs</b></a>
     <div class="links">
-      <a href="#tech">{nav_tech}</a><a href="#pilot">{nav_pilot}</a><a href="#price">{nav_price}</a><a href="#invest">{nav_inv}</a><a href="#faq">FAQ</a><a href="#contact">{nav_contact}</a>
+      <a href="#tech">{nav_tech}</a><a href="#pilot">{nav_pilot}</a><a href="#price">{nav_price}</a><a href="#invest">{nav_inv}</a><a href="#faq">FAQ</a><a href="{blog_url}">Blog</a><a href="#contact">{nav_contact}</a>
     </div>
     <div class="langs">{langlinks}</div>
   </div>
@@ -394,7 +394,7 @@ def page(c, lang):
         price_h=c["price_h"], price_s=c["price_s"], plans_html=plans_html,
         contact_h=c["contact_h"], contact_s=c["contact_s"], site=c["site"],
         nav_inv=inv["nav"], over_inv=inv["nav"], inv_h=inv["h"], inv_s=inv["s"], inv_cta=inv["cta"], inv_cta2=inv["cta2"], inv_cards=inv_cards,
-        faq_h={"en":"Questions from farms","ru":"Вопросы хозяйств","nl":"Vragen van telers","zh":"农场常见问题"}[lang], faq_html=faq_html, jsonld=jsonld,
+        faq_h={"en":"Questions from farms","ru":"Вопросы хозяйств","nl":"Vragen van telers","zh":"农场常见问题"}[lang], faq_html=faq_html, jsonld=jsonld, blog_url=("/blog/" if lang=="en" else f"/blog/{lang}/"),
         foot_l=c["foot_l"], foot_r=c["foot_r"])
     return html
 

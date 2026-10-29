@@ -199,3 +199,20 @@ footer .frow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 /* footer badge */
 .frow.badge-row{margin-top:14px}
 .frow.badge-row img{display:inline-block}
+
+/* ---------- blog ---------- */
+.article { max-width: 860px; padding: 48px 0 72px; }
+.article h1 { font-size: clamp(28px, 4vw, 42px); line-height: 1.18; margin-bottom: 14px; }
+.article .crumb { font-size: 14px; margin-bottom: 18px; }
+.article .crumb a { color: #35c9e9; text-decoration: none; }
+.article .meta { color: #7d8ba1; font-size: 14px; margin-bottom: 28px; }
+.article h2 { font-size: clamp(21px, 2.6vw, 28px); margin: 34px 0 12px; }
+.article h3 { font-size: 19px; margin: 24px 0 8px; }
+.article p { font-size: 17px; line-height: 1.65; color: #c3cfdd; margin-bottom: 14px; }
+.article ol, .article ul { margin: 0 0 16px 22px; color: #c3cfdd; font-size: 17px; line-height: 1.6; }
+.article li { margin-bottom: 8px; }
+.article a { color: #35c9e9; }
+.article strong { color: #e8eefc; }
+.article .rel { list-style: none; margin-left: 0; }
+.article .rel li { margin-bottom: 10px; }
+.article .rel a { font-weight: 600; }

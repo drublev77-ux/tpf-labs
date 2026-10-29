@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://tpflabs.com/sitemap.xml
+Sitemap: https://tpflabs.com/sitemap-blog.xml
