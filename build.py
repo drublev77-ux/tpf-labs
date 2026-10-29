@@ -209,6 +209,34 @@ INV = {
 },
 }
 
+
+FAQ = {
+"en": [
+ ("How much does CALIBER+ cost?","Robot-as-a-Service starts at €26,000 per season (≈€1.9/kg of picked berries). Purchase: Lite (4 arms) from €55,000, Flagship (6 arms) from €80,000."),
+ ("How fast does the robot pick?","Up to 17 kg/h per unit with 12–14 hours of daily autonomy. It harvests two rows simultaneously, berry by berry."),
+ ("Does the machine damage the berries?","No: the silicone-and-vacuum gripper holds each berry with under 2 N of force. CALIBER+ has 0% crop loss versus about 5% for over-the-row harvesters."),
+ ("When can a farm get a robot?","Pilot programs run in season 2027 (30/60/90 days), commercial launch is 2028. Pilot slots for 2027 are open now."),
+],
+"ru": [
+ ("Сколько стоит CALIBER+?","Робот-как-Сервис — от 26 000 € за сезон (≈1,9 €/кг собранной ягоды). Покупка: Lite (4 руки) от 55 000 €, Flagship (6 рук) от 80 000 €."),
+ ("Как быстро робот собирает ягоду?","До 17 кг/ч с автономностью 12–14 часов в день. Работает с двумя рядами одновременно, ягоду за ягодой."),
+ ("Повреждает ли машина ягоду?","Нет: силиконово-вакуумный захват держит ягоду с усилием менее 2 Н. Потери у CALIBER+ — 0% против примерно 5% у комбайнов."),
+ ("Когда хозяйство может получить робота?","Пилотные программы — сезон 2027 (30/60/90 дней), коммерческий запуск — 2028 год. Слоты пилота на 2027 уже открыты."),
+],
+"nl": [
+ ("Wat kost CALIBER+?","Robot-as-a-Service vanaf €26.000 per seizoen (≈€1,9/kg geplukte bessen). Aankoop: Lite (4 armen) vanaf €55.000, Flagship (6 armen) vanaf €80.000."),
+ ("Hoe snel plukt de robot?","Tot 17 kg/u met 12–14 uur autonomie per dag. Hij oogst twee rijen tegelijk, bes voor bes."),
+ ("Beschadigt de machine de bessen?","Nee: de siliconen-vacuümgrijper houdt elke bes vast met minder dan 2 N kracht. CALIBER+ heeft 0% oogstverlies tegenover circa 5% bij oogstmachines."),
+ ("Wanneer kan een teler een robot krijgen?","Pilotprogramma's lopen in seizoen 2027 (30/60/90 dagen), commerciële lancering in 2028. Pilotplekken voor 2027 zijn nu open."),
+],
+"zh": [
+ ("CALIBER+ 的价格是多少？","机器人即服务（RaaS）：每产季 26,000 欧元起（约 1.9 欧元/公斤）。购买：Lite（4 臂）55,000 欧元起，Flagship（6 臂）80,000 欧元起。"),
+ ("机器人采摘速度有多快？","单台每小时可达 17 公斤，每天自主作业 12–14 小时，可同时采摘两行，逐颗采摘。"),
+ ("机器会损伤果实吗？","不会：硅胶加真空的夹爪以小于 2 牛的力夹持每颗果实。CALIBER+ 的作物损失为 0%，而跨行采收机约为 5%。"),
+ ("农场什么时候可以拿到机器人？","试点计划在 2027 产季（30/60/90 天），商业化发布于 2028 年。2027 年的试点名额现已开放。"),
+],
+}
+
 TPL = """<!DOCTYPE html>
 <html lang="{lang}">
 <head>
@@ -236,13 +264,14 @@ TPL = """<!DOCTYPE html>
 <meta name="google-site-verification" content="Zr5OkmQBIum5PVhi6DNK-WUCK-wY8WJlHhbv-nSxepE">
 <link rel="icon" href="/img/favicon-64.png" type="image/png" sizes="64x64">
 <link rel="stylesheet" href="/css/style.css">
+{jsonld}
 </head>
 <body>
 <header>
   <div class="wrap nav">
     <a class="logo" href="/"><img src="/img/logo-icon.png" alt="TPF Labs logo"> TPF<b>labs</b></a>
     <div class="links">
-      <a href="#tech">{nav_tech}</a><a href="#pilot">{nav_pilot}</a><a href="#price">{nav_price}</a><a href="#invest">{nav_inv}</a><a href="#contact">{nav_contact}</a>
+      <a href="#tech">{nav_tech}</a><a href="#pilot">{nav_pilot}</a><a href="#price">{nav_price}</a><a href="#invest">{nav_inv}</a><a href="#faq">FAQ</a><a href="#contact">{nav_contact}</a>
     </div>
     <div class="langs">{langlinks}</div>
   </div>
@@ -293,6 +322,12 @@ TPL = """<!DOCTYPE html>
     </div>
   </div>
 </section>
+<section id="faq">
+  <div class="wrap">
+    <span class="over">FAQ</span><br><h2>{faq_h}</h2>
+    <div class="faq">{faq_html}</div>
+  </div>
+</section>
 <section id="contact" class="alt contact">
   <div class="wrap">
     <span class="over">{over_contact}</span><br><h2>{contact_h}</h2>
@@ -330,6 +365,15 @@ def page(c, lang):
     stats_html = "".join(f'<div class="stat"><div class="n">{n}</div><div class="l">{l}</div></div>' for n,l in c["stats"])
     cards_html = "".join(f'<div class="card"><div class="ic">{ic}</div><h3>{h}</h3><p>{p}</p><div class="spec">{s}</div></div>' for ic,h,p,s in c["cards"])
     steps_html = "".join(f'<div class="step"><div class="num">{d}</div><h3>{t}</h3><p>{p}</p></div>' for d,t,p in c["steps"])
+    faq_items = FAQ[lang]
+    faq_html = "".join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q,a in faq_items)
+    import json as _json
+    _org = {"@type":"Organization","@id":"https://tpflabs.com/#org","name":"TPF Labs","alternateName":"TPFtechnology","url":"https://tpflabs.com/","logo":"https://tpflabs.com/img/logo-icon.png","email":"drublev77@gmail.com","parentOrganization":{"@type":"Organization","name":"TPFtechnology","url":"https://tpf-technology.com/"},"areaServed":"EU","knowsLanguage":["en","ru","nl","zh"]}
+    _prod = {"@type":"Product","@id":"https://tpflabs.com/#caliber","name":"CALIBER+","description":"Autonomous selective harvester for fresh-market blueberries: 17 kg/h, >97% ripeness accuracy, 0% crop loss, 12-14 h autonomy.","brand":{"@type":"Brand","name":"TPF Labs"},"category":"Agricultural robot","offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"55000","highPrice":"80000","availability":"https://schema.org/PreOrder","url":"https://tpflabs.com/"},"additionalProperty":[{"@type":"PropertyValue","name":"Picking rate","value":"17 kg/h"},{"@type":"PropertyValue","name":"Ripeness accuracy","value":">97%"},{"@type":"PropertyValue","name":"Daily autonomy","value":"12-14 h"}]}
+    _site = {"@type":"WebSite","@id":"https://tpflabs.com/#site","url":"https://tpflabs.com/","name":"TPF Labs — CALIBER+","inLanguage":lang}
+    _faq = {"@type":"FAQPage","inLanguage":lang,"mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq_items]}
+    _ld = {"@context":"https://schema.org","@graph":[_org,_prod,_site,_faq]}
+    jsonld = '<script type="application/ld+json">' + _json.dumps(_ld, ensure_ascii=False) + '</script>'
     inv = INV[lang]
     inv_cards = "".join(f'<div class="card"><div class="ic">{ic}</div><h3>{h}</h3><p>{p}</p><div class="spec">{s}</div></div>' for ic,h,p,s in inv["cards"])
     plans_html = ""
@@ -350,6 +394,7 @@ def page(c, lang):
         price_h=c["price_h"], price_s=c["price_s"], plans_html=plans_html,
         contact_h=c["contact_h"], contact_s=c["contact_s"], site=c["site"],
         nav_inv=inv["nav"], over_inv=inv["nav"], inv_h=inv["h"], inv_s=inv["s"], inv_cta=inv["cta"], inv_cta2=inv["cta2"], inv_cards=inv_cards,
+        faq_h={"en":"Questions from farms","ru":"Вопросы хозяйств","nl":"Vragen van telers","zh":"农场常见问题"}[lang], faq_html=faq_html, jsonld=jsonld,
         foot_l=c["foot_l"], foot_r=c["foot_r"])
     return html
 
