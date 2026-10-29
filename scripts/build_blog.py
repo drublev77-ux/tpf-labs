@@ -169,7 +169,7 @@ NAV = '''<body>
   <div class="wrap nav">
     <a class="logo" href="/"><img src="/img/logo-icon.png" alt="TPF Labs logo"> TPF<b>labs</b></a>
     <div class="links">
-      <a href="/#{lang}/">{tech}</a><a href="/#{lang}/pilot">{pilot}</a><a href="/#{lang}/price">{price}</a><a href="/blog/{langpath}/">blog</a>
+      <a href="/#{lang}/">{tech}</a><a href="/#{lang}/pilot">{pilot}</a><a href="/#{lang}/price">{price}</a><a href="/blog{langpath}">blog</a>
     </div>
     <div class="langs">{langlinks}</div>
   </div>
@@ -195,7 +195,7 @@ FOOT = f'''<footer>
 
 def nav_html(lang: str) -> str:
     tech, pilot, price = NAVLABELS[lang]
-    langpath = "" if lang == "en" else lang + "/"
+    langpath = "/" if lang == "en" else f"/{lang}/"
     links = ""
     for l, label in [("en", "EN"), ("ru", "RU"), ("nl", "NL"), ("zh", "中文")]:
         href = "/" if l == "en" else f"/{l}/"
@@ -273,18 +273,18 @@ def main() -> None:
     (ROOT / "blog").mkdir(exist_ok=True)
     for lang in ["en", "ru", "nl", "zh"]:
         items = arts.get(lang, [])
-        outdir = ROOT / "blog" if lang == "en" else ROOT / "blog" / lang
+        outdir = ROOT / "blog" / lang
         outdir.mkdir(parents=True, exist_ok=True)
-        (outdir / "index.html").write_text(index_page(lang, items, all_en), encoding="utf-8")
+        idx = index_page(lang, items, all_en)
+        (outdir / "index.html").write_text(idx, encoding="utf-8")
         if lang == "en":
-            (ROOT / "blog" / "en").mkdir(exist_ok=True)
-            (ROOT / "blog" / "en" / "index.html").write_text(index_page(lang, items, all_en), encoding="utf-8")
+            (ROOT / "blog" / "index.html").write_text(idx, encoding="utf-8")
         url = f"{BASE}/blog/{'' if lang == 'en' else lang + '/'}"
         sitemap_rows.append(f"  <url><loc>{url}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>")
         print("built", outdir / "index.html")
         for meta in items:
             related = [a for a in items if a["slug"] != meta["slug"]][:3]
-            (outdir / meta["slug"]).mkdir(exist_ok=True)
+            (outdir / meta["slug"]).mkdir(parents=True, exist_ok=True)
             (outdir / meta["slug"] / "index.html").write_text(article_page(meta, related), encoding="utf-8")
             sitemap_rows.append(f"  <url><loc>{BASE}/blog/{lang}/{meta['slug']}/</loc><lastmod>{meta['date']}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>")
             print("built", outdir / meta["slug"] / "index.html")
