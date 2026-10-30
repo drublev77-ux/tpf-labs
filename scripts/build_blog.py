@@ -73,8 +73,28 @@ def md_to_html(md: str) -> tuple[str, list[tuple[str, str]]]:
             out.append("<p>" + inline(" ".join(para)) + "</p>")
             para = []
 
+    tbl: list[list[str]] = []
+
+    def flush_table():
+        nonlocal tbl
+        if not tbl:
+            return
+        rows = tbl
+        head_row = "".join(f"<th>{inline(c)}</th>" for c in rows[0])
+        body = "".join("<tr>" + "".join(f"<td>{inline(c)}</td>" for c in r) + "</tr>" for r in rows[1:])
+        out.append(f"<table><thead><tr>{head_row}</tr></thead><tbody>{body}</tbody></table>")
+        tbl = []
+
     for ln in lines:
         s = ln.rstrip()
+        if s.startswith("|"):
+            cells = [c.strip() for c in s.strip("|").split("|")]
+            if all(re.fullmatch(r":?-{2,}:?", c) for c in cells if c):
+                continue
+            tbl.append(cells)
+            continue
+        if tbl:
+            flush_table()
         if s.startswith("# "):
             flush(); continue  # h1 comes from front matter
         if s.startswith("## "):
@@ -112,6 +132,7 @@ def md_to_html(md: str) -> tuple[str, list[tuple[str, str]]]:
             continue
         para.append(s)
     flush()
+    flush_table()
     # close lists
     fixed = []
     for chunk in out:

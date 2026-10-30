@@ -216,3 +216,6 @@ footer .frow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .article .rel { list-style: none; margin-left: 0; }
 .article .rel li { margin-bottom: 10px; }
 .article .rel a { font-weight: 600; }
+.article table { width: 100%; border-collapse: collapse; margin: 8px 0 20px; font-size: 15.5px; }
+.article th { text-align: left; color: #35c9e9; font-size: 13px; text-transform: uppercase; letter-spacing: .5px; padding: 10px 12px; border-bottom: 1px solid #23405f; }
+.article td { padding: 10px 12px; border-bottom: 1px solid #16283f; color: #c3cfdd; vertical-align: top; }
