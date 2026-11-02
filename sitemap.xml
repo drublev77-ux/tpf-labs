@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://tpflabs.com/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://tpflabs.com/"/>
@@ -10,10 +10,19 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://tpflabs.com/nl/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://tpflabs.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tpflabs.com/"/>
+    <image:image><image:loc>https://tpflabs.com/img/hero.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://tpflabs.com/img/film-poster.jpg</video:thumbnail_loc>
+      <video:title>CALIBER+ autonomous blueberry harvester — how it works</video:title>
+      <video:description>70 seconds on the machine: four SCARA arms, AI ripeness vision, a chilled 60 L hopper and 12-14 hours of autonomous work.</video:description>
+      <video:content_loc>https://tpflabs.com/video/caliber-plus-film-en-16x9.mp4</video:content_loc>
+      <video:duration>71</video:duration>
+      <video:publication_date>2026-11-02T12:00:00+00:00</video:publication_date>
+    </video:video>
   </url>
   <url>
     <loc>https://tpflabs.com/ru/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://tpflabs.com/"/>
@@ -21,10 +30,19 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://tpflabs.com/nl/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://tpflabs.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tpflabs.com/"/>
+    <image:image><image:loc>https://tpflabs.com/img/hero.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://tpflabs.com/img/film-poster.jpg</video:thumbnail_loc>
+      <video:title>CALIBER+ — как работает автономный сборщик голубики</video:title>
+      <video:description>70 секунд о машине: четыре SCARA-манипулятора, ИИ-зрение спелости, охлаждаемый бункер 60 л и 12-14 часов автономной работы.</video:description>
+      <video:content_loc>https://tpflabs.com/video/caliber-plus-film-en-16x9.mp4</video:content_loc>
+      <video:duration>71</video:duration>
+      <video:publication_date>2026-11-02T12:00:00+00:00</video:publication_date>
+    </video:video>
   </url>
   <url>
     <loc>https://tpflabs.com/nl/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://tpflabs.com/"/>
@@ -32,10 +50,19 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://tpflabs.com/nl/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://tpflabs.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tpflabs.com/"/>
+    <image:image><image:loc>https://tpflabs.com/img/hero.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://tpflabs.com/img/film-poster.jpg</video:thumbnail_loc>
+      <video:title>CALIBER+ autonome blauwe-bessenoogstrobot — zo werkt het</video:title>
+      <video:description>70 seconden over de machine: vier SCARA-armen, AI-rijpheidsvisie, een gekoelde bunker van 60 liter en 12-14 uur autonoom werk.</video:description>
+      <video:content_loc>https://tpflabs.com/video/caliber-plus-film-en-16x9.mp4</video:content_loc>
+      <video:duration>71</video:duration>
+      <video:publication_date>2026-11-02T12:00:00+00:00</video:publication_date>
+    </video:video>
   </url>
   <url>
     <loc>https://tpflabs.com/zh/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://tpflabs.com/"/>
@@ -43,5 +70,14 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://tpflabs.com/nl/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://tpflabs.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tpflabs.com/"/>
+    <image:image><image:loc>https://tpflabs.com/img/hero.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://tpflabs.com/img/film-poster.jpg</video:thumbnail_loc>
+      <video:title>CALIBER+ 自主蓝莓采摘机如何工作</video:title>
+      <video:description>70 秒看懂这台机器：四条 SCARA 机械臂、AI 成熟度识别、60 升冷藏果箱，12-14 小时自主作业。</video:description>
+      <video:content_loc>https://tpflabs.com/video/caliber-plus-film-en-16x9.mp4</video:content_loc>
+      <video:duration>71</video:duration>
+      <video:publication_date>2026-11-02T12:00:00+00:00</video:publication_date>
+    </video:video>
   </url>
 </urlset>

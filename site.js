@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.classList.add("js");
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   var els = document.querySelectorAll(
-    ".stat, .card, .step, .plan, .hero-visual, .hero .txt > *, section .wrap > h2, section .sub, .bigmail"
+    // Above-the-fold hero is not animated: hiding it delays Largest Contentful Paint
+    ".stat, .card, .step, .plan, section .wrap > h2, section .sub, .bigmail"
   );
   var i = 0;
   els.forEach(function (el) {

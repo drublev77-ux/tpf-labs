@@ -1,0 +1,9 @@
+# Source and working files that must not be served on tpflabs.com
+build.py
+scripts/
+content/
+previews/
+out/
+README.md
+SEO.md
+*.patch

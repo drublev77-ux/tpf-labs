@@ -4,8 +4,8 @@ import os, json
 
 C = {
 "en": {
- "title": "TPF Labs — CALIBER+ Autonomous Blueberry Harvester",
- "desc": "CALIBER+ by TPF Labs: autonomous selective blueberry harvester. 17 kg/h, >97% ripeness accuracy, 0% crop loss, 12–14 h autonomy. Pilot program for farms.",
+ "title": "CALIBER+ Blueberry Harvesting Robot | TPF Labs",
+ "desc": "Autonomous blueberry harvesting machine for fresh-market farms: 17 kg/h, 0% crop loss, ≈€1.9/kg. Rent from €26,000/season or buy. 2027 pilots open.",
  "nav": {"tech":"Technology","pilot":"Pilot","price":"Pricing","contact":"Contact"},
  "hero_tag": "TPF Labs · Autonomous Field Robotics",
  "h1": "Meet <b>CALIBER+</b> — the harvester that picks like hands, works like a machine",
@@ -41,8 +41,8 @@ C = {
  "foot_r": "CALIBER+ is in pre-production. Photos show design concepts.",
 },
 "ru": {
- "title": "TPF Labs — автономный сборщик голубики CALIBER+",
- "desc": "CALIBER+ от TPF Labs: автономный селективный сборщик голубики. 17 кг/ч, точность спелости >97%, потери 0%, автономность 12–14 ч. Пилотная программа для хозяйств.",
+ "title": "Робот для сбора голубики CALIBER+ — цена и пилот | TPF Labs",
+ "desc": "Автономная машина для сбора голубики: 17 кг/ч, 0% потерь, ≈1,9 €/кг. Аренда от 26 000 € за сезон или покупка. Набор хозяйств на пилот 2027.",
  "nav": {"tech":"Технологии","pilot":"Пилот","price":"Цены","contact":"Контакты"},
  "hero_tag": "TPF Labs · Автономная полевая робототехника",
  "h1": "Знакомьтесь — <b>CALIBER+</b>: собирает как руки, работает как машина",
@@ -78,8 +78,8 @@ C = {
  "foot_r": "CALIBER+ находится в стадии подготовки к производству. Изображения — дизайнерские концепты.",
 },
 "nl": {
- "title": "TPF Labs — CALIBER+ autonome blauwe-bessenoogstrobot",
- "desc": "CALIBER+ van TPF Labs: autonome selectieve oogstrobot voor verse blauwe bessen. 17 kg/u, >97% nauwkeurigheid rijpheidsherkenning, 0% verlies, 12–14 uur autonomie. Pilotprogramma voor telers.",
+ "title": "CALIBER+ oogstrobot blauwe bessen — prijs & pilot | TPF Labs",
+ "desc": "Blauwe bessen machinaal oogsten voor de versmarkt: 17 kg/u, 0% verlies, ≈€1,9/kg. Huur vanaf €26.000 per seizoen of koop. Pilots 2027 open.",
  "nav": {"tech":"Technologie","pilot":"Pilot","price":"Prijzen","contact":"Contact"},
  "hero_tag": "TPF Labs · Autonome veldrobotica",
  "h1": "Maak kennis met <b>CALIBER+</b> — oogst zoals handmatig, werkt als een machine",
@@ -115,8 +115,8 @@ C = {
  "foot_r": "CALIBER+ is in preproductie. Foto's tonen ontwerpconcepten.",
 },
 "zh": {
- "title": "TPF Labs — CALIBER+ 自主蓝莓采摘机器人",
- "desc": "TPF Labs 的 CALIBER+：面向鲜果市场的自主选择性蓝莓采摘机器人。17 公斤/小时，成熟度识别精度 >97%，损耗 0%，续航 12–14 小时。开放试点申请。",
+ "title": "CALIBER+ 蓝莓采摘机器人 — 价格与试点 | TPF Labs",
+ "desc": "面向鲜果市场的自主蓝莓采摘机：每小时 17 公斤，损耗 0%，约 1.9 欧元/公斤。按季租赁 26,000 欧元起或购买。2027 试点名额开放。",
  "nav": {"tech":"技术","pilot":"试点","price":"价格","contact":"联系"},
  "hero_tag": "TPF Labs · 自主田间机器人",
  "h1": "认识 <b>CALIBER+</b>：像双手一样轻采，像机器一样高效",
@@ -252,9 +252,15 @@ TPL = """<!DOCTYPE html>
 <meta property="og:image" content="https://tpflabs.com/img/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="TPF Labs — CALIBER+ autonomous blueberry harvester">
+<meta property="og:image:alt" content="{og_alt}">
+<meta property="og:site_name" content="TPF Labs">
 <meta property="og:locale" content="{og_locale}">
+{og_locale_alt}
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="https://tpflabs.com/img/og.png">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://tpflabs.com{suffix}">
 <link rel="alternate" hreflang="en" href="https://tpflabs.com/">
 <link rel="alternate" hreflang="ru" href="https://tpflabs.com/ru/">
@@ -262,7 +268,11 @@ TPL = """<!DOCTYPE html>
 <link rel="alternate" hreflang="zh" href="https://tpflabs.com/zh/">
 <link rel="alternate" hreflang="x-default" href="https://tpflabs.com/">
 <meta name="google-site-verification" content="Zr5OkmQBIum5PVhi6DNK-WUCK-wY8WJlHhbv-nSxepE">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/img/favicon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" as="image" href="/img/hero.webp" type="image/webp" fetchpriority="high">
 <link rel="stylesheet" href="/css/style.css">
 {jsonld}
 </head>
@@ -271,7 +281,7 @@ TPL = """<!DOCTYPE html>
   <div class="wrap nav">
     <a class="logo" href="/"><img src="/img/logo-icon.png" alt="TPF Labs logo"> TPF<b>labs</b></a>
     <div class="links">
-      <a href="#tech">{nav_tech}</a><a href="#pilot">{nav_pilot}</a><a href="#price">{nav_price}</a><a href="#invest">{nav_inv}</a><a href="#faq">FAQ</a><a href="{blog_url}">Blog</a><a href="#contact">{nav_contact}</a>
+      <a href="#tech">{nav_tech}</a><a href="#pilot">{nav_pilot}</a><a href="#price">{nav_price}</a><a href="#invest">{nav_inv}</a><a href="#faq">FAQ</a><a href="{blog_url}">{nav_blog}</a><a href="#contact">{nav_contact}</a>
     </div>
     <div class="langs">{langlinks}</div>
   </div>
@@ -287,8 +297,8 @@ TPL = """<!DOCTYPE html>
       <a class="btn sec" href="#tech">{cta2}</a>
     </div>
   </div>
-  <div class="hero-visual"><span class="c3"></span><img src="/img/hero.jpg" alt="CALIBER+ autonomous blueberry harvester concept render" decoding="async" width="700" height="875">
-    <div class="hero-cap"><b>CALIBER+</b> · concept render · 1:2 row architecture</div>
+  <div class="hero-visual"><span class="c3"></span><picture><source srcset="/img/hero.webp" type="image/webp"><img src="/img/hero.jpg" alt="{hero_alt}" fetchpriority="high" decoding="async" width="700" height="875"></picture>
+    <div class="hero-cap"><b>CALIBER+</b> · {hero_cap}</div>
   </div></div>
 </div>
 <div class="wrap"><div class="stats">
@@ -299,7 +309,7 @@ TPL = """<!DOCTYPE html>
     <span class="over">{film_over}</span><br><h2>{film_h}</h2>
     <p class="sub">{film_s}</p>
     <div class="film-frame">
-      <video class="film-video" controls playsinline preload="metadata" poster="/img/film-poster.jpg" width="1920" height="1080">
+      <video class="film-video" title="{film_h}" controls playsinline preload="metadata" poster="/img/film-poster.jpg" width="1920" height="1080">
         <source src="/video/caliber-plus-film-en-16x9.mp4" type="video/mp4">
         Your browser does not support the video tag. <a href="/video/caliber-plus-film-en-16x9.mp4">Download the film</a>.
       </video>
@@ -374,6 +384,30 @@ FILM = {
  "zh": {"over":"CALIBER+ \u5f71\u7247","h":"\u4e86\u89e3 CALIBER+ \u5982\u4f55\u5de5\u4f5c","s":"70 \u79d2\u770b\u61c2\u8fd9\u53f0\u673a\u5668\uff1a\u56db\u6761 SCARA \u673a\u68b0\u81c2\u3001AI \u6210\u719f\u5ea6\u8bc6\u522b\u300160 \u5347\u51b7\u85cf\u679c\u7bb1\uff0c12-14 \u5c0f\u65f6\u81ea\u4e3b\u4f5c\u4e1a\u3002"},
 }
 
+OG_LOC = {"en":"en_US","ru":"ru_RU","nl":"nl_NL","zh":"zh_CN"}
+
+# Localized SEO strings: image alt texts, captions, nav label, video metadata
+SEO = {
+ "en": {"og_alt":"CALIBER+ autonomous blueberry harvesting robot by TPF Labs",
+        "hero_alt":"CALIBER+ autonomous blueberry harvesting robot picking two rows — concept render",
+        "hero_cap":"concept render · 1:2 row architecture", "blog":"Blog",
+        "video_name":"CALIBER+ autonomous blueberry harvester — how it works"},
+ "ru": {"og_alt":"CALIBER+ — автономный робот для сбора голубики от TPF Labs",
+        "hero_alt":"Автономный робот для сбора голубики CALIBER+ убирает два ряда — концепт-рендер",
+        "hero_cap":"концепт-рендер · архитектура 1:2 ряда", "blog":"Блог",
+        "video_name":"CALIBER+ — как работает автономный сборщик голубики"},
+ "nl": {"og_alt":"CALIBER+ autonome oogstrobot voor blauwe bessen van TPF Labs",
+        "hero_alt":"CALIBER+ autonome oogstrobot voor blauwe bessen oogst twee rijen — conceptrender",
+        "hero_cap":"conceptrender · 1:2 rij-architectuur", "blog":"Blog",
+        "video_name":"CALIBER+ autonome blauwe-bessenoogstrobot — zo werkt het"},
+ "zh": {"og_alt":"TPF Labs 的 CALIBER+ 自主蓝莓采摘机器人",
+        "hero_alt":"CALIBER+ 自主蓝莓采摘机器人同时采摘两行——概念渲染图",
+        "hero_cap":"概念渲染图 · 1:2 行架构", "blog":"博客",
+        "video_name":"CALIBER+ 自主蓝莓采摘机如何工作"},
+}
+VIDEO_UPLOAD = "2026-11-02"
+
+
 def page(c, lang):
     suffix = "/" if lang=="en" else "/"+lang+"/"
     langlinks = ""
@@ -387,11 +421,14 @@ def page(c, lang):
     faq_items = FAQ[lang]
     faq_html = "".join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q,a in faq_items)
     import json as _json
-    _org = {"@type":"Organization","@id":"https://tpflabs.com/#org","name":"TPF Labs","alternateName":"TPFtechnology","url":"https://tpflabs.com/","logo":"https://tpflabs.com/img/logo-icon.png","email":"drublev77@gmail.com","parentOrganization":{"@type":"Organization","name":"TPFtechnology","url":"https://tpf-technology.com/"},"areaServed":"EU","knowsLanguage":["en","ru","nl","zh"]}
-    _prod = {"@type":"Product","@id":"https://tpflabs.com/#caliber","name":"CALIBER+","description":"Autonomous selective harvester for fresh-market blueberries: 17 kg/h, >97% ripeness accuracy, 0% crop loss, 12-14 h autonomy.","brand":{"@type":"Brand","name":"TPF Labs"},"category":"Agricultural robot","offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"55000","highPrice":"80000","availability":"https://schema.org/PreOrder","url":"https://tpflabs.com/"},"additionalProperty":[{"@type":"PropertyValue","name":"Picking rate","value":"17 kg/h"},{"@type":"PropertyValue","name":"Ripeness accuracy","value":">97%"},{"@type":"PropertyValue","name":"Daily autonomy","value":"12-14 h"}]}
-    _site = {"@type":"WebSite","@id":"https://tpflabs.com/#site","url":"https://tpflabs.com/","name":"TPF Labs — CALIBER+","inLanguage":lang}
-    _faq = {"@type":"FAQPage","inLanguage":lang,"mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq_items]}
-    _ld = {"@context":"https://schema.org","@graph":[_org,_prod,_site,_faq]}
+    _url = "https://tpflabs.com" + suffix
+    _org = {"@type":"Organization","@id":"https://tpflabs.com/#org","name":"TPF Labs","alternateName":["TPFlabs","TPF Labs CALIBER+"],"url":"https://tpflabs.com/","logo":{"@type":"ImageObject","url":"https://tpflabs.com/apple-touch-icon.png","width":180,"height":180},"image":"https://tpflabs.com/img/og.png","email":"drublev77@gmail.com","description":"Autonomous field robotics for fresh-market berry harvesting.","parentOrganization":{"@type":"Organization","name":"TPFtechnology","url":"https://tpf-technology.com/"},"areaServed":{"@type":"Place","name":"European Union"},"knowsAbout":["blueberry harvesting","agricultural robotics","selective fruit picking","robot as a service"],"knowsLanguage":["en","ru","nl","zh"]}
+    _prod = {"@type":"Product","@id":"https://tpflabs.com/#caliber","name":"CALIBER+","description":"Autonomous selective harvester for fresh-market blueberries: 17 kg/h, >97% ripeness accuracy, 0% crop loss, 12-14 h autonomy.","image":["https://tpflabs.com/img/hero.jpg","https://tpflabs.com/img/og.png","https://tpflabs.com/img/film-poster.jpg"],"brand":{"@type":"Brand","name":"TPF Labs"},"manufacturer":{"@id":"https://tpflabs.com/#org"},"category":"Agricultural robot","subjectOf":{"@id":_url+"#film"},"offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"55000","highPrice":"80000","offerCount":2,"availability":"https://schema.org/PreOrder","url":_url+"#price","seller":{"@id":"https://tpflabs.com/#org"}},"additionalProperty":[{"@type":"PropertyValue","name":"Picking rate","value":"17 kg/h"},{"@type":"PropertyValue","name":"Ripeness accuracy","value":">97%"},{"@type":"PropertyValue","name":"Crop loss","value":"0%"},{"@type":"PropertyValue","name":"Daily autonomy","value":"12-14 h"},{"@type":"PropertyValue","name":"Weight","value":"450 kg"}]}
+    _site = {"@type":"WebSite","@id":"https://tpflabs.com/#site","url":"https://tpflabs.com/","name":"TPF Labs","alternateName":"TPF Labs — CALIBER+","publisher":{"@id":"https://tpflabs.com/#org"},"inLanguage":["en","ru","nl","zh"]}
+    _page = {"@type":"WebPage","@id":_url+"#page","url":_url,"name":c["title"],"description":c["desc"],"inLanguage":lang,"isPartOf":{"@id":"https://tpflabs.com/#site"},"about":{"@id":"https://tpflabs.com/#caliber"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://tpflabs.com/img/hero.jpg","width":700,"height":875}}
+    _video = {"@type":"VideoObject","@id":_url+"#film","name":SEO[lang]["video_name"],"description":FILM[lang]["s"],"thumbnailUrl":["https://tpflabs.com/img/film-poster.jpg"],"uploadDate":VIDEO_UPLOAD+"T12:00:00+00:00","duration":"PT1M11S","contentUrl":"https://tpflabs.com/video/caliber-plus-film-en-16x9.mp4","embedUrl":_url+"#film","inLanguage":"en","publisher":{"@id":"https://tpflabs.com/#org"}}
+    _faq = {"@type":"FAQPage","@id":_url+"#faq","inLanguage":lang,"mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq_items]}
+    _ld = {"@context":"https://schema.org","@graph":[_org,_site,_page,_prod,_video,_faq]}
     jsonld = '<script type="application/ld+json">' + _json.dumps(_ld, ensure_ascii=False) + '</script>'
     inv = INV[lang]
     inv_cards = "".join(f'<div class="card"><div class="ic">{ic}</div><h3>{h}</h3><p>{p}</p><div class="spec">{s}</div></div>' for ic,h,p,s in inv["cards"])
@@ -404,7 +441,7 @@ def page(c, lang):
     html = TPL.format(
         lang=lang, brand="TPF", suffix=suffix, title=c["title"], desc=c["desc"],
         over_tech=c["nav"]["tech"], over_pilot=c["nav"]["pilot"], over_price=c["nav"]["price"], over_contact=c["nav"]["contact"],
-        og_locale={"en":"en_US","ru":"ru_RU","nl":"nl_NL","zh":"zh_CN"}[lang],
+        og_locale=OG_LOC[lang],
         nav_tech=c["nav"]["tech"], nav_pilot=c["nav"]["pilot"], nav_price=c["nav"]["price"], nav_contact=c["nav"]["contact"],
         langlinks=langlinks, hero_tag=c["hero_tag"], h1=c["h1"], lead=c["lead"],
         mail=c["mail"], cta1=c["cta1"], cta2=c["cta2"], stats_html=stats_html,
@@ -415,7 +452,10 @@ def page(c, lang):
         nav_inv=inv["nav"], over_inv=inv["nav"], inv_h=inv["h"], inv_s=inv["s"], inv_cta=inv["cta"], inv_cta2=inv["cta2"], inv_cards=inv_cards,
         faq_h={"en":"Questions from farms","ru":"Вопросы хозяйств","nl":"Vragen van telers","zh":"农场常见问题"}[lang], faq_html=faq_html, jsonld=jsonld, blog_url=("/blog/" if lang=="en" else f"/blog/{lang}/"),
         film_over=FILM[lang]["over"], film_h=FILM[lang]["h"], film_s=FILM[lang]["s"],
-        foot_l=c["foot_l"], foot_r=c["foot_r"])
+        foot_l=c["foot_l"], foot_r=c["foot_r"],
+        og_alt=SEO[lang]["og_alt"], hero_alt=SEO[lang]["hero_alt"], hero_cap=SEO[lang]["hero_cap"],
+        nav_blog=SEO[lang]["blog"],
+        og_locale_alt="\n".join(f'<meta property="og:locale:alternate" content="{v}">' for k,v in OG_LOC.items() if k!=lang))
     return html
 
 os.makedirs("out", exist_ok=True)
@@ -425,3 +465,32 @@ for lang in ["en","ru","nl","zh"]:
     with open(p,"w",encoding="utf-8") as f:
         f.write(page(C[lang], lang))
     print("built", p)
+
+# Main sitemap: language versions with hreflang alternates, hero image and the film
+import datetime as _dt
+_today = _dt.date.today().isoformat()
+_alts = "".join(f'\n    <xhtml:link rel="alternate" hreflang="{l}" href="https://tpflabs.com{"/" if l=="en" else "/"+l+"/"}"/>' for l in ["en","ru","nl","zh"])
+_alts += '\n    <xhtml:link rel="alternate" hreflang="x-default" href="https://tpflabs.com/"/>'
+_rows = []
+for lang in ["en","ru","nl","zh"]:
+    loc = "https://tpflabs.com" + ("/" if lang=="en" else f"/{lang}/")
+    _rows.append(f'''  <url>
+    <loc>{loc}</loc>
+    <lastmod>{_today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>{"1.0" if lang=="en" else "0.9"}</priority>{_alts}
+    <image:image><image:loc>https://tpflabs.com/img/hero.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://tpflabs.com/img/film-poster.jpg</video:thumbnail_loc>
+      <video:title>{SEO[lang]["video_name"]}</video:title>
+      <video:description>{FILM[lang]["s"]}</video:description>
+      <video:content_loc>https://tpflabs.com/video/caliber-plus-film-en-16x9.mp4</video:content_loc>
+      <video:duration>71</video:duration>
+      <video:publication_date>{VIDEO_UPLOAD}T12:00:00+00:00</video:publication_date>
+    </video:video>
+  </url>''')
+with open("out/sitemap.xml","w",encoding="utf-8") as f:
+    f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+            'xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" '
+            'xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">\n' + "\n".join(_rows) + "\n</urlset>\n")
+print("built out/sitemap.xml")

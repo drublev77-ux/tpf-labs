@@ -25,10 +25,10 @@ SRC = ROOT / "content" / "blog"
 BASE = "https://tpflabs.com"
 OG = {"en": "en_US", "ru": "ru_RU", "nl": "nl_NL", "zh": "zh_CN"}
 UI = {
-    "en": dict(blog="Blog", home="Home", back="← All articles", related="More articles", cta1="Request a pilot", cta2="Investor deck", lang_note=""),
-    "nl": dict(blog="Blog", home="Home", back="← Alle artikelen", related="Meer artikelen", cta1="Pilot aanvragen", cta2="Investeerdersdeck", lang_note="Dit artikel is in het Engels beschikbaar."),
-    "ru": dict(blog="Блог", home="Главная", back="← Все статьи", related="Другие статьи", cta1="Запросить пилот", cta2="Инвесторская дека", lang_note="Эта статья доступна на английском."),
-    "zh": dict(blog="博客", home="首页", back="← 所有文章", related="更多文章", cta1="申请试点", cta2="投资人资料", lang_note="本文暂为英文版本。"),
+    "en": dict(idx_title="Blog: blueberry harvesting machines & farm robotics | TPF Labs", idx_desc="Practical articles on blueberry harvesting machines, picking robots, cost per kilogram and labour on fresh-market berry farms.", foot_l="TPF Labs — autonomous robotics division of TPFtechnology.", foot_r="CALIBER+ is in pre-production. Photos show design concepts.", blog="Blog", home="Home", back="← All articles", related="More articles", cta1="Request a pilot", cta2="Investor deck", lang_note=""),
+    "nl": dict(idx_title="Blog: blauwe bessen machinaal oogsten & oogstrobots | TPF Labs", idx_desc="Artikelen over oogstmachines en plukrobots voor blauwe bessen, kosten per kilo en arbeid op bessenbedrijven.", foot_l="TPF Labs — divisie autonome robotica van TPFtechnology.", foot_r="CALIBER+ is in preproductie. Foto's tonen ontwerpconcepten.", blog="Blog", home="Home", back="← Alle artikelen", related="Meer artikelen", cta1="Pilot aanvragen", cta2="Investeerdersdeck", lang_note="Dit artikel is in het Engels beschikbaar."),
+    "ru": dict(idx_title="Блог: машины и роботы для сбора голубики | TPF Labs", idx_desc="Статьи о комбайнах и роботах для сбора голубики, стоимости уборки за килограмм и нехватке сборщиков в ягодных хозяйствах.", foot_l="TPF Labs — дивизион автономной робототехники TPFtechnology.", foot_r="CALIBER+ находится в стадии подготовки к производству. Изображения — дизайнерские концепты.", blog="Блог", home="Главная", back="← Все статьи", related="Другие статьи", cta1="Запросить пилот", cta2="Инвесторская дека", lang_note="Эта статья доступна на английском."),
+    "zh": dict(idx_title="博客：蓝莓采摘机与农业机器人 | TPF Labs", idx_desc="关于蓝莓采摘机、采摘机器人、每公斤采收成本和浆果农场劳动力的文章。", foot_l="TPF Labs — TPFtechnology 旗下自主机器人部门。", foot_r="CALIBER+ 处于量产准备阶段。图片为设计概念图。", blog="博客", home="首页", back="← 所有文章", related="更多文章", cta1="申请试点", cta2="投资人资料", lang_note="本文暂为英文版本。"),
 }
 MAIL = "drublev77@gmail.com"
 
@@ -163,7 +163,8 @@ def md_to_html(md: str) -> tuple[str, list[tuple[str, str]]]:
     return "\n".join(res), faq
 
 
-def head(lang: str, title: str, desc: str, canon: str, extra_ld: str = "", page_type: str = "website") -> str:
+def head(lang: str, title: str, desc: str, canon: str, extra_ld: str = "", page_type: str = "website",
+         robots: str = "index,follow,max-image-preview:large,max-snippet:-1", alternates: str = "", extra_meta: str = "") -> str:
     return f'''<!DOCTYPE html>
 <html lang="{lang}">
 <head>
@@ -177,11 +178,24 @@ def head(lang: str, title: str, desc: str, canon: str, extra_ld: str = "", page_
 <meta property="og:type" content="{page_type}">
 <meta property="og:url" content="{canon}">
 <meta property="og:image" content="https://tpflabs.com/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TPF Labs — CALIBER+ blueberry harvesting robot">
+<meta property="og:site_name" content="TPF Labs">
 <meta property="og:locale" content="{OG[lang]}">
+{extra_meta}
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{html.escape(title)}">
+<meta name="twitter:description" content="{html.escape(desc)}">
+<meta name="twitter:image" content="https://tpflabs.com/img/og.png">
+<meta name="robots" content="{robots}">
 <link rel="canonical" href="{canon}">
+{alternates}
 <script type="application/ld+json">{extra_ld}</script>
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/img/favicon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/css/style.css">
 </head>'''
 
@@ -190,7 +204,7 @@ NAV = '''<body>
   <div class="wrap nav">
     <a class="logo" href="/"><img src="/img/logo-icon.png" alt="TPF Labs logo"> TPF<b>labs</b></a>
     <div class="links">
-      <a href="/#{lang}/">{tech}</a><a href="/#{lang}/pilot">{pilot}</a><a href="/#{lang}/price">{price}</a><a href="/blog{langpath}">blog</a>
+      <a href="/{lang}/#tech">{tech}</a><a href="/{lang}/#pilot">{pilot}</a><a href="/{lang}/#price">{price}</a><a href="/blog{langpath}">{bloglabel}</a>
     </div>
     <div class="langs">{langlinks}</div>
   </div>
@@ -203,15 +217,19 @@ NAVLABELS = {
     "zh": ("技术", "试点", "价格"),
 }
 
-FOOT = f'''<footer>
+FOOT_TPL = '''<footer>
   <div class="wrap">
   <a class="logo foot-logo" href="/"><img src="/img/logo-icon.png" alt="TPF Labs logo" loading="lazy" decoding="async"> TPF<b>labs</b></a>
-  <div class="frow"><span>TPF Labs — autonomous robotics division of TPFtechnology.</span><span>CALIBER+ is in pre-production. Photos show design concepts.</span></div>
+  <div class="frow"><span>{foot_l}</span><span>{foot_r}</span></div>
   </div>
 </footer>
 <script src="/consent.js" defer></script>
 </body>
 </html>'''
+
+
+def foot(lang: str) -> str:
+    return FOOT_TPL.replace("{foot_l}", UI[lang]["foot_l"]).replace("{foot_r}", UI[lang]["foot_r"])
 
 
 def nav_html(lang: str) -> str:
@@ -222,7 +240,7 @@ def nav_html(lang: str) -> str:
         href = "/" if l == "en" else f"/{l}/"
         cls = ' class="on"' if l == lang else ""
         links += f'<a href="{href}"{cls}>{label}</a>'
-    return (NAV.replace("{lang}/", "" if lang == "en" else f"{lang}/")
+    return (NAV.replace("/{lang}/", "/" if lang == "en" else f"/{lang}/").replace("{bloglabel}", UI[lang]["blog"])
                .replace("{tech}", tech).replace("{pilot}", pilot).replace("{price}", price)
                .replace("{langpath}", langpath).replace("{langlinks}", links))
 
@@ -234,10 +252,12 @@ def article_page(meta: dict, related: list[dict]) -> str:
     canon = f"{BASE}/blog/{lang}/{meta['slug']}/"
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "Article", "headline": meta["title"], "description": meta["description"],
-         "datePublished": meta["date"], "dateModified": meta["date"], "inLanguage": lang,
-         "author": {"@type": "Organization", "name": "TPF Labs"},
-         "publisher": {"@type": "Organization", "name": "TPF Labs", "logo": {"@type": "ImageObject", "url": "https://tpflabs.com/img/logo-icon.png"}},
-         "mainEntityOfPage": canon},
+         "datePublished": meta["date"], "dateModified": meta.get("updated", meta["date"]), "inLanguage": lang,
+         "image": ["https://tpflabs.com/img/og.png", "https://tpflabs.com/img/hero.jpg"],
+         "author": {"@type": "Organization", "@id": "https://tpflabs.com/#org", "name": "TPF Labs", "url": "https://tpflabs.com/"},
+         "publisher": {"@type": "Organization", "@id": "https://tpflabs.com/#org", "name": "TPF Labs", "logo": {"@type": "ImageObject", "url": "https://tpflabs.com/apple-touch-icon.png", "width": 180, "height": 180}},
+         "about": {"@id": "https://tpflabs.com/#caliber"},
+         "mainEntityOfPage": {"@type": "WebPage", "@id": canon}},
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": ui["home"], "item": f"{BASE}/" if lang == "en" else f"{BASE}/{lang}/"},
             {"@type": "ListItem", "position": 2, "name": "Blog", "item": f"{BASE}/blog/{'' if lang == 'en' else lang + '/'}"},
@@ -247,7 +267,11 @@ def article_page(meta: dict, related: list[dict]) -> str:
         ld["@graph"].append({"@type": "FAQPage", "inLanguage": lang, "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
     rel = "".join(f'<li><a href="/blog/{lang}/{r["slug"]}/">{html.escape(r["title"])}</a></li>' for r in related)
-    return f'''{head(lang, meta["title"], meta["description"], canon, json.dumps(ld, ensure_ascii=False), "article")}
+    art_meta = (f'<meta property="article:published_time" content="{meta["date"]}">\n'
+                f'<meta property="article:modified_time" content="{meta.get("updated", meta["date"])}">\n'
+                '<meta property="article:author" content="TPF Labs">')
+    alt = f'<link rel="alternate" hreflang="{lang}" href="{canon}">'
+    return f'''{head(lang, meta["title"], meta["description"], canon, json.dumps(ld, ensure_ascii=False), "article", alternates=alt, extra_meta=art_meta)}
 {nav_html(lang)}
 <main class="wrap article">
   <p class="crumb"><a href="/blog/{'' if lang == 'en' else lang + '/'}">{ui["back"]}</a></p>
@@ -260,7 +284,7 @@ def article_page(meta: dict, related: list[dict]) -> str:
   </div>
   {f'<h2>{ui["related"]}</h2><ul class="rel">{rel}</ul>' if rel else ''}
 </main>
-{FOOT}'''
+{foot(lang)}'''
 
 
 def index_page(lang: str, arts: list[dict], all_en: list[dict]) -> str:
@@ -273,14 +297,15 @@ def index_page(lang: str, arts: list[dict], all_en: list[dict]) -> str:
         f'<p>{html.escape(a["description"])}</p><div class="spec">{a["date"]}</div></div>' for a in items)
     ld = json.dumps({"@context": "https://schema.org", "@type": "Blog", "name": "TPF Labs Blog",
                      "url": canon, "inLanguage": lang}, ensure_ascii=False)
-    return f'''{head(lang, "Blog — TPF Labs · CALIBER+ field robotics", "Articles on blueberry harvesting machines, robotic picking, farm economics and agricultural robotics.", canon, ld)}
+    robots = "index,follow" if arts else "noindex,follow"
+    return f'''{head(lang, ui["idx_title"], ui["idx_desc"], canon, ld, robots=robots)}
 {nav_html(lang)}
 <main class="wrap article">
-  <h1>Blog</h1>
+  <h1>{ui["blog"]}</h1>
   {note}
   <div class="grid g3">{cards}</div>
 </main>
-{FOOT}'''
+{foot(lang)}'''
 
 
 def main() -> None:
@@ -301,7 +326,8 @@ def main() -> None:
         if lang == "en":
             (ROOT / "blog" / "index.html").write_text(idx, encoding="utf-8")
         url = f"{BASE}/blog/{'' if lang == 'en' else lang + '/'}"
-        sitemap_rows.append(f"  <url><loc>{url}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>")
+        if items:
+            sitemap_rows.append(f"  <url><loc>{url}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>")
         print("built", outdir / "index.html")
         for meta in items:
             related = [a for a in items if a["slug"] != meta["slug"]][:3]
