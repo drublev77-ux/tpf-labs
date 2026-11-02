@@ -8,6 +8,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://tpflabs.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://tpflabs.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://tpflabs.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tpflabs.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://tpflabs.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tpflabs.com/"/>
     <image:image><image:loc>https://tpflabs.com/img/hero.jpg</image:loc></image:image>
@@ -28,6 +29,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://tpflabs.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://tpflabs.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://tpflabs.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tpflabs.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://tpflabs.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tpflabs.com/"/>
     <image:image><image:loc>https://tpflabs.com/img/hero.jpg</image:loc></image:image>
@@ -48,6 +50,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://tpflabs.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://tpflabs.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://tpflabs.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tpflabs.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://tpflabs.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tpflabs.com/"/>
     <image:image><image:loc>https://tpflabs.com/img/hero.jpg</image:loc></image:image>
@@ -61,6 +64,27 @@
     </video:video>
   </url>
   <url>
+    <loc>https://tpflabs.com/pl/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tpflabs.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tpflabs.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://tpflabs.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tpflabs.com/pl/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://tpflabs.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tpflabs.com/"/>
+    <image:image><image:loc>https://tpflabs.com/img/hero.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://tpflabs.com/img/film-poster.jpg</video:thumbnail_loc>
+      <video:title>CALIBER+ — jak działa autonomiczny kombajn do borówki</video:title>
+      <video:description>70 sekund o maszynie: cztery ramiona SCARA, wizja AI oceniająca dojrzałość, chłodzony zbiornik 60 l i 12–14 godzin autonomicznej pracy.</video:description>
+      <video:content_loc>https://tpflabs.com/video/caliber-plus-film-en-16x9.mp4</video:content_loc>
+      <video:duration>71</video:duration>
+      <video:publication_date>2026-11-02T12:00:00+00:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
     <loc>https://tpflabs.com/zh/</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -68,6 +92,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://tpflabs.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://tpflabs.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://tpflabs.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://tpflabs.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://tpflabs.com/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tpflabs.com/"/>
     <image:image><image:loc>https://tpflabs.com/img/hero.jpg</image:loc></image:image>

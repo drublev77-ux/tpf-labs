@@ -23,11 +23,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "content" / "blog"
 BASE = "https://tpflabs.com"
-OG = {"en": "en_US", "ru": "ru_RU", "nl": "nl_NL", "zh": "zh_CN"}
+LANGS = [("en", "EN"), ("ru", "RU"), ("nl", "NL"), ("pl", "PL"), ("zh", "中文")]
+OG = {"en": "en_US", "ru": "ru_RU", "nl": "nl_NL", "pl": "pl_PL", "zh": "zh_CN"}
 UI = {
     "en": dict(idx_title="Blog: blueberry harvesting machines & farm robotics | TPF Labs", idx_desc="Practical articles on blueberry harvesting machines, picking robots, cost per kilogram and labour on fresh-market berry farms.", foot_l="TPF Labs — autonomous robotics division of TPFtechnology.", foot_r="CALIBER+ is in pre-production. Photos show design concepts.", blog="Blog", home="Home", back="← All articles", related="More articles", cta1="Request a pilot", cta2="Investor deck", lang_note=""),
     "nl": dict(idx_title="Blog: blauwe bessen machinaal oogsten & oogstrobots | TPF Labs", idx_desc="Artikelen over oogstmachines en plukrobots voor blauwe bessen, kosten per kilo en arbeid op bessenbedrijven.", foot_l="TPF Labs — divisie autonome robotica van TPFtechnology.", foot_r="CALIBER+ is in preproductie. Foto's tonen ontwerpconcepten.", blog="Blog", home="Home", back="← Alle artikelen", related="Meer artikelen", cta1="Pilot aanvragen", cta2="Investeerdersdeck", lang_note="Dit artikel is in het Engels beschikbaar."),
     "ru": dict(idx_title="Блог: машины и роботы для сбора голубики | TPF Labs", idx_desc="Статьи о комбайнах и роботах для сбора голубики, стоимости уборки за килограмм и нехватке сборщиков в ягодных хозяйствах.", foot_l="TPF Labs — дивизион автономной робототехники TPFtechnology.", foot_r="CALIBER+ находится в стадии подготовки к производству. Изображения — дизайнерские концепты.", blog="Блог", home="Главная", back="← Все статьи", related="Другие статьи", cta1="Запросить пилот", cta2="Инвесторская дека", lang_note="Эта статья доступна на английском."),
+    "pl": dict(idx_title="Blog: kombajny i roboty do zbioru borówki | TPF Labs", idx_desc="Artykuły o kombajnach i robotach do zbioru borówki amerykańskiej, koszcie zbioru za kilogram i braku rąk do pracy na plantacjach.", foot_l="TPF Labs — dział autonomicznej robotyki TPFtechnology.", foot_r="CALIBER+ jest na etapie przygotowania do produkcji. Zdjęcia przedstawiają koncepcje projektowe.", blog="Blog", home="Strona główna", back="← Wszystkie artykuły", related="Więcej artykułów", cta1="Zgłoś się do pilotażu", cta2="Prezentacja dla inwestorów", lang_note="Ten artykuł jest dostępny w języku angielskim."),
     "zh": dict(idx_title="博客：蓝莓采摘机与农业机器人 | TPF Labs", idx_desc="关于蓝莓采摘机、采摘机器人、每公斤采收成本和浆果农场劳动力的文章。", foot_l="TPF Labs — TPFtechnology 旗下自主机器人部门。", foot_r="CALIBER+ 处于量产准备阶段。图片为设计概念图。", blog="博客", home="首页", back="← 所有文章", related="更多文章", cta1="申请试点", cta2="投资人资料", lang_note="本文暂为英文版本。"),
 }
 MAIL = "drublev77@gmail.com"
@@ -214,6 +216,7 @@ NAVLABELS = {
     "en": ("Technology", "Pilot", "Pricing"),
     "ru": ("Технологии", "Пилот", "Цены"),
     "nl": ("Technologie", "Pilot", "Prijzen"),
+    "pl": ("Technologia", "Pilotaż", "Ceny"),
     "zh": ("技术", "试点", "价格"),
 }
 
@@ -236,7 +239,7 @@ def nav_html(lang: str) -> str:
     tech, pilot, price = NAVLABELS[lang]
     langpath = "/" if lang == "en" else f"/{lang}/"
     links = ""
-    for l, label in [("en", "EN"), ("ru", "RU"), ("nl", "NL"), ("zh", "中文")]:
+    for l, label in LANGS:
         href = "/" if l == "en" else f"/{l}/"
         cls = ' class="on"' if l == lang else ""
         links += f'<a href="{href}"{cls}>{label}</a>'
@@ -317,7 +320,7 @@ def main() -> None:
     all_en = arts.get("en", [])
     sitemap_rows = []
     (ROOT / "blog").mkdir(exist_ok=True)
-    for lang in ["en", "ru", "nl", "zh"]:
+    for lang in [l for l, _ in LANGS]:
         items = arts.get(lang, [])
         outdir = ROOT / "blog" / lang
         outdir.mkdir(parents=True, exist_ok=True)

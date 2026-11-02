@@ -7,6 +7,7 @@
     ru: { text: 'Мы хотим подключить Google Analytics, чтобы понимать, как посетители пользуются сайтом. Он ставит cookie — только если вы согласны.', ok: 'Принять', no: 'Отклонить' },
     en: { text: 'We would like to use Google Analytics to understand how visitors use the site. It sets cookies — only if you agree.', ok: 'Accept', no: 'Reject' },
     nl: { text: 'Wij willen Google Analytics gebruiken om te begrijpen hoe bezoekers de site gebruiken. Het plaatst cookies — alleen als u akkoord gaat.', ok: 'Accepteren', no: 'Weigeren' },
+    pl: { text: 'Chcielibyśmy korzystać z Google Analytics, aby wiedzieć, jak odwiedzający korzystają ze strony. Narzędzie zapisuje pliki cookie — tylko za Państwa zgodą.', ok: 'Akceptuję', no: 'Odrzucam' },
     zh: { text: '我们希望使用 Google Analytics 来了解访客如何使用本网站。它会设置 Cookie——仅在您同意后。', ok: '接受', no: '拒绝' }
   };
   function lang() { var l = (document.documentElement.lang || 'en').slice(0, 2); return T[l] ? l : 'en'; }

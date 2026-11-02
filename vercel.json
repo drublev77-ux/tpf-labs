@@ -3,7 +3,7 @@
   "trailingSlash": true,
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/:lang(ru|nl|zh)/index.html", "destination": "/:lang/", "permanent": true },
+    { "source": "/:lang(ru|nl|pl|zh)/index.html", "destination": "/:lang/", "permanent": true },
     { "source": "/en/", "destination": "/", "permanent": true },
     { "source": "/blog/en/", "destination": "/blog/", "permanent": true },
     { "source": "/blog/blueberry-harvesting-machine-types-costs/", "destination": "/blog/en/blueberry-harvesting-machine-types-costs/", "permanent": true },

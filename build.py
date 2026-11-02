@@ -2,6 +2,10 @@
 # Builds EN/RU/NL/ZH pages for the TPF Labs site
 import os, json
 
+# Site languages in switcher order: (code, label). EN is served at /, others at /<code>/
+LANGS = [("en","EN"),("ru","RU"),("nl","NL"),("pl","PL"),("zh","中文")]
+CODES = [l for l, _ in LANGS]
+
 C = {
 "en": {
  "title": "CALIBER+ Blueberry Harvesting Robot | TPF Labs",
@@ -114,6 +118,43 @@ C = {
  "foot_l": "TPF Labs — divisie autonome robotica van TPFtechnology.",
  "foot_r": "CALIBER+ is in preproductie. Foto's tonen ontwerpconcepten.",
 },
+"pl": {
+ "title": "Robot do zbioru borówki CALIBER+ — cena i pilotaż | TPF Labs",
+ "desc": "Autonomiczny kombajn do zbioru borówki na rynek świeży: 17 kg/h, 0% strat, ≈1,9 €/kg. Dzierżawa od 26 000 € za sezon lub zakup. Pilotaże 2027.",
+ "nav": {"tech":"Technologia","pilot":"Pilotaż","price":"Ceny","contact":"Kontakt"},
+ "hero_tag": "TPF Labs · Autonomiczna robotyka polowa",
+ "h1": "Poznaj <b>CALIBER+</b> — zbiera jak ludzkie ręce, pracuje jak maszyna",
+ "lead": "Autonomiczny robot do selektywnego zbioru borówki amerykańskiej na rynek świeży. Dwa rzędy jednocześnie, owoc po owocu, bez strat i z autonomią 12–14 godzin dziennie.",
+ "cta1": "Zgłoś się do pilotażu", "cta2": "Technologia",
+ "stats": [("17 kg/h","wydajność jednej maszyny"),(">97%","trafność oceny dojrzałości"),("0%","strat (kombajny ok. 5%)"),("12–14 h","autonomii dziennie")],
+ "tech_h": "Stworzony dla owoców na rynek świeży",
+ "tech_s": "Cztery ramiona SCARA, wizja AI oceniająca dojrzałość i miękki chwytak hybrydowy traktują każdy owoc jak zbierany ręcznie.",
+ "cards": [
+  ["🦾","Cztery ramiona SCARA","Po dwa manipulatory z każdej strony na pionowych wózkach zbierają owoce z dwóch rzędów jednocześnie.","zasięg 800 mm · skok wózka 1500 mm · cykl 0,5 s"],
+  ["🧠","Wizja AI oceniająca dojrzałość","Rozpoznawanie oparte na głębokim uczeniu znajduje każdy dojrzały owoc i pomija zielone — jakość na rynek świeży przy każdym przejeździe.",">97% trafności · kamery głębi + LiDAR + RTK-GPS"],
+  ["🫐","Delikatny chwytak hybrydowy","Silikonowe palce ze wspomaganiem podciśnieniowym trzymają owoc z siłą poniżej 2 N. Bez odgnieceń i osypywania.","miękki chwyt ≤2 N · chłodzony zbiornik 60 l na pokładzie"],
+  ["☀️","Praca przez cały dzień","Akumulatory LiFePO4 i dach solarny 600 W zapewniają pracę przez całą zmianę. Szybka wymiana baterii.","48 V LiFePO4 · podwozie gąsienicowe na miękki grunt · 450 kg"],
+ ],
+ "pilot_h": "Program pilotażowy: 30 / 60 / 90 dni",
+ "pilot_s": "Żadnych zobowiązań finansowych do czasu umowy sezonowej. Udowodnimy liczby na Państwa plantacji, a decyzja należy do Państwa.",
+ "steps": [
+  ["Dni 0–30","Przegląd i mapowanie rzędów","Skanujemy rzędy, tworzymy mapę RTK kwatery i kalibrujemy system wizyjny pod Państwa odmiany."],
+  ["Dni 30–60","Autonomiczny zbiór na 1 ha","CALIBER+ pracuje na kwaterze; mierzymy dojrzałość, kaliber, straty i koszt za kilogram."],
+  ["Dni 60–90","Raport i umowa sezonowa","Otrzymują Państwo pełny raport z pilotażu oraz opcję zablokowania stawki RaaS lub zakupu na sezon 2027."],
+ ],
+ "price_h": "Prosty model współpracy",
+ "price_s": "Start bez nakładów inwestycyjnych — dzierżawa na sezon lub zakup.",
+ "plans": [
+  ["Robot jako usługa (RaaS)","26 000 € / sezon","hot",["Serwis, oprogramowanie i aktualizacje w cenie","≈1,9 €/kg wobec ≈2,4 €/kg przy zbiorze ręcznym","Szybka wymiana baterii w stacji bazowej","Wolne terminy na sezon 2027"]],
+  ["Zakup","na zapytanie",["Prototyp i seria pilotażowa: 2027–2028","Certyfikacja CE zgodnie z rozporządzeniem UE 2023/1230 w sprawie maszyn","Produkcja hybrydowa: montaż w UE, zoptymalizowana mechanika","Oferta handlowa na zapytanie"]],
+ ],
+ "contact_h": "Zaproś CALIBER+ na swoją plantację",
+ "contact_s": "Terminy pilotaży na sezon 2027 są otwarte. Prosimy opisać gospodarstwo: hektary, odmiany, termin zbioru.",
+ "mail": "drublev77@gmail.com",
+ "site": "tpf-technology.com — firma macierzysta",
+ "foot_l": "TPF Labs — dział autonomicznej robotyki TPFtechnology.",
+ "foot_r": "CALIBER+ jest na etapie przygotowania do produkcji. Zdjęcia przedstawiają koncepcje projektowe.",
+},
 "zh": {
  "title": "CALIBER+ 蓝莓采摘机器人 — 价格与试点 | TPF Labs",
  "desc": "面向鲜果市场的自主蓝莓采摘机：每小时 17 公斤，损耗 0%，约 1.9 欧元/公斤。按季租赁 26,000 欧元起或购买。2027 试点名额开放。",
@@ -194,6 +235,19 @@ INV = {
   ["🚀","Roadmap","Grijper-prototype: gebouwd en getest. Veldprototype: 2027. Commerciële lancering: 2028.","prototype → pilotvloot → lancering"],
  ],
 },
+"pl": {
+ "nav": "Inwestorzy",
+ "cta2": "Pobierz prezentację (PDF)",
+ "h": "Inwestycja w przyszłość zbioru owoców na rynek świeży",
+ "s": "CALIBER+ otwiera rundę Seed (1,0–1,2 mln €), aby przenieść sprawdzony chwytak i system wizyjny do prototypu polowego i komercyjnego startu w 2028 roku. Zapraszamy partnerów przemysłowych i handlowych.",
+ "cta": "Poproś o prezentację dla inwestorów",
+ "cards": [
+  ["🧩","Postępy","Podpisana umowa NDA i pakiet DFM w ocenie u producenta kontraktowego WayKen (Chiny); rozmowy o niezależnej walidacji z węzłami AgriFoodTEF ILVO i INRIA (UE); pierwsze zainteresowanie ze strony największej polskiej grupy zakupowej borówki.","runda Seed · firma w UE · 2026–2027"],
+  ["📈","Okno rynkowe","Zbiór ręczny kosztuje ≈2,4 €/kg przy chronicznym niedoborze rąk do pracy. Przy ≈1,9 €/kg w modelu RaaS jeden robot CALIBER+ zwraca się w ciągu sezonu.","borówka na rynek świeży · najpierw UE"],
+  ["🤝","Zostań partnerem","Gospodarstwa pilotażowe na sezon 2027, partnerzy handlowi i serwisowi RaaS, dostawcy komponentów do montażu w UE.","plantacje · integratorzy · dostawcy"],
+  ["🚀","Mapa drogowa","Prototyp chwytaka: zbudowany i przetestowany w laboratorium. Prototyp polowy: 2027. Start komercyjny: 2028.","prototyp → flota pilotażowa → start"],
+ ],
+},
 "zh": {
  "nav": "投资人",
  "cta2": "下载资料 (PDF)",
@@ -229,6 +283,12 @@ FAQ = {
  ("Beschadigt de machine de bessen?","Nee: de siliconen-vacuümgrijper houdt elke bes vast met minder dan 2 N kracht. CALIBER+ heeft 0% oogstverlies tegenover circa 5% bij oogstmachines."),
  ("Wanneer kan een teler een robot krijgen?","Pilotprogramma's lopen in seizoen 2027 (30/60/90 dagen), commerciële lancering in 2028. Pilotplekken voor 2027 zijn nu open."),
 ],
+"pl": [
+ ("Ile kosztuje CALIBER+?","Robot jako usługa (RaaS) od 26 000 € za sezon (≈1,9 €/kg zebranych owoców). Zakup: Lite (4 ramiona) od 55 000 €, Flagship (6 ramion) od 80 000 €."),
+ ("Jak szybko robot zbiera borówki?","Do 17 kg/h na maszynę przy 12–14 godzinach autonomii dziennie. Zbiera z dwóch rzędów jednocześnie, owoc po owocu."),
+ ("Czy maszyna uszkadza owoce?","Nie: silikonowo-podciśnieniowy chwytak trzyma każdy owoc z siłą poniżej 2 N. CALIBER+ ma 0% strat wobec ok. 5% przy kombajnach okrakowych."),
+ ("Kiedy gospodarstwo może otrzymać robota?","Programy pilotażowe ruszają w sezonie 2027 (30/60/90 dni), start komercyjny w 2028 roku. Terminy pilotaży na 2027 są już otwarte."),
+],
 "zh": [
  ("CALIBER+ 的价格是多少？","机器人即服务（RaaS）：每产季 26,000 欧元起（约 1.9 欧元/公斤）。购买：Lite（4 臂）55,000 欧元起，Flagship（6 臂）80,000 欧元起。"),
  ("机器人采摘速度有多快？","单台每小时可达 17 公斤，每天自主作业 12–14 小时，可同时采摘两行，逐颗采摘。"),
@@ -262,11 +322,7 @@ TPL = """<!DOCTYPE html>
 <meta name="twitter:image" content="https://tpflabs.com/img/og.png">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://tpflabs.com{suffix}">
-<link rel="alternate" hreflang="en" href="https://tpflabs.com/">
-<link rel="alternate" hreflang="ru" href="https://tpflabs.com/ru/">
-<link rel="alternate" hreflang="nl" href="https://tpflabs.com/nl/">
-<link rel="alternate" hreflang="zh" href="https://tpflabs.com/zh/">
-<link rel="alternate" hreflang="x-default" href="https://tpflabs.com/">
+{hreflang}
 <meta name="google-site-verification" content="Zr5OkmQBIum5PVhi6DNK-WUCK-wY8WJlHhbv-nSxepE">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/img/favicon-64.png" type="image/png" sizes="64x64">
@@ -381,10 +437,11 @@ FILM = {
  "en": {"over":"CALIBER+ film","h":"See how CALIBER+ works","s":"70 seconds on the machine: four SCARA arms, AI ripeness vision, a chilled 60 L hopper and 12-14 hours of autonomous work."},
  "ru": {"over":"\u0424\u0438\u043b\u044c\u043c \u043e CALIBER+","h":"\u041a\u0430\u043a \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 CALIBER+","s":"70 \u0441\u0435\u043a\u0443\u043d\u0434 \u043e \u043c\u0430\u0448\u0438\u043d\u0435: \u0447\u0435\u0442\u044b\u0440\u0435 SCARA-\u043c\u0430\u043d\u0438\u043f\u0443\u043b\u044f\u0442\u043e\u0440\u0430, \u0418\u0418-\u0437\u0440\u0435\u043d\u0438\u0435 \u0441\u043f\u0435\u043b\u043e\u0441\u0442\u0438, \u043e\u0445\u043b\u0430\u0436\u0434\u0430\u0435\u043c\u044b\u0439 \u0431\u0443\u043d\u043a\u0435\u0440 60 \u043b \u0438 12-14 \u0447\u0430\u0441\u043e\u0432 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u043e\u0439 \u0440\u0430\u0431\u043e\u0442\u044b."},
  "nl": {"over":"CALIBER+ film","h":"Zo werkt CALIBER+","s":"70 seconden over de machine: vier SCARA-armen, AI-rijpheidsvisie, een gekoelde bunker van 60 liter en 12-14 uur autonoom werk."},
+ "pl": {"over":"Film o CALIBER+","h":"Zobacz, jak działa CALIBER+","s":"70 sekund o maszynie: cztery ramiona SCARA, wizja AI oceniająca dojrzałość, chłodzony zbiornik 60 l i 12–14 godzin autonomicznej pracy."},
  "zh": {"over":"CALIBER+ \u5f71\u7247","h":"\u4e86\u89e3 CALIBER+ \u5982\u4f55\u5de5\u4f5c","s":"70 \u79d2\u770b\u61c2\u8fd9\u53f0\u673a\u5668\uff1a\u56db\u6761 SCARA \u673a\u68b0\u81c2\u3001AI \u6210\u719f\u5ea6\u8bc6\u522b\u300160 \u5347\u51b7\u85cf\u679c\u7bb1\uff0c12-14 \u5c0f\u65f6\u81ea\u4e3b\u4f5c\u4e1a\u3002"},
 }
 
-OG_LOC = {"en":"en_US","ru":"ru_RU","nl":"nl_NL","zh":"zh_CN"}
+OG_LOC = {"en":"en_US","ru":"ru_RU","nl":"nl_NL","pl":"pl_PL","zh":"zh_CN"}
 
 # Localized SEO strings: image alt texts, captions, nav label, video metadata
 SEO = {
@@ -400,6 +457,10 @@ SEO = {
         "hero_alt":"CALIBER+ autonome oogstrobot voor blauwe bessen oogst twee rijen — conceptrender",
         "hero_cap":"conceptrender · 1:2 rij-architectuur", "blog":"Blog",
         "video_name":"CALIBER+ autonome blauwe-bessenoogstrobot — zo werkt het"},
+ "pl": {"og_alt":"CALIBER+ — autonomiczny robot do zbioru borówki od TPF Labs",
+        "hero_alt":"Autonomiczny robot do zbioru borówki CALIBER+ zbiera z dwóch rzędów — wizualizacja koncepcyjna",
+        "hero_cap":"wizualizacja koncepcyjna · architektura 1:2 rzędy", "blog":"Blog",
+        "video_name":"CALIBER+ — jak działa autonomiczny kombajn do borówki"},
  "zh": {"og_alt":"TPF Labs 的 CALIBER+ 自主蓝莓采摘机器人",
         "hero_alt":"CALIBER+ 自主蓝莓采摘机器人同时采摘两行——概念渲染图",
         "hero_cap":"概念渲染图 · 1:2 行架构", "blog":"博客",
@@ -408,10 +469,13 @@ SEO = {
 VIDEO_UPLOAD = "2026-11-02"
 
 
+HREFLANG = "\n".join(f'<link rel="alternate" hreflang="{l}" href="https://tpflabs.com{"/" if l=="en" else "/"+l+"/"}">' for l in CODES) + '\n<link rel="alternate" hreflang="x-default" href="https://tpflabs.com/">'
+
+
 def page(c, lang):
     suffix = "/" if lang=="en" else "/"+lang+"/"
     langlinks = ""
-    for l,label in [("en","EN"),("ru","RU"),("nl","NL"),("zh","中文")]:
+    for l,label in LANGS:
         href = "/" if l=="en" else "/"+l+"/"
         cls = ' class="on"' if l==lang else ""
         langlinks += f'<a href="{href}"{cls}>{label}</a>'
@@ -422,9 +486,9 @@ def page(c, lang):
     faq_html = "".join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q,a in faq_items)
     import json as _json
     _url = "https://tpflabs.com" + suffix
-    _org = {"@type":"Organization","@id":"https://tpflabs.com/#org","name":"TPF Labs","alternateName":["TPFlabs","TPF Labs CALIBER+"],"url":"https://tpflabs.com/","logo":{"@type":"ImageObject","url":"https://tpflabs.com/apple-touch-icon.png","width":180,"height":180},"image":"https://tpflabs.com/img/og.png","email":"drublev77@gmail.com","description":"Autonomous field robotics for fresh-market berry harvesting.","parentOrganization":{"@type":"Organization","name":"TPFtechnology","url":"https://tpf-technology.com/"},"areaServed":{"@type":"Place","name":"European Union"},"knowsAbout":["blueberry harvesting","agricultural robotics","selective fruit picking","robot as a service"],"knowsLanguage":["en","ru","nl","zh"]}
+    _org = {"@type":"Organization","@id":"https://tpflabs.com/#org","name":"TPF Labs","alternateName":["TPFlabs","TPF Labs CALIBER+"],"url":"https://tpflabs.com/","logo":{"@type":"ImageObject","url":"https://tpflabs.com/apple-touch-icon.png","width":180,"height":180},"image":"https://tpflabs.com/img/og.png","email":"drublev77@gmail.com","description":"Autonomous field robotics for fresh-market berry harvesting.","parentOrganization":{"@type":"Organization","name":"TPFtechnology","url":"https://tpf-technology.com/"},"areaServed":{"@type":"Place","name":"European Union"},"knowsAbout":["blueberry harvesting","agricultural robotics","selective fruit picking","robot as a service"],"knowsLanguage":CODES}
     _prod = {"@type":"Product","@id":"https://tpflabs.com/#caliber","name":"CALIBER+","description":"Autonomous selective harvester for fresh-market blueberries: 17 kg/h, >97% ripeness accuracy, 0% crop loss, 12-14 h autonomy.","image":["https://tpflabs.com/img/hero.jpg","https://tpflabs.com/img/og.png","https://tpflabs.com/img/film-poster.jpg"],"brand":{"@type":"Brand","name":"TPF Labs"},"manufacturer":{"@id":"https://tpflabs.com/#org"},"category":"Agricultural robot","subjectOf":{"@id":_url+"#film"},"offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"55000","highPrice":"80000","offerCount":2,"availability":"https://schema.org/PreOrder","url":_url+"#price","seller":{"@id":"https://tpflabs.com/#org"}},"additionalProperty":[{"@type":"PropertyValue","name":"Picking rate","value":"17 kg/h"},{"@type":"PropertyValue","name":"Ripeness accuracy","value":">97%"},{"@type":"PropertyValue","name":"Crop loss","value":"0%"},{"@type":"PropertyValue","name":"Daily autonomy","value":"12-14 h"},{"@type":"PropertyValue","name":"Weight","value":"450 kg"}]}
-    _site = {"@type":"WebSite","@id":"https://tpflabs.com/#site","url":"https://tpflabs.com/","name":"TPF Labs","alternateName":"TPF Labs — CALIBER+","publisher":{"@id":"https://tpflabs.com/#org"},"inLanguage":["en","ru","nl","zh"]}
+    _site = {"@type":"WebSite","@id":"https://tpflabs.com/#site","url":"https://tpflabs.com/","name":"TPF Labs","alternateName":"TPF Labs — CALIBER+","publisher":{"@id":"https://tpflabs.com/#org"},"inLanguage":CODES}
     _page = {"@type":"WebPage","@id":_url+"#page","url":_url,"name":c["title"],"description":c["desc"],"inLanguage":lang,"isPartOf":{"@id":"https://tpflabs.com/#site"},"about":{"@id":"https://tpflabs.com/#caliber"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://tpflabs.com/img/hero.jpg","width":700,"height":875}}
     _video = {"@type":"VideoObject","@id":_url+"#film","name":SEO[lang]["video_name"],"description":FILM[lang]["s"],"thumbnailUrl":["https://tpflabs.com/img/film-poster.jpg"],"uploadDate":VIDEO_UPLOAD+"T12:00:00+00:00","duration":"PT1M11S","contentUrl":"https://tpflabs.com/video/caliber-plus-film-en-16x9.mp4","embedUrl":_url+"#film","inLanguage":"en","publisher":{"@id":"https://tpflabs.com/#org"}}
     _faq = {"@type":"FAQPage","@id":_url+"#faq","inLanguage":lang,"mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq_items]}
@@ -437,7 +501,7 @@ def page(c, lang):
         name, pr, feats = plan[0], plan[1], plan[3] if len(plan)>3 and plan[2]=="hot" else plan[2]
         hot = ' hot' if (len(plan)>3 and plan[2]=="hot") else ''
         ul = "".join(f"<li>{f}</li>" for f in feats)
-        plans_html += f'<div class="plan{hot}"><div class="ph">{name}</div><div class="pnum">{pr}</div><ul>{ul}</ul><a class="btn sec" href="mailto:{c["mail"]}?subject=CALIBER%2B">{ ("Request" if lang=="en" else ("Запрос" if lang=="ru" else ("Aanvraag" if lang=="nl" else "咨询"))) }</a></div>'
+        plans_html += f'<div class="plan{hot}"><div class="ph">{name}</div><div class="pnum">{pr}</div><ul>{ul}</ul><a class="btn sec" href="mailto:{c["mail"]}?subject=CALIBER%2B">{ {"en":"Request","ru":"Запрос","nl":"Aanvraag","pl":"Zapytaj","zh":"咨询"}[lang] }</a></div>'
     html = TPL.format(
         lang=lang, brand="TPF", suffix=suffix, title=c["title"], desc=c["desc"],
         over_tech=c["nav"]["tech"], over_pilot=c["nav"]["pilot"], over_price=c["nav"]["price"], over_contact=c["nav"]["contact"],
@@ -450,16 +514,16 @@ def page(c, lang):
         price_h=c["price_h"], price_s=c["price_s"], plans_html=plans_html,
         contact_h=c["contact_h"], contact_s=c["contact_s"], site=c["site"],
         nav_inv=inv["nav"], over_inv=inv["nav"], inv_h=inv["h"], inv_s=inv["s"], inv_cta=inv["cta"], inv_cta2=inv["cta2"], inv_cards=inv_cards,
-        faq_h={"en":"Questions from farms","ru":"Вопросы хозяйств","nl":"Vragen van telers","zh":"农场常见问题"}[lang], faq_html=faq_html, jsonld=jsonld, blog_url=("/blog/" if lang=="en" else f"/blog/{lang}/"),
+        faq_h={"en":"Questions from farms","ru":"Вопросы хозяйств","nl":"Vragen van telers","pl":"Pytania od plantatorów","zh":"农场常见问题"}[lang], faq_html=faq_html, jsonld=jsonld, blog_url=("/blog/" if lang=="en" else f"/blog/{lang}/"),
         film_over=FILM[lang]["over"], film_h=FILM[lang]["h"], film_s=FILM[lang]["s"],
         foot_l=c["foot_l"], foot_r=c["foot_r"],
         og_alt=SEO[lang]["og_alt"], hero_alt=SEO[lang]["hero_alt"], hero_cap=SEO[lang]["hero_cap"],
-        nav_blog=SEO[lang]["blog"],
+        nav_blog=SEO[lang]["blog"], hreflang=HREFLANG,
         og_locale_alt="\n".join(f'<meta property="og:locale:alternate" content="{v}">' for k,v in OG_LOC.items() if k!=lang))
     return html
 
 os.makedirs("out", exist_ok=True)
-for lang in ["en","ru","nl","zh"]:
+for lang in CODES:
     p = "out/index.html" if lang=="en" else f"out/{lang}/index.html"
     os.makedirs(os.path.dirname(p), exist_ok=True)
     with open(p,"w",encoding="utf-8") as f:
@@ -469,10 +533,10 @@ for lang in ["en","ru","nl","zh"]:
 # Main sitemap: language versions with hreflang alternates, hero image and the film
 import datetime as _dt
 _today = _dt.date.today().isoformat()
-_alts = "".join(f'\n    <xhtml:link rel="alternate" hreflang="{l}" href="https://tpflabs.com{"/" if l=="en" else "/"+l+"/"}"/>' for l in ["en","ru","nl","zh"])
+_alts = "".join(f'\n    <xhtml:link rel="alternate" hreflang="{l}" href="https://tpflabs.com{"/" if l=="en" else "/"+l+"/"}"/>' for l in CODES)
 _alts += '\n    <xhtml:link rel="alternate" hreflang="x-default" href="https://tpflabs.com/"/>'
 _rows = []
-for lang in ["en","ru","nl","zh"]:
+for lang in CODES:
     loc = "https://tpflabs.com" + ("/" if lang=="en" else f"/{lang}/")
     _rows.append(f'''  <url>
     <loc>{loc}</loc>
