@@ -18,4 +18,4 @@ python3 build.py
 ## Deploy
 Push to `main` → Vercel picks it up (project: tpflabs.com).
 
-Contact: drublev77@gmail.com · https://tpf-technology.com
+Contact: orders@tpf-technology.com · https://tpf-technology.com

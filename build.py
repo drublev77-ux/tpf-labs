@@ -6,6 +6,9 @@ import os, json
 LANGS = [("en","EN"),("ru","RU"),("nl","NL"),("pl","PL"),("zh","中文")]
 CODES = [l for l, _ in LANGS]
 
+# Contact address for pilot requests, used on every page and in structured data
+MAIL = "orders@tpf-technology.com"  # switch to pilot@tpflabs.com once its mail forwarding works
+
 C = {
 "en": {
  "title": "CALIBER+ Blueberry Harvesting Robot | TPF Labs",
@@ -35,11 +38,11 @@ C = {
  "price_s": "Start without capital expenditure — rent for the season or buy.",
  "plans": [
   ["Robot-as-a-Service","€26,000 / season","hot",["Service, software and updates included","≈€1.9/kg vs ≈€2.4/kg manual picking","Hot-swap battery support at the base station","Season 2027 slots"]],
-  ["Purchase","on request",["Prototype and pilot series timeline 2027–2028","CE certification under EU Machinery Regulation 2023/1230","Hybrid manufacturing: EU assembly, optimized mechanics","Commercial proposal on request"]],
+  ["Purchase","from €80,000",["Prototype and pilot series timeline 2027–2028","CE certification under EU Machinery Regulation 2023/1230","Hybrid manufacturing: EU assembly, optimized mechanics","Commercial proposal on request"]],
  ],
  "contact_h": "Bring CALIBER+ to your field",
  "contact_s": "Pilot slots for season 2027 are open. Tell us about your farm — hectares, varieties, harvest window.",
- "mail": "drublev77@gmail.com",
+ "mail": MAIL,
  "site": "tpf-technology.com — parent company",
  "foot_l": "TPF Labs — autonomous robotics division of TPFtechnology.",
  "foot_r": "CALIBER+ is in pre-production. Photos show design concepts.",
@@ -72,11 +75,11 @@ C = {
  "price_s": "Начните без капитальных вложений — аренда на сезон или покупка.",
  "plans": [
   ["Робот-как-Сервис (RaaS)","26 000 € / сезон","hot",["Сервис, ПО и обновления включены","≈1,9 €/кг против ≈2,4 €/кг ручного сбора","Горячая замена батарей на базовой станции","Слоты на сезон 2027"]],
-  ["Покупка","по запросу",["Прототип и пилотная серия: 2027–2028","Сертификация CE по Регламенту ЕС 2023/1230","Гибридное производство: сборка в ЕС, оптимизированная механика","Коммерческое предложение по запросу"]],
+  ["Покупка","от 80 000 €",["Прототип и пилотная серия: 2027–2028","Сертификация CE по Регламенту ЕС 2023/1230","Гибридное производство: сборка в ЕС, оптимизированная механика","Коммерческое предложение по запросу"]],
  ],
  "contact_h": "Пригласите CALIBER+ на своё поле",
  "contact_s": "Слоты пилота на сезон 2027 открыты. Расскажите о хозяйстве: гектары, сорта, сроки уборки.",
- "mail": "drublev77@gmail.com",
+ "mail": MAIL,
  "site": "tpf-technology.com — материнская компания",
  "foot_l": "TPF Labs — дивизион автономной робототехники TPFtechnology.",
  "foot_r": "CALIBER+ находится в стадии подготовки к производству. Изображения — дизайнерские концепты.",
@@ -109,11 +112,11 @@ C = {
  "price_s": "Begin zonder investering — huur per seizoen of koop.",
  "plans": [
   ["Robot-as-a-Service","€26.000 / seizoen","hot",["Service, software en updates inbegrepen","≈€1,9/kg vs ≈€2,4/kg handmatig plukken","Hot-swap batterijen op het basisstation","Seizoen 2027 slots"]],
-  ["Aankoop","op aanvraag",["Prototype- en pilotserie-tijdlijn 2027–2028","CE-certificering volgens EU Machinery Regulation 2023/1230","Hybride productie: EU-assemblage, geoptimaliseerde mechanica","Commercieel voorstel op aanvraag"]],
+  ["Aankoop","vanaf €80.000",["Prototype- en pilotserie-tijdlijn 2027–2028","CE-certificering volgens EU Machinery Regulation 2023/1230","Hybride productie: EU-assemblage, geoptimaliseerde mechanica","Commercieel voorstel op aanvraag"]],
  ],
  "contact_h": "Breng CALIBER+ naar uw veld",
  "contact_s": "Pilot-slots voor seizoen 2027 zijn open. Vertel over uw bedrijf: hectaren, rassen, oogstperiode.",
- "mail": "drublev77@gmail.com",
+ "mail": MAIL,
  "site": "tpf-technology.com — moederbedrijf",
  "foot_l": "TPF Labs — divisie autonome robotica van TPFtechnology.",
  "foot_r": "CALIBER+ is in preproductie. Foto's tonen ontwerpconcepten.",
@@ -146,11 +149,11 @@ C = {
  "price_s": "Start bez nakładów inwestycyjnych — dzierżawa na sezon lub zakup.",
  "plans": [
   ["Robot jako usługa (RaaS)","26 000 € / sezon","hot",["Serwis, oprogramowanie i aktualizacje w cenie","≈1,9 €/kg wobec ≈2,4 €/kg przy zbiorze ręcznym","Szybka wymiana baterii w stacji bazowej","Wolne terminy na sezon 2027"]],
-  ["Zakup","na zapytanie",["Prototyp i seria pilotażowa: 2027–2028","Certyfikacja CE zgodnie z rozporządzeniem UE 2023/1230 w sprawie maszyn","Produkcja hybrydowa: montaż w UE, zoptymalizowana mechanika","Oferta handlowa na zapytanie"]],
+  ["Zakup","od 80 000 €",["Prototyp i seria pilotażowa: 2027–2028","Certyfikacja CE zgodnie z rozporządzeniem UE 2023/1230 w sprawie maszyn","Produkcja hybrydowa: montaż w UE, zoptymalizowana mechanika","Oferta handlowa na zapytanie"]],
  ],
  "contact_h": "Zaproś CALIBER+ na swoją plantację",
  "contact_s": "Terminy pilotaży na sezon 2027 są otwarte. Prosimy opisać gospodarstwo: hektary, odmiany, termin zbioru.",
- "mail": "drublev77@gmail.com",
+ "mail": MAIL,
  "site": "tpf-technology.com — firma macierzysta",
  "foot_l": "TPF Labs — dział autonomicznej robotyki TPFtechnology.",
  "foot_r": "CALIBER+ jest na etapie przygotowania do produkcji. Zdjęcia przedstawiają koncepcje projektowe.",
@@ -183,11 +186,11 @@ C = {
  "price_s": "无需设备投资即可启动——按季租赁或购买。",
  "plans": [
   ["机器人即服务（RaaS）","26,000 € / 季","hot",["含服务、软件与更新","约 1.9 €/公斤，人工约 2.4 €/公斤","基站支持电池热更换","2027 季度名额开放"]],
-  ["购买","面议",["原型与试产线时间表 2027–2028","按欧盟机械法规 2023/1230 进行 CE 认证","混合制造：欧盟组装，优化的机械部件","商业方案可索取"]],
+  ["购买","80,000 € 起",["原型与试产线时间表 2027–2028","按欧盟机械法规 2023/1230 进行 CE 认证","混合制造：欧盟组装，优化的机械部件","商业方案可索取"]],
  ],
  "contact_h": "把 CALIBER+ 带到你的田间",
  "contact_s": "2027 季度试点名额已开放。请介绍你的农场：面积、品种、采收期。",
- "mail": "drublev77@gmail.com",
+ "mail": MAIL,
  "site": "tpf-technology.com — 母公司",
  "foot_l": "TPF Labs — TPFtechnology 旗下自主机器人部门。",
  "foot_r": "CALIBER+ 处于量产准备阶段。图片为设计概念图。",
@@ -266,31 +269,31 @@ INV = {
 
 FAQ = {
 "en": [
- ("How much does CALIBER+ cost?","Robot-as-a-Service starts at €26,000 per season (≈€1.9/kg of picked berries). Purchase: Lite (4 arms) from €55,000, Flagship (6 arms) from €80,000."),
+ ("How much does CALIBER+ cost?","Robot-as-a-Service starts at €26,000 per season (≈€1.9/kg of picked berries). Purchase starts at €80,000."),
  ("How fast does the robot pick?","Up to 17 kg/h per unit with 12–14 hours of daily autonomy. It harvests two rows simultaneously, berry by berry."),
  ("Does the machine damage the berries?","No: the silicone-and-vacuum gripper holds each berry with under 2 N of force. CALIBER+ has 0% crop loss versus about 5% for over-the-row harvesters."),
  ("When can a farm get a robot?","Pilot programs run in season 2027 (30/60/90 days), commercial launch is 2028. Pilot slots for 2027 are open now."),
 ],
 "ru": [
- ("Сколько стоит CALIBER+?","Робот-как-Сервис — от 26 000 € за сезон (≈1,9 €/кг собранной ягоды). Покупка: Lite (4 руки) от 55 000 €, Flagship (6 рук) от 80 000 €."),
+ ("Сколько стоит CALIBER+?","Робот-как-Сервис — от 26 000 € за сезон (≈1,9 €/кг собранной ягоды). Покупка — от 80 000 €."),
  ("Как быстро робот собирает ягоду?","До 17 кг/ч с автономностью 12–14 часов в день. Работает с двумя рядами одновременно, ягоду за ягодой."),
  ("Повреждает ли машина ягоду?","Нет: силиконово-вакуумный захват держит ягоду с усилием менее 2 Н. Потери у CALIBER+ — 0% против примерно 5% у комбайнов."),
  ("Когда хозяйство может получить робота?","Пилотные программы — сезон 2027 (30/60/90 дней), коммерческий запуск — 2028 год. Слоты пилота на 2027 уже открыты."),
 ],
 "nl": [
- ("Wat kost CALIBER+?","Robot-as-a-Service vanaf €26.000 per seizoen (≈€1,9/kg geplukte bessen). Aankoop: Lite (4 armen) vanaf €55.000, Flagship (6 armen) vanaf €80.000."),
+ ("Wat kost CALIBER+?","Robot-as-a-Service vanaf €26.000 per seizoen (≈€1,9/kg geplukte bessen). Aankoop vanaf €80.000."),
  ("Hoe snel plukt de robot?","Tot 17 kg/u met 12–14 uur autonomie per dag. Hij oogst twee rijen tegelijk, bes voor bes."),
  ("Beschadigt de machine de bessen?","Nee: de siliconen-vacuümgrijper houdt elke bes vast met minder dan 2 N kracht. CALIBER+ heeft 0% oogstverlies tegenover circa 5% bij oogstmachines."),
  ("Wanneer kan een teler een robot krijgen?","Pilotprogramma's lopen in seizoen 2027 (30/60/90 dagen), commerciële lancering in 2028. Pilotplekken voor 2027 zijn nu open."),
 ],
 "pl": [
- ("Ile kosztuje CALIBER+?","Robot jako usługa (RaaS) od 26 000 € za sezon (≈1,9 €/kg zebranych owoców). Zakup: Lite (4 ramiona) od 55 000 €, Flagship (6 ramion) od 80 000 €."),
+ ("Ile kosztuje CALIBER+?","Robot jako usługa (RaaS) od 26 000 € za sezon (≈1,9 €/kg zebranych owoców). Zakup od 80 000 €."),
  ("Jak szybko robot zbiera borówki?","Do 17 kg/h na maszynę przy 12–14 godzinach autonomii dziennie. Zbiera z dwóch rzędów jednocześnie, owoc po owocu."),
  ("Czy maszyna uszkadza owoce?","Nie: silikonowo-podciśnieniowy chwytak trzyma każdy owoc z siłą poniżej 2 N. CALIBER+ ma 0% strat wobec ok. 5% przy kombajnach okrakowych."),
  ("Kiedy gospodarstwo może otrzymać robota?","Programy pilotażowe ruszają w sezonie 2027 (30/60/90 dni), start komercyjny w 2028 roku. Terminy pilotaży na 2027 są już otwarte."),
 ],
 "zh": [
- ("CALIBER+ 的价格是多少？","机器人即服务（RaaS）：每产季 26,000 欧元起（约 1.9 欧元/公斤）。购买：Lite（4 臂）55,000 欧元起，Flagship（6 臂）80,000 欧元起。"),
+ ("CALIBER+ 的价格是多少？","机器人即服务（RaaS）：每产季 26,000 欧元起（约 1.9 欧元/公斤）。购买：80,000 欧元起。"),
  ("机器人采摘速度有多快？","单台每小时可达 17 公斤，每天自主作业 12–14 小时，可同时采摘两行，逐颗采摘。"),
  ("机器会损伤果实吗？","不会：硅胶加真空的夹爪以小于 2 牛的力夹持每颗果实。CALIBER+ 的作物损失为 0%，而跨行采收机约为 5%。"),
  ("农场什么时候可以拿到机器人？","试点计划在 2027 产季（30/60/90 天），商业化发布于 2028 年。2027 年的试点名额现已开放。"),
@@ -486,8 +489,8 @@ def page(c, lang):
     faq_html = "".join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q,a in faq_items)
     import json as _json
     _url = "https://tpflabs.com" + suffix
-    _org = {"@type":"Organization","@id":"https://tpflabs.com/#org","name":"TPF Labs","alternateName":["TPFlabs","TPF Labs CALIBER+"],"url":"https://tpflabs.com/","logo":{"@type":"ImageObject","url":"https://tpflabs.com/apple-touch-icon.png","width":180,"height":180},"image":"https://tpflabs.com/img/og.png","email":"drublev77@gmail.com","description":"Autonomous field robotics for fresh-market berry harvesting.","parentOrganization":{"@type":"Organization","name":"TPFtechnology","url":"https://tpf-technology.com/"},"areaServed":{"@type":"Place","name":"European Union"},"knowsAbout":["blueberry harvesting","agricultural robotics","selective fruit picking","robot as a service"],"knowsLanguage":CODES}
-    _prod = {"@type":"Product","@id":"https://tpflabs.com/#caliber","name":"CALIBER+","description":"Autonomous selective harvester for fresh-market blueberries: 17 kg/h, >97% ripeness accuracy, 0% crop loss, 12-14 h autonomy.","image":["https://tpflabs.com/img/hero.jpg","https://tpflabs.com/img/og.png","https://tpflabs.com/img/film-poster.jpg"],"brand":{"@type":"Brand","name":"TPF Labs"},"manufacturer":{"@id":"https://tpflabs.com/#org"},"category":"Agricultural robot","subjectOf":{"@id":_url+"#film"},"offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"55000","highPrice":"80000","offerCount":2,"availability":"https://schema.org/PreOrder","url":_url+"#price","seller":{"@id":"https://tpflabs.com/#org"}},"additionalProperty":[{"@type":"PropertyValue","name":"Picking rate","value":"17 kg/h"},{"@type":"PropertyValue","name":"Ripeness accuracy","value":">97%"},{"@type":"PropertyValue","name":"Crop loss","value":"0%"},{"@type":"PropertyValue","name":"Daily autonomy","value":"12-14 h"},{"@type":"PropertyValue","name":"Weight","value":"450 kg"}]}
+    _org = {"@type":"Organization","@id":"https://tpflabs.com/#org","name":"TPF Labs","alternateName":["TPFlabs","TPF Labs CALIBER+"],"url":"https://tpflabs.com/","logo":{"@type":"ImageObject","url":"https://tpflabs.com/apple-touch-icon.png","width":180,"height":180},"image":"https://tpflabs.com/img/og.png","email":MAIL,"description":"Autonomous field robotics for fresh-market berry harvesting.","parentOrganization":{"@type":"Organization","name":"TPFtechnology","url":"https://tpf-technology.com/"},"areaServed":{"@type":"Place","name":"European Union"},"knowsAbout":["blueberry harvesting","agricultural robotics","selective fruit picking","robot as a service"],"knowsLanguage":CODES}
+    _prod = {"@type":"Product","@id":"https://tpflabs.com/#caliber","name":"CALIBER+","description":"Autonomous selective harvester for fresh-market blueberries: 17 kg/h, >97% ripeness accuracy, 0% crop loss, 12-14 h autonomy.","image":["https://tpflabs.com/img/hero.jpg","https://tpflabs.com/img/og.png","https://tpflabs.com/img/film-poster.jpg"],"brand":{"@type":"Brand","name":"TPF Labs"},"manufacturer":{"@id":"https://tpflabs.com/#org"},"category":"Agricultural robot","subjectOf":{"@id":_url+"#film"},"offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"80000","offerCount":1,"availability":"https://schema.org/PreOrder","url":_url+"#price","seller":{"@id":"https://tpflabs.com/#org"}},"additionalProperty":[{"@type":"PropertyValue","name":"Picking rate","value":"17 kg/h"},{"@type":"PropertyValue","name":"Ripeness accuracy","value":">97%"},{"@type":"PropertyValue","name":"Crop loss","value":"0%"},{"@type":"PropertyValue","name":"Daily autonomy","value":"12-14 h"},{"@type":"PropertyValue","name":"Weight","value":"450 kg"}]}
     _site = {"@type":"WebSite","@id":"https://tpflabs.com/#site","url":"https://tpflabs.com/","name":"TPF Labs","alternateName":"TPF Labs — CALIBER+","publisher":{"@id":"https://tpflabs.com/#org"},"inLanguage":CODES}
     _page = {"@type":"WebPage","@id":_url+"#page","url":_url,"name":c["title"],"description":c["desc"],"inLanguage":lang,"isPartOf":{"@id":"https://tpflabs.com/#site"},"about":{"@id":"https://tpflabs.com/#caliber"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://tpflabs.com/img/hero.jpg","width":700,"height":875}}
     _video = {"@type":"VideoObject","@id":_url+"#film","name":SEO[lang]["video_name"],"description":FILM[lang]["s"],"thumbnailUrl":["https://tpflabs.com/img/film-poster.jpg"],"uploadDate":VIDEO_UPLOAD+"T12:00:00+00:00","duration":"PT1M11S","contentUrl":"https://tpflabs.com/video/caliber-plus-film-en-16x9.mp4","embedUrl":_url+"#film","inLanguage":"en","publisher":{"@id":"https://tpflabs.com/#org"}}

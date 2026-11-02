@@ -37,7 +37,7 @@ Purchase price is the number everyone asks about first, and it is the number tha
 - **A purchased machine** puts the whole cost into the year you buy it. For over-the-row harvesters that means a six-figure investment tied to one crop and one season window — the machine sits idle for ten months.
 - **Robot-as-a-Service** moves the cost to the season: service, software, updates and support included, paid per season rather than as capital expenditure.
 
-For CALIBER+ the two commercial options look like this: RaaS at €26,000 per season, which works out to about €1.9 per kilogram of picked berries, or purchase — Lite (four arms) from €55,000, Flagship (six arms) from €80,000, with the prototype and pilot-series timeline running 2027-2028.
+For CALIBER+ the two commercial options look like this: RaaS at €26,000 per season, which works out to about €1.9 per kilogram of picked berries, or purchase from €80,000, with the prototype and pilot-series timeline running 2027-2028.
 
 ## Five questions to ask before buying any harvesting machine
 
@@ -59,7 +59,7 @@ The honest limitation is throughput. One robot today replaces part of a picking 
 
 The lowest-risk path is a pilot: a 30/60/90-day programme on your own field. Days 0-30 are a row survey and vision calibration for your varieties; days 30-60 the machine harvests one hectare while ripeness, calibre, loss and cost per kilogram are measured; days 60-90 you receive a full report and an option to lock a service tariff or buy for the next season. No financial obligation until a season contract.
 
-Pilot slots for season 2027 are open. If you want to see the numbers on your own rows, write to drublev77@gmail.com with hectares, varieties and your harvest window.
+Pilot slots for season 2027 are open. If you want to see the numbers on your own rows, write to [orders@tpf-technology.com](mailto:orders@tpf-technology.com) with hectares, varieties and your harvest window.
 
 ## FAQ
 
@@ -67,7 +67,7 @@ Pilot slots for season 2027 are open. If you want to see the numbers on your own
 Only selective machines. Over-the-row harvesters and shakers mix ripeness and bruise fruit, which is acceptable for processing but not for supermarket or export programmes.
 
 **What does a blueberry harvesting machine cost?**
-It depends on the model of payment. Manual picking costs about €2.4/kg. Robot-as-a-Service for CALIBER+ is €26,000 per season (about €1.9/kg), and purchase starts at €55,000 for the four-arm Lite configuration and €80,000 for the six-arm Flagship.
+It depends on the model of payment. Manual picking costs about €2.4/kg. Robot-as-a-Service for CALIBER+ is €26,000 per season (about €1.9/kg), and purchase starts at €80,000.
 
 **Can a robot replace hand picking completely?**
 Not yet. A selective robot covers a full working day and a large share of a crew's output, but on most farms the first seasons are a hybrid: the robot picks the bulk, people handle the rest. The gain is that the harvest no longer depends on whether the crew arrives.

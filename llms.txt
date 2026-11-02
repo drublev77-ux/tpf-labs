@@ -6,9 +6,9 @@ Key facts:
 - Picks two rows at once with four SCARA arms; AI vision selects ripe berries (>97% ripeness accuracy, target).
 - Target picking rate 17 kg/h per unit, 0% crop loss (vs about 5% for over-the-row harvesters), 12–14 h daily autonomy.
 - Soft silicone + vacuum gripper, under 2 N of force; chilled 60 L hopper; tracked chassis, 450 kg; 48 V LiFePO4 with 600 W solar roof.
-- Pricing: Robot-as-a-Service from €26,000 per season (≈€1.9/kg vs ≈€2.4/kg manual picking). Purchase: Lite (4 arms) from €55,000, Flagship (6 arms) from €80,000.
+- Pricing: Robot-as-a-Service from €26,000 per season (≈€1.9/kg vs ≈€2.4/kg manual picking). Purchase from €80,000.
 - Pilot program for farms: 30/60/90 days in season 2027 (row survey, autonomous harvest on 1 ha, report and season contract).
-- Contact: drublev77@gmail.com
+- Contact: orders@tpf-technology.com
 
 ## Pages
 - [CALIBER+ (English)](https://tpflabs.com/): product, technology, pilot, pricing, investors, FAQ

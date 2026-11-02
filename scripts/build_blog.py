@@ -32,7 +32,7 @@ UI = {
     "pl": dict(idx_title="Blog: kombajny i roboty do zbioru borówki | TPF Labs", idx_desc="Artykuły o kombajnach i robotach do zbioru borówki amerykańskiej, koszcie zbioru za kilogram i braku rąk do pracy na plantacjach.", foot_l="TPF Labs — dział autonomicznej robotyki TPFtechnology.", foot_r="CALIBER+ jest na etapie przygotowania do produkcji. Zdjęcia przedstawiają koncepcje projektowe.", blog="Blog", home="Strona główna", back="← Wszystkie artykuły", related="Więcej artykułów", cta1="Zgłoś się do pilotażu", cta2="Prezentacja dla inwestorów", lang_note="Ten artykuł jest dostępny w języku angielskim."),
     "zh": dict(idx_title="博客：蓝莓采摘机与农业机器人 | TPF Labs", idx_desc="关于蓝莓采摘机、采摘机器人、每公斤采收成本和浆果农场劳动力的文章。", foot_l="TPF Labs — TPFtechnology 旗下自主机器人部门。", foot_r="CALIBER+ 处于量产准备阶段。图片为设计概念图。", blog="博客", home="首页", back="← 所有文章", related="更多文章", cta1="申请试点", cta2="投资人资料", lang_note="本文暂为英文版本。"),
 }
-MAIL = "drublev77@gmail.com"
+MAIL = "orders@tpf-technology.com"
 
 
 def parse(path: Path) -> dict:

@@ -50,12 +50,9 @@ That is roughly €50,000 per 100 tonnes, before counting the fruit that process
 
 ## Purchase: what the numbers look like
 
-Some farms prefer to own the machine, and for those there are two configurations of CALIBER+:
+Some farms prefer to own the machine. For them CALIBER+ is available for purchase **from €80,000**.
 
-- **Lite** — four arms — from €55,000
-- **Flagship** — six arms — from €80,000
-
-Both sit in the prototype and pilot-series timeline of 2027-2028, with CE certification planned under EU Machinery Regulation 2023/1230 and hybrid manufacturing: EU final assembly, optimised mechanics. A commercial proposal is available on request.
+It sits in the prototype and pilot-series timeline of 2027-2028, with CE certification planned under EU Machinery Regulation 2023/1230 and hybrid manufacturing: EU final assembly, optimised mechanics. A commercial proposal is available on request.
 
 The honest caveat: buying makes sense when the machine works most of the season on your own acreage. If your harvest window is short and your hectare count is moderate, the arithmetic favours paying per season instead.
 
@@ -75,12 +72,12 @@ If a quote does not answer these five, the cheap offer is usually the expensive 
 
 The lowest-risk way to price a machine is to measure it on your own field. The CALIBER+ pilot runs 30/60/90 days: a row survey and vision calibration for your varieties, autonomous harvest on one hectare with ripeness, calibre, loss and cost per kilogram measured, then a full report and an option to lock a tariff or buy for the next season. Payment is 50/40/10 by stage, and there is no financial obligation until a season contract.
 
-Pilot slots for season 2027 are open. If you want the arithmetic done on your own hectares, write to drublev77@gmail.com with your acreage, varieties and harvest window.
+Pilot slots for season 2027 are open. If you want the arithmetic done on your own hectares, write to [orders@tpf-technology.com](mailto:orders@tpf-technology.com) with your acreage, varieties and harvest window.
 
 ## FAQ
 
 **What does a blueberry harvesting machine cost?**
-It depends on how you pay. Manual picking costs about €2.4 per kilogram. Robot-as-a-Service for CALIBER+ is €26,000 per season, about €1.9 per kilogram picked. Purchase starts at €55,000 for the four-arm Lite and €80,000 for the six-arm Flagship.
+It depends on how you pay. Manual picking costs about €2.4 per kilogram. Robot-as-a-Service for CALIBER+ is €26,000 per season, about €1.9 per kilogram picked. Purchase starts at €80,000.
 
 **Is RaaS cheaper than buying a machine?**
 It is cheaper if your harvest window is short or your acreage is moderate, because you pay only for the season. Buying wins when a machine works most of the year on your own fields — the crossover depends on hectares and on how many kilos you actually pick.
