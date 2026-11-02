@@ -219,3 +219,11 @@ footer .frow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .article table { width: 100%; border-collapse: collapse; margin: 8px 0 20px; font-size: 15.5px; }
 .article th { text-align: left; color: #35c9e9; font-size: 13px; text-transform: uppercase; letter-spacing: .5px; padding: 10px 12px; border-bottom: 1px solid #23405f; }
 .article td { padding: 10px 12px; border-bottom: 1px solid #16283f; color: #c3cfdd; vertical-align: top; }
+
+
+/* CALIBER+ film */
+.film { padding: 72px 0 8px; }
+.film-frame { max-width: 1040px; margin: 28px auto 0; }
+.film-video { display:block; width:100%; height:auto; aspect-ratio:16/9; border-radius:18px;
+  background:#0a1020; box-shadow:0 26px 60px rgba(8,16,36,.35); }
+@media (max-width:720px){ .film { padding: 48px 0 0; } .film-video { border-radius:12px; } }

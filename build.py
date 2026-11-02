@@ -294,6 +294,18 @@ TPL = """<!DOCTYPE html>
 <div class="wrap"><div class="stats">
   {stats_html}
 </div></div>
+<section id="film" class="film">
+  <div class="wrap">
+    <span class="over">{film_over}</span><br><h2>{film_h}</h2>
+    <p class="sub">{film_s}</p>
+    <div class="film-frame">
+      <video class="film-video" controls playsinline preload="metadata" poster="/img/hero.jpg" width="1920" height="1080">
+        <source src="/video/caliber-plus-film-en-16x9.mp4" type="video/mp4">
+        Your browser does not support the video tag. <a href="/video/caliber-plus-film-en-16x9.mp4">Download the film</a>.
+      </video>
+    </div>
+  </div>
+</section>
 <section id="tech">
   <div class="wrap">
     <span class="over">{over_tech}</span><br><h2>{tech_h}</h2><p class="sub">{tech_s}</p>
@@ -355,6 +367,13 @@ TPL = """<!DOCTYPE html>
 </html>
 """
 
+FILM = {
+ "en": {"over":"CALIBER+ film","h":"See how CALIBER+ works","s":"70 seconds on the machine: four SCARA arms, AI ripeness vision, a chilled 60 L hopper and 12-14 hours of autonomous work."},
+ "ru": {"over":"\u0424\u0438\u043b\u044c\u043c \u043e CALIBER+","h":"\u041a\u0430\u043a \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 CALIBER+","s":"70 \u0441\u0435\u043a\u0443\u043d\u0434 \u043e \u043c\u0430\u0448\u0438\u043d\u0435: \u0447\u0435\u0442\u044b\u0440\u0435 SCARA-\u043c\u0430\u043d\u0438\u043f\u0443\u043b\u044f\u0442\u043e\u0440\u0430, \u0418\u0418-\u0437\u0440\u0435\u043d\u0438\u0435 \u0441\u043f\u0435\u043b\u043e\u0441\u0442\u0438, \u043e\u0445\u043b\u0430\u0436\u0434\u0430\u0435\u043c\u044b\u0439 \u0431\u0443\u043d\u043a\u0435\u0440 60 \u043b \u0438 12-14 \u0447\u0430\u0441\u043e\u0432 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u043e\u0439 \u0440\u0430\u0431\u043e\u0442\u044b."},
+ "nl": {"over":"CALIBER+ film","h":"Zo werkt CALIBER+","s":"70 seconden over de machine: vier SCARA-armen, AI-rijpheidsvisie, een gekoelde bunker van 60 liter en 12-14 uur autonoom werk."},
+ "zh": {"over":"CALIBER+ \u5f71\u7247","h":"\u4e86\u89e3 CALIBER+ \u5982\u4f55\u5de5\u4f5c","s":"70 \u79d2\u770b\u61c2\u8fd9\u53f0\u673a\u5668\uff1a\u56db\u6761 SCARA \u673a\u68b0\u81c2\u3001AI \u6210\u719f\u5ea6\u8bc6\u522b\u300160 \u5347\u51b7\u85cf\u679c\u7bb1\uff0c12-14 \u5c0f\u65f6\u81ea\u4e3b\u4f5c\u4e1a\u3002"},
+}
+
 def page(c, lang):
     suffix = "/" if lang=="en" else "/"+lang+"/"
     langlinks = ""
@@ -395,6 +414,7 @@ def page(c, lang):
         contact_h=c["contact_h"], contact_s=c["contact_s"], site=c["site"],
         nav_inv=inv["nav"], over_inv=inv["nav"], inv_h=inv["h"], inv_s=inv["s"], inv_cta=inv["cta"], inv_cta2=inv["cta2"], inv_cards=inv_cards,
         faq_h={"en":"Questions from farms","ru":"Вопросы хозяйств","nl":"Vragen van telers","zh":"农场常见问题"}[lang], faq_html=faq_html, jsonld=jsonld, blog_url=("/blog/" if lang=="en" else f"/blog/{lang}/"),
+        film_over=FILM[lang]["over"], film_h=FILM[lang]["h"], film_s=FILM[lang]["s"],
         foot_l=c["foot_l"], foot_r=c["foot_r"])
     return html
 
