@@ -54,6 +54,12 @@
     box.append(p, row); document.body.appendChild(box);
   }
   window.tpfConsent = { open: open };
+  // Leads: a click on any mailto link (pilot request, orders@) is sent as GA4 "generate_lead" — only when GA was allowed.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="mailto:"]');
+    if (!a || !window.__tpfGa || !window.gtag) return;
+    window.gtag('event', 'generate_lead', { method: 'email', link_url: a.href.split('?')[0], page_location: location.href });
+  }, true);
   if (navigator.webdriver) return;
   var choice = get();
   if (choice === 'granted') load();
