@@ -4,6 +4,7 @@ description: "Three kinds of blueberry harvesting machines, what each costs per 
 date: 2026-10-29
 lang: en
 slug: blueberry-harvesting-machine-types-costs
+seo_title: "Blueberry harvesting machine: types and costs (2026)"
 cluster: machines
 ---
 

@@ -233,3 +233,10 @@ footer .frow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 /* ---------- note under stat tiles (design targets) ---------- */
 .stats-note{max-width:1080px;margin:10px auto 0;font-size:.8rem;opacity:.65;text-align:center}
+
+/* ---------- about block ---------- */
+.about{border-top:1px solid rgba(255,255,255,.06)}
+.about .sub{max-width:760px}
+
+/* ---------- article tables scroll sideways on phones instead of overflowing ---------- */
+.article table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}

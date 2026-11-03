@@ -34,6 +34,9 @@ UI = {
 }
 MAIL = "orders@tpf-technology.com"
 
+# H1 and intro paragraph on each blog index
+INTRO = {'en': ('Blueberry harvesting machines and robots: costs, types and field economics', 'Guides for fresh-market blueberry growers: what each kind of harvesting machine costs per kilogram, where selective picking robots stand today and how to test one on your own rows before you commit.'), 'ru': ('Машины и роботы для сбора голубики: цены, виды и экономика уборки', 'Материалы для хозяйств, выращивающих голубику на свежий рынок: сколько стоит машинная уборка за килограмм, чем селективный робот отличается от комбайна и как проверить его на своём поле.'), 'nl': ('Oogstmachines en plukrobots voor blauwe bessen: kosten en soorten', 'Gidsen voor telers van verse blauwe bessen: wat elk type oogstmachine per kilo kost, waar selectieve plukrobots nu staan en hoe u er een op uw eigen rijen test.'), 'pl': ('Kombajny i roboty do zbioru borówki: ceny, rodzaje i ekonomika zbioru', 'Poradniki dla plantatorów borówki amerykańskiej na rynek świeży: ile kosztuje zbiór maszynowy w przeliczeniu na kilogram, czym robot selektywny różni się od kombajnu i jak sprawdzić go na własnej plantacji.'), 'zh': ('蓝莓采摘机与采摘机器人：价格、类型与采收经济性', '面向鲜果蓝莓种植者的指南：各类采摘机每公斤成本、选择性采摘机器人的现状，以及如何在自己的果园先行测试。')}
+
 
 def parse(path: Path) -> dict:
     raw = path.read_text(encoding="utf-8")
@@ -264,7 +267,7 @@ def article_page(meta: dict, related: list[dict]) -> str:
                 f'<meta property="article:modified_time" content="{meta.get("updated", meta["date"])}">\n'
                 '<meta property="article:author" content="TPF Labs">')
     alt = f'<link rel="alternate" hreflang="{lang}" href="{canon}">'
-    return f'''{head(lang, meta["title"], meta["description"], canon, json.dumps(ld, ensure_ascii=False), "article", alternates=alt, extra_meta=art_meta)}
+    return f'''{head(lang, meta.get("seo_title", meta["title"]), meta["description"], canon, json.dumps(ld, ensure_ascii=False), "article", alternates=alt, extra_meta=art_meta)}
 {nav_html(lang)}
 <main class="wrap article">
   <p class="crumb"><a href="/blog/{'' if lang == 'en' else lang + '/'}">{ui["back"]}</a></p>
@@ -294,7 +297,8 @@ def index_page(lang: str, arts: list[dict], all_en: list[dict]) -> str:
     return f'''{head(lang, ui["idx_title"], ui["idx_desc"], canon, ld, robots=robots)}
 {nav_html(lang)}
 <main class="wrap article">
-  <h1>{ui["blog"]}</h1>
+  <h1>{INTRO[lang][0]}</h1>
+  <p class="sub">{INTRO[lang][1]}</p>
   {note}
   <div class="grid g3">{cards}</div>
 </main>

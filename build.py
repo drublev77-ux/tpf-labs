@@ -12,10 +12,10 @@ MAIL = "orders@tpf-technology.com"  # switch to pilot@tpflabs.com once its mail 
 C = {
 "en": {
  "title": "CALIBER+ Blueberry Harvesting Robot | TPF Labs",
- "desc": "Autonomous blueberry harvesting machine for fresh-market farms, designed for 17 kg/h and zero crop loss at ≈€1.9/kg. Rent from €26,000/season or buy. 2027 pilots open.",
+ "desc": "Autonomous blueberry harvesting robot for fresh-market farms: designed for 17 kg/h with zero loss at ≈€1.9/kg. From €26,000 per season. 2027 pilots open.",
  "nav": {"tech":"Technology","pilot":"Pilot","price":"Pricing","contact":"Contact"},
  "hero_tag": "TPF Labs · Autonomous Field Robotics",
- "h1": "Meet <b>CALIBER+</b> — the harvester that picks like hands, works like a machine",
+ "h1": "<b>CALIBER+</b> blueberry harvesting robot — picks like hands, works like a machine",
  "lead": "An autonomous robot for selective harvesting of fresh-market blueberries. Two rows at once, berry by berry, designed for zero crop loss and 12–14 hours of daily autonomy.",
  "cta1": "Request a pilot", "cta2": "Technology",
  "stats": [("17 kg/h","picking rate per unit"),(">97%","ripeness accuracy"),("0%","crop loss (vs ~5% for harvesters)"),("12–14 h","daily autonomy")],
@@ -52,7 +52,7 @@ C = {
  "desc": "Автономная машина для сбора голубики: цель — 17 кг/ч без потерь, ≈1,9 €/кг. Аренда от 26 000 € за сезон или покупка. Набор хозяйств на пилот 2027.",
  "nav": {"tech":"Технологии","pilot":"Пилот","price":"Цены","contact":"Контакты"},
  "hero_tag": "TPF Labs · Автономная полевая робототехника",
- "h1": "Знакомьтесь — <b>CALIBER+</b>: собирает как руки, работает как машина",
+ "h1": "<b>CALIBER+</b> — робот для сбора голубики: собирает как руки, работает как машина",
  "lead": "Автономный робот для селективного сбора свежей голубики на продажу. Два ряда одновременно, ягоду за ягодой; проектная цель — нулевые потери и автономностью 12–14 часов в день.",
  "cta1": "Запросить пилот", "cta2": "Технологии",
  "stats": [("17 кг/ч","производительность машины"),(">97%","точность спелости"),("0%","потери (у комбайнов ~5%)"),("12–14 ч","автономность в день")],
@@ -89,7 +89,7 @@ C = {
  "desc": "Blauwe bessen machinaal oogsten voor de versmarkt: ontworpen voor 17 kg/u zonder verlies, ≈€1,9/kg. Huur vanaf €26.000 per seizoen of koop. Pilots 2027 open.",
  "nav": {"tech":"Technologie","pilot":"Pilot","price":"Prijzen","contact":"Contact"},
  "hero_tag": "TPF Labs · Autonome veldrobotica",
- "h1": "Maak kennis met <b>CALIBER+</b> — oogst zoals handmatig, werkt als een machine",
+ "h1": "<b>CALIBER+</b> oogstrobot voor blauwe bessen — plukt als handwerk, werkt als een machine",
  "lead": "Een autonome robot voor selectieve oogst van verse blauwe bessen. Twee rijen tegelijk, bes voor bes, ontworpen voor nul verlies en 12–14 uur autonomie per dag.",
  "cta1": "Pilot aanvragen", "cta2": "Technologie",
  "stats": [("17 kg/u","oogsttempo per machine"),(">97%","nauwkeurigheid rijpheidsherkenning"),("0%","verlies (oogstmachines ~5%)"),("12–14 u","autonomie per dag")],
@@ -126,7 +126,7 @@ C = {
  "desc": "Autonomiczny kombajn do zbioru borówki na rynek świeży: projektowo 17 kg/h bez strat, ≈1,9 €/kg. Dzierżawa od 26 000 € za sezon lub zakup. Pilotaże 2027.",
  "nav": {"tech":"Technologia","pilot":"Pilotaż","price":"Ceny","contact":"Kontakt"},
  "hero_tag": "TPF Labs · Autonomiczna robotyka polowa",
- "h1": "Poznaj <b>CALIBER+</b> — zbiera jak ludzkie ręce, pracuje jak maszyna",
+ "h1": "<b>CALIBER+</b> — robot do zbioru borówki: zbiera jak ludzkie ręce, pracuje jak maszyna",
  "lead": "Autonomiczny robot do selektywnego zbioru borówki amerykańskiej na rynek świeży. Dwa rzędy jednocześnie, owoc po owocu, projektowany pod zerowe straty i autonomię 12–14 godzin dziennie.",
  "cta1": "Zgłoś się do pilotażu", "cta2": "Technologia",
  "stats": [("17 kg/h","wydajność jednej maszyny"),(">97%","trafność oceny dojrzałości"),("0%","strat (kombajny ok. 5%)"),("12–14 h","autonomii dziennie")],
@@ -163,7 +163,7 @@ C = {
  "desc": "面向鲜果市场的自主蓝莓采摘机：设计目标每小时 17 公斤、零损耗，约 1.9 欧元/公斤。按季租赁 26,000 欧元起或购买。2027 试点名额开放。",
  "nav": {"tech":"技术","pilot":"试点","price":"价格","contact":"联系"},
  "hero_tag": "TPF Labs · 自主田间机器人",
- "h1": "认识 <b>CALIBER+</b>：像双手一样轻采，像机器一样高效",
+ "h1": "<b>CALIBER+</b> 蓝莓采摘机器人：像双手一样轻采，像机器一样高效",
  "lead": "面向鲜果蓝莓市场的自主采摘机器人。同时采摘两行，逐颗识别，设计目标为零损耗、每日续航 12–14 小时。",
  "cta1": "申请试点", "cta2": "技术",
  "stats": [("17 公斤/时","单机采摘速度"),(">97%","成熟度识别精度"),("0%","损耗（采收机约5%）"),("12–14 小时","每日续航")],
@@ -246,7 +246,7 @@ INV = {
  "cta": "Poproś o prezentację dla inwestorów",
  "cards": [
   ["🧩","Postępy","Podpisana umowa NDA i pakiet DFM w ocenie u producenta kontraktowego WayKen (Chiny); rozmowy o niezależnej walidacji z węzłami AgriFoodTEF ILVO i INRIA (UE); pierwsze zainteresowanie ze strony największej polskiej grupy zakupowej borówki.","runda Seed · firma w UE · 2026–2027"],
-  ["📈","Okno rynkowe","Zbiór ręczny kosztuje ≈2,4 €/kg przy chronicznym niedoborze rąk do pracy. Przy ≈1,9 €/kg w modelu RaaS jeden robot CALIBER+ według modelu zwraca się w ciągu sezonu.","borówka na rynek świeży · najpierw UE"],
+  ["📈","Okno rynkowe","Zbiór ręczny kosztuje ≈2,4 €/kg przy chronicznym niedoborze rąk do pracy. Przy ≈1,9 €/kg w modelu RaaS jeden robot CALIBER+ według wyliczeń zwraca się w ciągu sezonu.","borówka na rynek świeży · najpierw UE"],
   ["🤝","Zostań partnerem","Gospodarstwa pilotażowe na sezon 2027, partnerzy handlowi i serwisowi RaaS, dostawcy komponentów do montażu w UE.","plantacje · integratorzy · dostawcy"],
   ["🚀","Mapa drogowa","Prototyp chwytaka: zbudowany i przetestowany w laboratorium. Prototyp polowy: 2027. Start komercyjny: 2028.","prototyp → flota pilotażowa → start"],
  ],
@@ -409,6 +409,12 @@ TPL = """<!DOCTYPE html>
     <div class="faq">{faq_html}</div>
   </div>
 </section>
+<section id="about" class="about">
+  <div class="wrap">
+    <span class="over">{about_over}</span><br><h2>{about_h}</h2>
+    {about_html}
+  </div>
+</section>
 <section id="contact" class="alt contact">
   <div class="wrap">
     <span class="over">{over_contact}</span><br><h2>{contact_h}</h2>
@@ -469,6 +475,9 @@ SEO = {
         "hero_cap":"概念渲染图 · 1:2 行架构", "blog":"博客",
         "video_name":"CALIBER+ 自主蓝莓采摘机如何工作"},
 }
+# "About" block: who builds the machine and at what stage (trust signals for buyers)
+ABOUT = {'en': ('About', 'Who builds CALIBER+', ['<b>TPF Labs</b> is the autonomous field robotics division of TPFtechnology, a software and AI company registered in Poland and working across the EU.', 'Where we are today: the soft gripper prototype is built and lab-tested; the field prototype goes into pilot farms in season 2027, and commercial launch is planned for 2028. Manufacturing is prepared with contract manufacturer WayKen, and independent validation is being discussed with the AgriFoodTEF network (ILVO, INRIA).', 'Images on this site are design renders, and performance figures are design targets until pilot results are published. Questions go to one address, answered by the team that builds the machine.']), 'ru': ('О компании', 'Кто делает CALIBER+', ['<b>TPF Labs</b> — подразделение автономной полевой робототехники TPFtechnology, компании в сфере ПО и ИИ, зарегистрированной в Польше и работающей по всему ЕС.', 'Где мы сейчас: прототип мягкого захвата собран и испытан в лаборатории; полевой прототип выходит в пилотные хозяйства в сезон 2027, коммерческий запуск запланирован на 2028 год. Производство готовится с контрактным производителем WayKen, независимая проверка обсуждается с сетью AgriFoodTEF (ILVO, INRIA).', 'Изображения на сайте — дизайнерские рендеры, а показатели — проектные цели до публикации результатов пилотов. На вопросы отвечает команда, которая строит машину, по одному адресу.']), 'nl': ('Over ons', 'Wie bouwt CALIBER+', ['<b>TPF Labs</b> is de divisie autonome veldrobotica van TPFtechnology, een software- en AI-bedrijf geregistreerd in Polen en actief in de hele EU.', 'Waar we nu staan: het prototype van de zachte grijper is gebouwd en in het lab getest; het veldprototype gaat in seizoen 2027 naar pilotbedrijven en de commerciële lancering is gepland voor 2028. De productie wordt voorbereid met contractproducent WayKen; onafhankelijke validatie wordt besproken met het AgriFoodTEF-netwerk (ILVO, INRIA).', 'Afbeeldingen op deze site zijn ontwerprenders en prestatiecijfers zijn ontwerpdoelen tot de pilotresultaten zijn gepubliceerd. Vragen gaan naar één adres en worden beantwoord door het team dat de machine bouwt.']), 'pl': ('O nas', 'Kto buduje CALIBER+', ['<b>TPF Labs</b> to dział autonomicznej robotyki polowej TPFtechnology — firmy z branży oprogramowania i AI zarejestrowanej w Polsce i działającej w całej UE.', 'Na jakim etapie jesteśmy: prototyp miękkiego chwytaka jest zbudowany i przetestowany w laboratorium; prototyp polowy trafi do gospodarstw pilotażowych w sezonie 2027, a start komercyjny planujemy na 2028 rok. Produkcję przygotowujemy z producentem kontraktowym WayKen, a niezależną walidację omawiamy z siecią AgriFoodTEF (ILVO, INRIA).', 'Zdjęcia na stronie to wizualizacje projektowe, a parametry to cele projektowe do czasu publikacji wyników pilotaży. Na pytania odpowiada zespół, który buduje maszynę, pod jednym adresem.']), 'zh': ('关于我们', '谁在打造 CALIBER+', ['<b>TPF Labs</b> 是 TPFtechnology 旗下的自主田间机器人部门。TPFtechnology 是一家在波兰注册、业务覆盖欧盟的软件与人工智能公司。', '目前进展：柔性夹爪原型已完成并通过实验室测试；田间原型将于 2027 产季进入试点农场，计划于 2028 年商业化发布。我们正与合同制造商 WayKen 准备生产，并与 AgriFoodTEF 网络（ILVO、INRIA）商谈第三方验证。', '本站图片为设计渲染图；在试点结果公布前，性能数据均为设计目标。所有问题由打造这台机器的团队通过同一个邮箱回复。'])}
+
 VIDEO_UPLOAD = "2026-11-02"
 
 # Shown under the stat tiles: the numbers are targets for a machine still in pre-production
@@ -492,7 +501,7 @@ def page(c, lang):
     faq_html = "".join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q,a in faq_items)
     import json as _json
     _url = "https://tpflabs.com" + suffix
-    _org = {"@type":"Organization","@id":"https://tpflabs.com/#org","name":"TPF Labs","alternateName":["TPFlabs","TPF Labs CALIBER+"],"url":"https://tpflabs.com/","logo":{"@type":"ImageObject","url":"https://tpflabs.com/apple-touch-icon.png","width":180,"height":180},"image":"https://tpflabs.com/img/og.png","email":MAIL,"description":"Autonomous field robotics for fresh-market berry harvesting.","parentOrganization":{"@type":"Organization","name":"TPFtechnology","url":"https://tpf-technology.com/"},"areaServed":{"@type":"Place","name":"European Union"},"knowsAbout":["blueberry harvesting","agricultural robotics","selective fruit picking","robot as a service"],"knowsLanguage":CODES}
+    _org = {"@type":"Organization","@id":"https://tpflabs.com/#org","name":"TPF Labs","alternateName":["TPFlabs","TPF Labs CALIBER+"],"url":"https://tpflabs.com/","logo":{"@type":"ImageObject","url":"https://tpflabs.com/apple-touch-icon.png","width":180,"height":180},"image":"https://tpflabs.com/img/og.png","email":MAIL,"description":"Autonomous field robotics for fresh-market berry harvesting.","parentOrganization":{"@type":"Organization","name":"TPFtechnology","url":"https://tpf-technology.com/"},"address":{"@type":"PostalAddress","addressCountry":"PL"},"areaServed":{"@type":"Place","name":"European Union"},"knowsAbout":["blueberry harvesting","agricultural robotics","selective fruit picking","robot as a service"],"knowsLanguage":CODES}
     _prod = {"@type":"Product","@id":"https://tpflabs.com/#caliber","name":"CALIBER+","description":"Autonomous selective harvester for fresh-market blueberries in pre-production. Design targets: 17 kg/h, >97% ripeness accuracy, 0% crop loss, 12-14 h autonomy.","image":["https://tpflabs.com/img/hero.jpg","https://tpflabs.com/img/og.png","https://tpflabs.com/img/film-poster.jpg"],"brand":{"@type":"Brand","name":"TPF Labs"},"manufacturer":{"@id":"https://tpflabs.com/#org"},"category":"Agricultural robot","subjectOf":{"@id":_url+"#film"},"offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"80000","offerCount":1,"availability":"https://schema.org/PreOrder","url":_url+"#price","seller":{"@id":"https://tpflabs.com/#org"}},"additionalProperty":[{"@type":"PropertyValue","name":"Picking rate","value":"17 kg/h"},{"@type":"PropertyValue","name":"Ripeness accuracy","value":">97%"},{"@type":"PropertyValue","name":"Crop loss","value":"0%"},{"@type":"PropertyValue","name":"Daily autonomy","value":"12-14 h"},{"@type":"PropertyValue","name":"Weight","value":"450 kg"}]}
     _site = {"@type":"WebSite","@id":"https://tpflabs.com/#site","url":"https://tpflabs.com/","name":"TPF Labs","alternateName":"TPF Labs — CALIBER+","publisher":{"@id":"https://tpflabs.com/#org"},"inLanguage":CODES}
     _page = {"@type":"WebPage","@id":_url+"#page","url":_url,"name":c["title"],"description":c["desc"],"inLanguage":lang,"isPartOf":{"@id":"https://tpflabs.com/#site"},"about":{"@id":"https://tpflabs.com/#caliber"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://tpflabs.com/img/hero.jpg","width":700,"height":875}}
@@ -514,7 +523,7 @@ def page(c, lang):
         og_locale=OG_LOC[lang],
         nav_tech=c["nav"]["tech"], nav_pilot=c["nav"]["pilot"], nav_price=c["nav"]["price"], nav_contact=c["nav"]["contact"],
         langlinks=langlinks, hero_tag=c["hero_tag"], h1=c["h1"], lead=c["lead"],
-        mail=c["mail"], cta1=c["cta1"], cta2=c["cta2"], stats_html=stats_html, stats_note=STATS_NOTE[lang],
+        mail=c["mail"], cta1=c["cta1"], cta2=c["cta2"], stats_html=stats_html, stats_note=STATS_NOTE[lang], about_over=ABOUT[lang][0], about_h=ABOUT[lang][1], about_html="".join(f'<p class="sub">{t}</p>' for t in ABOUT[lang][2]),
         tech_h=c["tech_h"], tech_s=c["tech_s"], cards_html=cards_html,
         pilot_h=c["pilot_h"], pilot_s=c["pilot_s"], steps_html=steps_html,
         price_h=c["price_h"], price_s=c["price_s"], plans_html=plans_html,
