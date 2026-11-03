@@ -3,7 +3,6 @@ build.py
 scripts/
 content/
 previews/
-out/
 README.md
 SEO.md
 *.patch

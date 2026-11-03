@@ -26,11 +26,11 @@ BASE = "https://tpflabs.com"
 LANGS = [("en", "EN"), ("ru", "RU"), ("nl", "NL"), ("pl", "PL"), ("zh", "中文")]
 OG = {"en": "en_US", "ru": "ru_RU", "nl": "nl_NL", "pl": "pl_PL", "zh": "zh_CN"}
 UI = {
-    "en": dict(idx_title="Blog: blueberry harvesting machines & farm robotics | TPF Labs", idx_desc="Practical articles on blueberry harvesting machines, picking robots, cost per kilogram and labour on fresh-market berry farms.", foot_l="TPF Labs — autonomous robotics division of TPFtechnology.", foot_r="CALIBER+ is in pre-production. Photos show design concepts.", blog="Blog", home="Home", back="← All articles", related="More articles", cta1="Request a pilot", cta2="Investor deck", lang_note=""),
-    "nl": dict(idx_title="Blog: blauwe bessen machinaal oogsten & oogstrobots | TPF Labs", idx_desc="Artikelen over oogstmachines en plukrobots voor blauwe bessen, kosten per kilo en arbeid op bessenbedrijven.", foot_l="TPF Labs — divisie autonome robotica van TPFtechnology.", foot_r="CALIBER+ is in preproductie. Foto's tonen ontwerpconcepten.", blog="Blog", home="Home", back="← Alle artikelen", related="Meer artikelen", cta1="Pilot aanvragen", cta2="Investeerdersdeck", lang_note="Dit artikel is in het Engels beschikbaar."),
-    "ru": dict(idx_title="Блог: машины и роботы для сбора голубики | TPF Labs", idx_desc="Статьи о комбайнах и роботах для сбора голубики, стоимости уборки за килограмм и нехватке сборщиков в ягодных хозяйствах.", foot_l="TPF Labs — дивизион автономной робототехники TPFtechnology.", foot_r="CALIBER+ находится в стадии подготовки к производству. Изображения — дизайнерские концепты.", blog="Блог", home="Главная", back="← Все статьи", related="Другие статьи", cta1="Запросить пилот", cta2="Инвесторская дека", lang_note="Эта статья доступна на английском."),
-    "pl": dict(idx_title="Blog: kombajny i roboty do zbioru borówki | TPF Labs", idx_desc="Artykuły o kombajnach i robotach do zbioru borówki amerykańskiej, koszcie zbioru za kilogram i braku rąk do pracy na plantacjach.", foot_l="TPF Labs — dział autonomicznej robotyki TPFtechnology.", foot_r="CALIBER+ jest na etapie przygotowania do produkcji. Zdjęcia przedstawiają koncepcje projektowe.", blog="Blog", home="Strona główna", back="← Wszystkie artykuły", related="Więcej artykułów", cta1="Zgłoś się do pilotażu", cta2="Prezentacja dla inwestorów", lang_note="Ten artykuł jest dostępny w języku angielskim."),
-    "zh": dict(idx_title="博客：蓝莓采摘机与农业机器人 | TPF Labs", idx_desc="关于蓝莓采摘机、采摘机器人、每公斤采收成本和浆果农场劳动力的文章。", foot_l="TPF Labs — TPFtechnology 旗下自主机器人部门。", foot_r="CALIBER+ 处于量产准备阶段。图片为设计概念图。", blog="博客", home="首页", back="← 所有文章", related="更多文章", cta1="申请试点", cta2="投资人资料", lang_note="本文暂为英文版本。"),
+    "en": dict(idx_title="Blog: blueberry harvesting machines & farm robotics | TPF Labs", idx_desc="Practical articles on blueberry harvesting machines, picking robots, cost per kilogram and labour on fresh-market berry farms.", foot_l="TPF Labs — autonomous robotics division of TPFtechnology.", foot_r="CALIBER+ is in pre-production. Photos show design concepts.", blog="Blog", home="Home", back="← All articles", related="More articles", cta1="Request a pilot", cta2="Investor deck", lang_note="", og_alt="CALIBER+ autonomous blueberry harvesting robot by TPF Labs"),
+    "nl": dict(idx_title="Blog: blauwe bessen machinaal oogsten & oogstrobots | TPF Labs", idx_desc="Artikelen over oogstmachines en plukrobots voor blauwe bessen, kosten per kilo en arbeid op bessenbedrijven.", foot_l="TPF Labs — divisie autonome robotica van TPFtechnology.", foot_r="CALIBER+ is in preproductie. Foto's tonen ontwerpconcepten.", blog="Blog", home="Home", back="← Alle artikelen", related="Meer artikelen", cta1="Pilot aanvragen", cta2="Investeerdersdeck", lang_note="Onze artikelen zijn voorlopig in het Engels beschikbaar.", og_alt="CALIBER+ autonome oogstrobot voor blauwe bessen van TPF Labs"),
+    "ru": dict(idx_title="Блог: машины и роботы для сбора голубики | TPF Labs", idx_desc="Статьи о комбайнах и роботах для сбора голубики, стоимости уборки за килограмм и нехватке сборщиков в ягодных хозяйствах.", foot_l="TPF Labs — дивизион автономной робототехники TPFtechnology.", foot_r="CALIBER+ находится в стадии подготовки к производству. Изображения — дизайнерские концепты.", blog="Блог", home="Главная", back="← Все статьи", related="Другие статьи", cta1="Запросить пилот", cta2="Инвесторская дека", lang_note="Статьи пока доступны на английском языке.", og_alt="CALIBER+ — автономный робот для сбора голубики от TPF Labs"),
+    "pl": dict(idx_title="Blog: kombajny i roboty do zbioru borówki | TPF Labs", idx_desc="Artykuły o kombajnach i robotach do zbioru borówki amerykańskiej, koszcie zbioru za kilogram i braku rąk do pracy na plantacjach.", foot_l="TPF Labs — dział autonomicznej robotyki TPFtechnology.", foot_r="CALIBER+ jest na etapie przygotowania do produkcji. Zdjęcia przedstawiają koncepcje projektowe.", blog="Blog", home="Strona główna", back="← Wszystkie artykuły", related="Więcej artykułów", cta1="Zgłoś się do pilotażu", cta2="Prezentacja dla inwestorów", lang_note="Artykuły są na razie dostępne w języku angielskim.", og_alt="CALIBER+ — autonomiczny robot do zbioru borówki od TPF Labs"),
+    "zh": dict(idx_title="博客：蓝莓采摘机与农业机器人 | TPF Labs", idx_desc="关于蓝莓采摘机、采摘机器人、每公斤采收成本和浆果农场劳动力的文章。", foot_l="TPF Labs — TPFtechnology 旗下自主机器人部门。", foot_r="CALIBER+ 处于量产准备阶段。图片为设计概念图。", blog="博客", home="首页", back="← 所有文章", related="更多文章", cta1="申请试点", cta2="投资人资料", lang_note="文章暂时仅提供英文版本。", og_alt="TPF Labs 的 CALIBER+ 自主蓝莓采摘机器人"),
 }
 MAIL = "orders@tpf-technology.com"
 
@@ -62,107 +62,97 @@ def inline(t: str) -> str:
 
 
 def md_to_html(md: str) -> tuple[str, list[tuple[str, str]]]:
-    """Returns (html, faq) where faq is [(question, answer)] harvested from the last H2 'FAQ'."""
-    out, para, i = [], [], 0
+    """Returns (html, faq). Questions under an H2 'FAQ' (bold line + answer) are rendered
+    as visible <details> blocks and also returned for FAQPage JSON-LD."""
+    out: list[str] = []
     faq: list[tuple[str, str]] = []
+    para: list[str] = []
+    tbl: list[list[str]] = []
+    lst: list[str] = []
+    lst_tag: str | None = None
     in_faq = False
-    pending_q = None
-    lines = md.splitlines()
+    pending_q: str | None = None
 
-    def flush():
+    def flush_para():
         nonlocal para
         if para:
             out.append("<p>" + inline(" ".join(para)) + "</p>")
             para = []
 
-    tbl: list[list[str]] = []
+    def flush_list():
+        nonlocal lst, lst_tag
+        if lst_tag:
+            out.append(f"<{lst_tag}>" + "".join(lst) + f"</{lst_tag}>")
+        lst, lst_tag = [], None
 
     def flush_table():
         nonlocal tbl
-        if not tbl:
-            return
-        rows = tbl
-        head_row = "".join(f"<th>{inline(c)}</th>" for c in rows[0])
-        body = "".join("<tr>" + "".join(f"<td>{inline(c)}</td>" for c in r) + "</tr>" for r in rows[1:])
-        out.append(f"<table><thead><tr>{head_row}</tr></thead><tbody>{body}</tbody></table>")
-        tbl = []
+        if tbl:
+            head_row = "".join(f"<th>{inline(c)}</th>" for c in tbl[0])
+            body = "".join("<tr>" + "".join(f"<td>{inline(c)}</td>" for c in r) + "</tr>" for r in tbl[1:])
+            out.append(f"<table><thead><tr>{head_row}</tr></thead><tbody>{body}</tbody></table>")
+            tbl = []
 
-    for ln in lines:
+    def flush_all():
+        flush_para(); flush_list(); flush_table()
+
+    def add_item(tag: str, text: str):
+        nonlocal lst_tag
+        flush_para(); flush_table()
+        if lst_tag != tag:
+            flush_list()
+            lst_tag = tag
+        lst.append("<li>" + inline(text) + "</li>")
+
+    faq_html: list[str] = []
+
+    def flush_faq():
+        if faq_html:
+            out.append('<div class="faq">' + "".join(faq_html) + "</div>")
+            faq_html.clear()
+
+    for ln in md.splitlines():
         s = ln.rstrip()
         if s.startswith("|"):
+            flush_para(); flush_list()
             cells = [c.strip() for c in s.strip("|").split("|")]
-            if all(re.fullmatch(r":?-{2,}:?", c) for c in cells if c):
-                continue
-            tbl.append(cells)
+            if not all(re.fullmatch(r":?-{2,}:?", c) for c in cells if c):
+                tbl.append(cells)
             continue
-        if tbl:
-            flush_table()
+        flush_table()
         if s.startswith("# "):
-            flush(); continue  # h1 comes from front matter
+            flush_all(); continue  # h1 comes from front matter
         if s.startswith("## "):
-            flush()
+            flush_all(); flush_faq()
             title = s[3:].strip()
             in_faq = title.upper().startswith("FAQ")
             out.append(f'<h2 id="{re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")}">{inline(title)}</h2>')
             continue
         if s.startswith("### "):
-            flush(); out.append(f"<h3>{inline(s[4:])}</h3>"); continue
-        if re.match(r"^\d+\.\s", s):
-            flush()
-            if not (out and out[-1].startswith("<ol")):
-                out.append("<ol>")
-            out.append("<li>" + inline(re.sub(r"^\d+\.\s+", "", s)) + "</li>")
-            continue
+            flush_all(); out.append(f"<h3>{inline(s[4:])}</h3>"); continue
+        if in_faq:
+            if not s:
+                continue
+            if s.startswith("**") and s.endswith("**"):
+                pending_q = s.strip("*").strip()
+                continue
+            if pending_q:
+                a = re.sub(r"\s+", " ", s).strip()
+                faq.append((pending_q, a))
+                faq_html.append(f"<details><summary>{inline(pending_q)}</summary><p>{inline(a)}</p></details>")
+                pending_q = None
+                continue
+        m = re.match(r"^\d+\.\s+(.*)$", s)
+        if m:
+            add_item("ol", m.group(1)); continue
         if s.startswith("- "):
-            flush()
-            if not (out and out[-1].startswith("<ul")):
-                out.append("<ul>")
-            out.append("<li>" + inline(s[2:]) + "</li>")
-            continue
+            add_item("ul", s[2:]); continue
         if not s:
-            flush()
-            if out and out[-1] in ("<ol>", "<ul>") or (out and out[-1].startswith("<li>")):
-                pass
-            continue
-        if in_faq and s.startswith("**") and s.endswith("**"):
-            flush()
-            pending_q = s.strip("*").strip()
-            continue
-        if in_faq and pending_q and not s.startswith("#"):
-            faq.append((pending_q, re.sub(r"\s+", " ", s).strip()))
-            pending_q = None
-            continue
+            flush_para(); flush_list(); continue
+        flush_list()
         para.append(s)
-    flush()
-    flush_table()
-    # close lists
-    fixed = []
-    for chunk in out:
-        if chunk == "<ol>":
-            fixed.append("<ol>")
-        elif chunk == "<ul>":
-            fixed.append("<ul>")
-        else:
-            if fixed and fixed[-1].startswith("<li>") is False and fixed[-1] in ("<ol>", "<ul>"):
-                pass
-            fixed.append(chunk)
-    # join list items properly
-    res, buf, tag = [], [], None
-    for chunk in fixed:
-        if chunk in ("<ol>", "<ul>"):
-            tag = chunk[1:3]
-            buf = []
-            continue
-        if chunk.startswith("<li>"):
-            buf.append(chunk)
-            continue
-        if tag:
-            res.append(f"<{tag}>" + "".join(buf) + f"</{tag}>")
-            tag, buf = None, []
-        res.append(chunk)
-    if tag:
-        res.append(f"<{tag}>" + "".join(buf) + f"</{tag}>")
-    return "\n".join(res), faq
+    flush_all(); flush_faq()
+    return "\n".join(out), faq
 
 
 def head(lang: str, title: str, desc: str, canon: str, extra_ld: str = "", page_type: str = "website",
@@ -182,7 +172,7 @@ def head(lang: str, title: str, desc: str, canon: str, extra_ld: str = "", page_
 <meta property="og:image" content="https://tpflabs.com/img/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="TPF Labs — CALIBER+ blueberry harvesting robot">
+<meta property="og:image:alt" content="{html.escape(UI[lang]["og_alt"])}">
 <meta property="og:site_name" content="TPF Labs">
 <meta property="og:locale" content="{OG[lang]}">
 {extra_meta}

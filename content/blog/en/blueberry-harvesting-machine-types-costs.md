@@ -51,9 +51,9 @@ For CALIBER+ the two commercial options look like this: RaaS at €26,000 per se
 
 Selective harvesting is the youngest category and the one that has just crossed from laboratory to field. CALIBER+, developed by TPF Labs, is an autonomous selective harvester for fresh-market blueberries: four SCARA arms on vertical carriages pick from two rows at once, a silicone-and-vacuum gripper holds each berry under 2 N of force, and an onboard AI — YOLOv9 with EfficientNet-B4 on an NVIDIA Jetson Orin NX, trained on a 50,000-berry dataset — decides ripeness with more than 97% accuracy and grades size within ±1 mm.
 
-The platform runs on 48 V LiFePO4 with a 600 W solar roof and hot-swap batteries: 12-14 hours of daily autonomy, 17 kg/h across two rows, 450 kg on a tracked chassis built for soft soil. The gripper prototype is built and lab-tested; field prototypes are planned for 2027 with commercial launch in 2028.
+The platform runs on 48 V LiFePO4 with a 600 W solar roof and hot-swap batteries: design targets of 12-14 hours of daily autonomy and 17 kg/h across two rows, 450 kg on a tracked chassis built for soft soil. The gripper prototype is built and lab-tested; field prototypes are planned for 2027 with commercial launch in 2028.
 
-The honest limitation is throughput. One robot today replaces part of a picking crew for a whole day, not the crew itself. The argument for it is quality and predictability: zero crop loss on the pass, no mixed-ripeness loads, and a harvest that does not stop when the seasonal workers do not arrive.
+The honest limitation is throughput. One robot is designed to replace part of a picking crew for a whole day, not the crew itself. The argument for it is quality and predictability: a design target of zero crop loss on the pass, no mixed-ripeness loads, and a harvest that does not stop when the seasonal workers do not arrive.
 
 ## How to test a machine without buying it
 

@@ -12,11 +12,11 @@ MAIL = "orders@tpf-technology.com"  # switch to pilot@tpflabs.com once its mail 
 C = {
 "en": {
  "title": "CALIBER+ Blueberry Harvesting Robot | TPF Labs",
- "desc": "Autonomous blueberry harvesting machine for fresh-market farms: 17 kg/h, 0% crop loss, ≈€1.9/kg. Rent from €26,000/season or buy. 2027 pilots open.",
+ "desc": "Autonomous blueberry harvesting machine for fresh-market farms, designed for 17 kg/h and zero crop loss at ≈€1.9/kg. Rent from €26,000/season or buy. 2027 pilots open.",
  "nav": {"tech":"Technology","pilot":"Pilot","price":"Pricing","contact":"Contact"},
  "hero_tag": "TPF Labs · Autonomous Field Robotics",
  "h1": "Meet <b>CALIBER+</b> — the harvester that picks like hands, works like a machine",
- "lead": "An autonomous robot for selective harvesting of fresh-market blueberries. Two rows at once, berry by berry, with zero crop loss and 12–14 hours of daily autonomy.",
+ "lead": "An autonomous robot for selective harvesting of fresh-market blueberries. Two rows at once, berry by berry, designed for zero crop loss and 12–14 hours of daily autonomy.",
  "cta1": "Request a pilot", "cta2": "Technology",
  "stats": [("17 kg/h","picking rate per unit"),(">97%","ripeness accuracy"),("0%","crop loss (vs ~5% for harvesters)"),("12–14 h","daily autonomy")],
  "tech_h": "Engineered for fresh-market fruit",
@@ -49,11 +49,11 @@ C = {
 },
 "ru": {
  "title": "Робот для сбора голубики CALIBER+ — цена и пилот | TPF Labs",
- "desc": "Автономная машина для сбора голубики: 17 кг/ч, 0% потерь, ≈1,9 €/кг. Аренда от 26 000 € за сезон или покупка. Набор хозяйств на пилот 2027.",
+ "desc": "Автономная машина для сбора голубики: цель — 17 кг/ч без потерь, ≈1,9 €/кг. Аренда от 26 000 € за сезон или покупка. Набор хозяйств на пилот 2027.",
  "nav": {"tech":"Технологии","pilot":"Пилот","price":"Цены","contact":"Контакты"},
  "hero_tag": "TPF Labs · Автономная полевая робототехника",
  "h1": "Знакомьтесь — <b>CALIBER+</b>: собирает как руки, работает как машина",
- "lead": "Автономный робот для селективного сбора свежей голубики на продажу. Два ряда одновременно, ягоду за ягодой, без потерь и с автономностью 12–14 часов в день.",
+ "lead": "Автономный робот для селективного сбора свежей голубики на продажу. Два ряда одновременно, ягоду за ягодой; проектная цель — нулевые потери и автономностью 12–14 часов в день.",
  "cta1": "Запросить пилот", "cta2": "Технологии",
  "stats": [("17 кг/ч","производительность машины"),(">97%","точность спелости"),("0%","потери (у комбайнов ~5%)"),("12–14 ч","автономность в день")],
  "tech_h": "Создан для ягоды свежего рынка",
@@ -86,11 +86,11 @@ C = {
 },
 "nl": {
  "title": "CALIBER+ oogstrobot blauwe bessen — prijs & pilot | TPF Labs",
- "desc": "Blauwe bessen machinaal oogsten voor de versmarkt: 17 kg/u, 0% verlies, ≈€1,9/kg. Huur vanaf €26.000 per seizoen of koop. Pilots 2027 open.",
+ "desc": "Blauwe bessen machinaal oogsten voor de versmarkt: ontworpen voor 17 kg/u zonder verlies, ≈€1,9/kg. Huur vanaf €26.000 per seizoen of koop. Pilots 2027 open.",
  "nav": {"tech":"Technologie","pilot":"Pilot","price":"Prijzen","contact":"Contact"},
  "hero_tag": "TPF Labs · Autonome veldrobotica",
  "h1": "Maak kennis met <b>CALIBER+</b> — oogst zoals handmatig, werkt als een machine",
- "lead": "Een autonome robot voor selectieve oogst van verse blauwe bessen. Twee rijen tegelijk, bes voor bes, zonder verlies en 12–14 uur autonomie per dag.",
+ "lead": "Een autonome robot voor selectieve oogst van verse blauwe bessen. Twee rijen tegelijk, bes voor bes, ontworpen voor nul verlies en 12–14 uur autonomie per dag.",
  "cta1": "Pilot aanvragen", "cta2": "Technologie",
  "stats": [("17 kg/u","oogsttempo per machine"),(">97%","nauwkeurigheid rijpheidsherkenning"),("0%","verlies (oogstmachines ~5%)"),("12–14 u","autonomie per dag")],
  "tech_h": "Gebouwd voor de versmarkt",
@@ -123,11 +123,11 @@ C = {
 },
 "pl": {
  "title": "Robot do zbioru borówki CALIBER+ — cena i pilotaż | TPF Labs",
- "desc": "Autonomiczny kombajn do zbioru borówki na rynek świeży: 17 kg/h, 0% strat, ≈1,9 €/kg. Dzierżawa od 26 000 € za sezon lub zakup. Pilotaże 2027.",
+ "desc": "Autonomiczny kombajn do zbioru borówki na rynek świeży: projektowo 17 kg/h bez strat, ≈1,9 €/kg. Dzierżawa od 26 000 € za sezon lub zakup. Pilotaże 2027.",
  "nav": {"tech":"Technologia","pilot":"Pilotaż","price":"Ceny","contact":"Kontakt"},
  "hero_tag": "TPF Labs · Autonomiczna robotyka polowa",
  "h1": "Poznaj <b>CALIBER+</b> — zbiera jak ludzkie ręce, pracuje jak maszyna",
- "lead": "Autonomiczny robot do selektywnego zbioru borówki amerykańskiej na rynek świeży. Dwa rzędy jednocześnie, owoc po owocu, bez strat i z autonomią 12–14 godzin dziennie.",
+ "lead": "Autonomiczny robot do selektywnego zbioru borówki amerykańskiej na rynek świeży. Dwa rzędy jednocześnie, owoc po owocu, projektowany pod zerowe straty i autonomię 12–14 godzin dziennie.",
  "cta1": "Zgłoś się do pilotażu", "cta2": "Technologia",
  "stats": [("17 kg/h","wydajność jednej maszyny"),(">97%","trafność oceny dojrzałości"),("0%","strat (kombajny ok. 5%)"),("12–14 h","autonomii dziennie")],
  "tech_h": "Stworzony dla owoców na rynek świeży",
@@ -160,11 +160,11 @@ C = {
 },
 "zh": {
  "title": "CALIBER+ 蓝莓采摘机器人 — 价格与试点 | TPF Labs",
- "desc": "面向鲜果市场的自主蓝莓采摘机：每小时 17 公斤，损耗 0%，约 1.9 欧元/公斤。按季租赁 26,000 欧元起或购买。2027 试点名额开放。",
+ "desc": "面向鲜果市场的自主蓝莓采摘机：设计目标每小时 17 公斤、零损耗，约 1.9 欧元/公斤。按季租赁 26,000 欧元起或购买。2027 试点名额开放。",
  "nav": {"tech":"技术","pilot":"试点","price":"价格","contact":"联系"},
  "hero_tag": "TPF Labs · 自主田间机器人",
  "h1": "认识 <b>CALIBER+</b>：像双手一样轻采，像机器一样高效",
- "lead": "面向鲜果蓝莓市场的自主采摘机器人。同时采摘两行，逐颗识别，零损耗，每日续航 12–14 小时。",
+ "lead": "面向鲜果蓝莓市场的自主采摘机器人。同时采摘两行，逐颗识别，设计目标为零损耗、每日续航 12–14 小时。",
  "cta1": "申请试点", "cta2": "技术",
  "stats": [("17 公斤/时","单机采摘速度"),(">97%","成熟度识别精度"),("0%","损耗（采收机约5%）"),("12–14 小时","每日续航")],
  "tech_h": "为鲜果市场而设计",
@@ -207,7 +207,7 @@ INV = {
  "cta": "Request the investor deck",
  "cards": [
   ["🧩","Traction today","Signed NDA and a DFM package under review with contract manufacturer WayKen (CN); third-party validation talks with AgriFoodTEF nodes ILVO and INRIA (EU); first farm interest from Poland's largest blueberry GPO.","Seed round · EU company · 2026–2027"],
-  ["📈","Market window","Manual picking costs ≈€2.4/kg with a chronic labor shortage. At ≈€1.9/kg under RaaS, CALIBER+ pays back within one season per robot.","fresh-market blueberries · EU first"],
+  ["📈","Market window","Manual picking costs ≈€2.4/kg with a chronic labor shortage. At ≈€1.9/kg under RaaS, CALIBER+ is modelled to pay back within one season per robot.","fresh-market blueberries · EU first"],
   ["🤝","Partner with us","Pilot farms for season 2027, RaaS channel and service partners, component suppliers for the EU assembly chain.","farms · integrators · suppliers"],
   ["🚀","Roadmap","Gripper prototype: built and lab-tested. Field prototype: 2027. Commercial launch: 2028.","prototype → pilot fleet → launch"],
  ],
@@ -220,7 +220,7 @@ INV = {
  "cta": "Запросить инвесторскую презентацию",
  "cards": [
   ["🧩","Трекшн","Подписан NDA, техпакет на DFM-ревью у контрактного производителя WayKen (КНР); сторонняя валидация с нодами AgriFoodTEF ILVO и INRIA (ЕС); первый интерес от крупнейшего польского GPO по голубике.","Seed-раунд · компания в ЕС · 2026–2027"],
-  ["📈","Окно рынка","Ручной сбор ≈2,4 €/кг при хронической нехватке рабочих. При RaaS ≈1,9 €/кг робот окупается за один сезон.","свежая голубика · сначала ЕС"],
+  ["📈","Окно рынка","Ручной сбор ≈2,4 €/кг при хронической нехватке рабочих. При RaaS ≈1,9 €/кг робот, по расчётам, окупается за один сезон.","свежая голубика · сначала ЕС"],
   ["🤝","Стать партнёром","Хозяйства-пилоты на сезон 2027, канальные и сервисные партнёры RaaS, поставщики компонентов для сборки в ЕС.","хозяйства · интеграторы · поставщики"],
   ["🚀","Дорожная карта","Прототип захвата: собран и протестирован. Полевой прототип: 2027. Коммерческий запуск: 2028.","прототип → пилотный флот → запуск"],
  ],
@@ -233,7 +233,7 @@ INV = {
  "cta": "Investeerdersdeck opvragen",
  "cards": [
   ["🧩","Tractie","Ondertekende NDA en DFM-pakket in review bij contractproducent WayKen (CN); validatiegesprekken met AgriFoodTEF-nodes ILVO en INRIA (EU); eerste belang van Polens grootste blauwe-bessen-GPO.","Seed-ronde · EU-bedrijf · 2026–2027"],
-  ["📈","Marktkans","Handmatig plukken kost ≈€2,4/kg bij chronisch arbeidstekort. Bij ≈€1,9/kg RaaS verdient CALIBER+ zich per robot in één seizoen terug.","verse blauwe bessen · eerst EU"],
+  ["📈","Marktkans","Handmatig plukken kost ≈€2,4/kg bij chronisch arbeidstekort. Bij ≈€1,9/kg RaaS verdient CALIBER+ zich volgens het model per robot in één seizoen terug.","verse blauwe bessen · eerst EU"],
   ["🤝","Partner worden","Pilotbedrijven voor seizoen 2027, RaaS-kanaal- en servicepartners, componentleveranciers voor EU-assemblage.","telers · integrators · leveranciers"],
   ["🚀","Roadmap","Grijper-prototype: gebouwd en getest. Veldprototype: 2027. Commerciële lancering: 2028.","prototype → pilotvloot → lancering"],
  ],
@@ -246,7 +246,7 @@ INV = {
  "cta": "Poproś o prezentację dla inwestorów",
  "cards": [
   ["🧩","Postępy","Podpisana umowa NDA i pakiet DFM w ocenie u producenta kontraktowego WayKen (Chiny); rozmowy o niezależnej walidacji z węzłami AgriFoodTEF ILVO i INRIA (UE); pierwsze zainteresowanie ze strony największej polskiej grupy zakupowej borówki.","runda Seed · firma w UE · 2026–2027"],
-  ["📈","Okno rynkowe","Zbiór ręczny kosztuje ≈2,4 €/kg przy chronicznym niedoborze rąk do pracy. Przy ≈1,9 €/kg w modelu RaaS jeden robot CALIBER+ zwraca się w ciągu sezonu.","borówka na rynek świeży · najpierw UE"],
+  ["📈","Okno rynkowe","Zbiór ręczny kosztuje ≈2,4 €/kg przy chronicznym niedoborze rąk do pracy. Przy ≈1,9 €/kg w modelu RaaS jeden robot CALIBER+ według modelu zwraca się w ciągu sezonu.","borówka na rynek świeży · najpierw UE"],
   ["🤝","Zostań partnerem","Gospodarstwa pilotażowe na sezon 2027, partnerzy handlowi i serwisowi RaaS, dostawcy komponentów do montażu w UE.","plantacje · integratorzy · dostawcy"],
   ["🚀","Mapa drogowa","Prototyp chwytaka: zbudowany i przetestowany w laboratorium. Prototyp polowy: 2027. Start komercyjny: 2028.","prototyp → flota pilotażowa → start"],
  ],
@@ -259,7 +259,7 @@ INV = {
  "cta": "获取投资人资料",
  "cards": [
   ["🧩","现有进展","已与合同制造商WayKen签署保密协议，DFM技术包在审；与欧盟AgriFoodTEF节点ILVO和INRIA进行第三方验证洽谈；波兰最大蓝莓GPO已表达合作意向。","种子轮 · 欧盟公司 · 2026–2027"],
-  ["📈","市场窗口","人工采摘成本约2.4欧元/公斤，劳动力长期短缺。RaaS模式约1.9欧元/公斤，单台机器人一个产季即可回本。","新鲜蓝莓 · 优先欧洲市场"],
+  ["📈","市场窗口","人工采摘成本约2.4欧元/公斤，劳动力长期短缺。RaaS模式约1.9欧元/公斤，按测算单台机器人一个产季即可回本。","新鲜蓝莓 · 优先欧洲市场"],
   ["🤝","合作方式","2027产季试点农场、RaaS渠道与服务伙伴、欧盟组装的零部件供应商。","农场 · 集成商 · 供应商"],
   ["🚀","路线图","夹爪原型：已完成并测试。田间原型：2027年。商业化发布：2028年。","原型 → 试点车队 → 发布"],
  ],
@@ -270,32 +270,32 @@ INV = {
 FAQ = {
 "en": [
  ("How much does CALIBER+ cost?","Robot-as-a-Service starts at €26,000 per season (≈€1.9/kg of picked berries). Purchase starts at €80,000."),
- ("How fast does the robot pick?","Up to 17 kg/h per unit with 12–14 hours of daily autonomy. It harvests two rows simultaneously, berry by berry."),
- ("Does the machine damage the berries?","No: the silicone-and-vacuum gripper holds each berry with under 2 N of force. CALIBER+ has 0% crop loss versus about 5% for over-the-row harvesters."),
+ ("How fast does the robot pick?","The design target is 17 kg/h per unit with 12–14 hours of daily autonomy. It harvests two rows simultaneously, berry by berry."),
+ ("Does the machine damage the berries?","No: the silicone-and-vacuum gripper holds each berry with under 2 N of force. CALIBER+ is designed for 0% crop loss versus about 5% for over-the-row harvesters."),
  ("When can a farm get a robot?","Pilot programs run in season 2027 (30/60/90 days), commercial launch is 2028. Pilot slots for 2027 are open now."),
 ],
 "ru": [
  ("Сколько стоит CALIBER+?","Робот-как-Сервис — от 26 000 € за сезон (≈1,9 €/кг собранной ягоды). Покупка — от 80 000 €."),
- ("Как быстро робот собирает ягоду?","До 17 кг/ч с автономностью 12–14 часов в день. Работает с двумя рядами одновременно, ягоду за ягодой."),
- ("Повреждает ли машина ягоду?","Нет: силиконово-вакуумный захват держит ягоду с усилием менее 2 Н. Потери у CALIBER+ — 0% против примерно 5% у комбайнов."),
+ ("Как быстро робот собирает ягоду?","Проектная цель — 17 кг/ч с автономностью 12–14 часов в день. Работает с двумя рядами одновременно, ягоду за ягодой."),
+ ("Повреждает ли машина ягоду?","Нет: силиконово-вакуумный захват держит ягоду с усилием менее 2 Н. Проектная цель CALIBER+ — 0% потерь против примерно 5% у комбайнов."),
  ("Когда хозяйство может получить робота?","Пилотные программы — сезон 2027 (30/60/90 дней), коммерческий запуск — 2028 год. Слоты пилота на 2027 уже открыты."),
 ],
 "nl": [
  ("Wat kost CALIBER+?","Robot-as-a-Service vanaf €26.000 per seizoen (≈€1,9/kg geplukte bessen). Aankoop vanaf €80.000."),
- ("Hoe snel plukt de robot?","Tot 17 kg/u met 12–14 uur autonomie per dag. Hij oogst twee rijen tegelijk, bes voor bes."),
- ("Beschadigt de machine de bessen?","Nee: de siliconen-vacuümgrijper houdt elke bes vast met minder dan 2 N kracht. CALIBER+ heeft 0% oogstverlies tegenover circa 5% bij oogstmachines."),
+ ("Hoe snel plukt de robot?","Het ontwerpdoel is 17 kg/u met 12–14 uur autonomie per dag. Hij oogst twee rijen tegelijk, bes voor bes."),
+ ("Beschadigt de machine de bessen?","Nee: de siliconen-vacuümgrijper houdt elke bes vast met minder dan 2 N kracht. CALIBER+ is ontworpen voor 0% oogstverlies tegenover circa 5% bij oogstmachines."),
  ("Wanneer kan een teler een robot krijgen?","Pilotprogramma's lopen in seizoen 2027 (30/60/90 dagen), commerciële lancering in 2028. Pilotplekken voor 2027 zijn nu open."),
 ],
 "pl": [
  ("Ile kosztuje CALIBER+?","Robot jako usługa (RaaS) od 26 000 € za sezon (≈1,9 €/kg zebranych owoców). Zakup od 80 000 €."),
- ("Jak szybko robot zbiera borówki?","Do 17 kg/h na maszynę przy 12–14 godzinach autonomii dziennie. Zbiera z dwóch rzędów jednocześnie, owoc po owocu."),
- ("Czy maszyna uszkadza owoce?","Nie: silikonowo-podciśnieniowy chwytak trzyma każdy owoc z siłą poniżej 2 N. CALIBER+ ma 0% strat wobec ok. 5% przy kombajnach okrakowych."),
+ ("Jak szybko robot zbiera borówki?","Cel projektowy to 17 kg/h na maszynę przy 12–14 godzinach autonomii dziennie. Zbiera z dwóch rzędów jednocześnie, owoc po owocu."),
+ ("Czy maszyna uszkadza owoce?","Nie: silikonowo-podciśnieniowy chwytak trzyma każdy owoc z siłą poniżej 2 N. CALIBER+ jest projektowany pod 0% strat wobec ok. 5% przy kombajnach okrakowych."),
  ("Kiedy gospodarstwo może otrzymać robota?","Programy pilotażowe ruszają w sezonie 2027 (30/60/90 dni), start komercyjny w 2028 roku. Terminy pilotaży na 2027 są już otwarte."),
 ],
 "zh": [
  ("CALIBER+ 的价格是多少？","机器人即服务（RaaS）：每产季 26,000 欧元起（约 1.9 欧元/公斤）。购买：80,000 欧元起。"),
- ("机器人采摘速度有多快？","单台每小时可达 17 公斤，每天自主作业 12–14 小时，可同时采摘两行，逐颗采摘。"),
- ("机器会损伤果实吗？","不会：硅胶加真空的夹爪以小于 2 牛的力夹持每颗果实。CALIBER+ 的作物损失为 0%，而跨行采收机约为 5%。"),
+ ("机器人采摘速度有多快？","设计目标为单台每小时 17 公斤，每天自主作业 12–14 小时，可同时采摘两行，逐颗采摘。"),
+ ("机器会损伤果实吗？","不会：硅胶加真空的夹爪以小于 2 牛的力夹持每颗果实。CALIBER+ 的设计目标是作物损失为 0%，而跨行采收机约为 5%。"),
  ("农场什么时候可以拿到机器人？","试点计划在 2027 产季（30/60/90 天），商业化发布于 2028 年。2027 年的试点名额现已开放。"),
 ],
 }
@@ -362,7 +362,7 @@ TPL = """<!DOCTYPE html>
 </div>
 <div class="wrap"><div class="stats">
   {stats_html}
-</div></div>
+</div><p class="stats-note">{stats_note}</p></div>
 <section id="film" class="film">
   <div class="wrap">
     <span class="over">{film_over}</span><br><h2>{film_h}</h2>
@@ -471,6 +471,9 @@ SEO = {
 }
 VIDEO_UPLOAD = "2026-11-02"
 
+# Shown under the stat tiles: the numbers are targets for a machine still in pre-production
+STATS_NOTE = {'en': 'Design targets for the 2027 field prototype; pilot results will be published.', 'ru': 'Проектные показатели полевого прототипа 2027 года; результаты пилотов будут опубликованы.', 'nl': 'Ontwerpdoelen voor het veldprototype van 2027; pilotresultaten worden gepubliceerd.', 'pl': 'Parametry projektowe prototypu polowego 2027; wyniki pilotaży zostaną opublikowane.', 'zh': '以上为 2027 年田间原型的设计目标，试点结果将公开发布。'}
+
 
 HREFLANG = "\n".join(f'<link rel="alternate" hreflang="{l}" href="https://tpflabs.com{"/" if l=="en" else "/"+l+"/"}">' for l in CODES) + '\n<link rel="alternate" hreflang="x-default" href="https://tpflabs.com/">'
 
@@ -490,10 +493,10 @@ def page(c, lang):
     import json as _json
     _url = "https://tpflabs.com" + suffix
     _org = {"@type":"Organization","@id":"https://tpflabs.com/#org","name":"TPF Labs","alternateName":["TPFlabs","TPF Labs CALIBER+"],"url":"https://tpflabs.com/","logo":{"@type":"ImageObject","url":"https://tpflabs.com/apple-touch-icon.png","width":180,"height":180},"image":"https://tpflabs.com/img/og.png","email":MAIL,"description":"Autonomous field robotics for fresh-market berry harvesting.","parentOrganization":{"@type":"Organization","name":"TPFtechnology","url":"https://tpf-technology.com/"},"areaServed":{"@type":"Place","name":"European Union"},"knowsAbout":["blueberry harvesting","agricultural robotics","selective fruit picking","robot as a service"],"knowsLanguage":CODES}
-    _prod = {"@type":"Product","@id":"https://tpflabs.com/#caliber","name":"CALIBER+","description":"Autonomous selective harvester for fresh-market blueberries: 17 kg/h, >97% ripeness accuracy, 0% crop loss, 12-14 h autonomy.","image":["https://tpflabs.com/img/hero.jpg","https://tpflabs.com/img/og.png","https://tpflabs.com/img/film-poster.jpg"],"brand":{"@type":"Brand","name":"TPF Labs"},"manufacturer":{"@id":"https://tpflabs.com/#org"},"category":"Agricultural robot","subjectOf":{"@id":_url+"#film"},"offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"80000","offerCount":1,"availability":"https://schema.org/PreOrder","url":_url+"#price","seller":{"@id":"https://tpflabs.com/#org"}},"additionalProperty":[{"@type":"PropertyValue","name":"Picking rate","value":"17 kg/h"},{"@type":"PropertyValue","name":"Ripeness accuracy","value":">97%"},{"@type":"PropertyValue","name":"Crop loss","value":"0%"},{"@type":"PropertyValue","name":"Daily autonomy","value":"12-14 h"},{"@type":"PropertyValue","name":"Weight","value":"450 kg"}]}
+    _prod = {"@type":"Product","@id":"https://tpflabs.com/#caliber","name":"CALIBER+","description":"Autonomous selective harvester for fresh-market blueberries in pre-production. Design targets: 17 kg/h, >97% ripeness accuracy, 0% crop loss, 12-14 h autonomy.","image":["https://tpflabs.com/img/hero.jpg","https://tpflabs.com/img/og.png","https://tpflabs.com/img/film-poster.jpg"],"brand":{"@type":"Brand","name":"TPF Labs"},"manufacturer":{"@id":"https://tpflabs.com/#org"},"category":"Agricultural robot","subjectOf":{"@id":_url+"#film"},"offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"80000","offerCount":1,"availability":"https://schema.org/PreOrder","url":_url+"#price","seller":{"@id":"https://tpflabs.com/#org"}},"additionalProperty":[{"@type":"PropertyValue","name":"Picking rate","value":"17 kg/h"},{"@type":"PropertyValue","name":"Ripeness accuracy","value":">97%"},{"@type":"PropertyValue","name":"Crop loss","value":"0%"},{"@type":"PropertyValue","name":"Daily autonomy","value":"12-14 h"},{"@type":"PropertyValue","name":"Weight","value":"450 kg"}]}
     _site = {"@type":"WebSite","@id":"https://tpflabs.com/#site","url":"https://tpflabs.com/","name":"TPF Labs","alternateName":"TPF Labs — CALIBER+","publisher":{"@id":"https://tpflabs.com/#org"},"inLanguage":CODES}
     _page = {"@type":"WebPage","@id":_url+"#page","url":_url,"name":c["title"],"description":c["desc"],"inLanguage":lang,"isPartOf":{"@id":"https://tpflabs.com/#site"},"about":{"@id":"https://tpflabs.com/#caliber"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://tpflabs.com/img/hero.jpg","width":700,"height":875}}
-    _video = {"@type":"VideoObject","@id":_url+"#film","name":SEO[lang]["video_name"],"description":FILM[lang]["s"],"thumbnailUrl":["https://tpflabs.com/img/film-poster.jpg"],"uploadDate":VIDEO_UPLOAD+"T12:00:00+00:00","duration":"PT1M11S","contentUrl":"https://tpflabs.com/video/caliber-plus-film-en-16x9.mp4","embedUrl":_url+"#film","inLanguage":"en","publisher":{"@id":"https://tpflabs.com/#org"}}
+    _video = {"@type":"VideoObject","@id":_url+"#film","name":SEO[lang]["video_name"],"description":FILM[lang]["s"],"thumbnailUrl":["https://tpflabs.com/img/film-poster.jpg"],"uploadDate":VIDEO_UPLOAD+"T12:00:00+00:00","duration":"PT1M11S","contentUrl":"https://tpflabs.com/video/caliber-plus-film-en-16x9.mp4","inLanguage":"en","publisher":{"@id":"https://tpflabs.com/#org"}}
     _faq = {"@type":"FAQPage","@id":_url+"#faq","inLanguage":lang,"mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq_items]}
     _ld = {"@context":"https://schema.org","@graph":[_org,_site,_page,_prod,_video,_faq]}
     jsonld = '<script type="application/ld+json">' + _json.dumps(_ld, ensure_ascii=False) + '</script>'
@@ -511,7 +514,7 @@ def page(c, lang):
         og_locale=OG_LOC[lang],
         nav_tech=c["nav"]["tech"], nav_pilot=c["nav"]["pilot"], nav_price=c["nav"]["price"], nav_contact=c["nav"]["contact"],
         langlinks=langlinks, hero_tag=c["hero_tag"], h1=c["h1"], lead=c["lead"],
-        mail=c["mail"], cta1=c["cta1"], cta2=c["cta2"], stats_html=stats_html,
+        mail=c["mail"], cta1=c["cta1"], cta2=c["cta2"], stats_html=stats_html, stats_note=STATS_NOTE[lang],
         tech_h=c["tech_h"], tech_s=c["tech_s"], cards_html=cards_html,
         pilot_h=c["pilot_h"], pilot_s=c["pilot_s"], steps_html=steps_html,
         price_h=c["price_h"], price_s=c["price_s"], plans_html=plans_html,
@@ -525,9 +528,10 @@ def page(c, lang):
         og_locale_alt="\n".join(f'<meta property="og:locale:alternate" content="{v}">' for k,v in OG_LOC.items() if k!=lang))
     return html
 
-os.makedirs("out", exist_ok=True)
+# Pages are written straight into the site root that Vercel serves (no manual copy step)
+ROOT = os.path.dirname(os.path.abspath(__file__))
 for lang in CODES:
-    p = "out/index.html" if lang=="en" else f"out/{lang}/index.html"
+    p = os.path.join(ROOT, "index.html" if lang=="en" else f"{lang}/index.html")
     os.makedirs(os.path.dirname(p), exist_ok=True)
     with open(p,"w",encoding="utf-8") as f:
         f.write(page(C[lang], lang))
@@ -556,8 +560,8 @@ for lang in CODES:
       <video:publication_date>{VIDEO_UPLOAD}T12:00:00+00:00</video:publication_date>
     </video:video>
   </url>''')
-with open("out/sitemap.xml","w",encoding="utf-8") as f:
+with open(os.path.join(ROOT, "sitemap.xml"),"w",encoding="utf-8") as f:
     f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
             'xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" '
             'xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">\n' + "\n".join(_rows) + "\n</urlset>\n")
-print("built out/sitemap.xml")
+print("built sitemap.xml")

@@ -230,3 +230,6 @@ footer .frow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .film-video { display:block; width:100%; height:auto; aspect-ratio:16/9; border-radius:18px;
   background:#0a1020; box-shadow:0 26px 60px rgba(8,16,36,.35); }
 @media (max-width:720px){ .film { padding: 48px 0 0; } .film-video { border-radius:12px; } }
+
+/* ---------- note under stat tiles (design targets) ---------- */
+.stats-note{max-width:1080px;margin:10px auto 0;font-size:.8rem;opacity:.65;text-align:center}

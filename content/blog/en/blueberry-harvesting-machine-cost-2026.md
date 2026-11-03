@@ -70,7 +70,7 @@ If a quote does not answer these five, the cheap offer is usually the expensive 
 
 ## The pilot: paying to find out, not to guess
 
-The lowest-risk way to price a machine is to measure it on your own field. The CALIBER+ pilot runs 30/60/90 days: a row survey and vision calibration for your varieties, autonomous harvest on one hectare with ripeness, calibre, loss and cost per kilogram measured, then a full report and an option to lock a tariff or buy for the next season. Payment is 50/40/10 by stage, and there is no financial obligation until a season contract.
+The lowest-risk way to price a machine is to measure it on your own field. The CALIBER+ pilot runs 30/60/90 days: a row survey and vision calibration for your varieties, autonomous harvest on one hectare with ripeness, calibre, loss and cost per kilogram measured, then a full report and an option to lock a tariff or buy for the next season. There is no financial obligation until you sign a season contract.
 
 Pilot slots for season 2027 are open. If you want the arithmetic done on your own hectares, write to [orders@tpf-technology.com](mailto:orders@tpf-technology.com) with your acreage, varieties and harvest window.
 
