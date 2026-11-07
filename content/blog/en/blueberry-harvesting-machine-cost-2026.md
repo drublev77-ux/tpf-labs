@@ -4,6 +4,7 @@ description: "Purchase price, cost per kilogram and the RaaS alternative: a stra
 date: 2026-10-30
 lang: en
 slug: blueberry-harvesting-machine-cost-2026
+group: price-2026
 cluster: machines
 ---
 

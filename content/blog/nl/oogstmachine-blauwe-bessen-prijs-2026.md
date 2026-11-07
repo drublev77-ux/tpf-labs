@@ -5,6 +5,7 @@ description: "Prijs van een oogstmachine voor blauwe bessen, oogstkosten per kil
 date: 2026-11-03
 lang: nl
 slug: oogstmachine-blauwe-bessen-prijs-2026
+group: price-2026
 cluster: machines
 ---
 

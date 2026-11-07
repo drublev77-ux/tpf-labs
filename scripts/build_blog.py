@@ -26,13 +26,26 @@ BASE = "https://tpflabs.com"
 LANGS = [("en", "EN"), ("ru", "RU"), ("nl", "NL"), ("pl", "PL"), ("zh", "中文")]
 OG = {"en": "en_US", "ru": "ru_RU", "nl": "nl_NL", "pl": "pl_PL", "zh": "zh_CN"}
 UI = {
-    "en": dict(idx_title="Blog: blueberry harvesting machines & farm robotics | TPF Labs", idx_desc="Practical articles on blueberry harvesting machines, picking robots, cost per kilogram and labour on fresh-market berry farms.", foot_l="TPF Labs — autonomous robotics division of TPFtechnology.", foot_r="CALIBER+ is in pre-production. Photos show design concepts.", blog="Blog", home="Home", back="← All articles", related="More articles", cta1="Request a pilot", cta2="Investor deck", lang_note="", og_alt="CALIBER+ autonomous blueberry harvesting robot by TPF Labs"),
-    "nl": dict(idx_title="Blog: blauwe bessen machinaal oogsten & oogstrobots | TPF Labs", idx_desc="Artikelen over oogstmachines en plukrobots voor blauwe bessen, kosten per kilo en arbeid op bessenbedrijven.", foot_l="TPF Labs — divisie autonome robotica van TPFtechnology.", foot_r="CALIBER+ is in preproductie. Foto's tonen ontwerpconcepten.", blog="Blog", home="Home", back="← Alle artikelen", related="Meer artikelen", cta1="Pilot aanvragen", cta2="Investeerdersdeck", lang_note="Onze artikelen zijn voorlopig in het Engels beschikbaar.", og_alt="CALIBER+ autonome oogstrobot voor blauwe bessen van TPF Labs"),
+    "en": dict(idx_title="Blog: blueberry harvesters & farm robots | TPF Labs", idx_desc="Practical articles on blueberry harvesting machines, picking robots, cost per kilogram and labour on fresh-market berry farms.", foot_l="TPF Labs — autonomous robotics division of TPFtechnology.", foot_r="CALIBER+ is in pre-production. Photos show design concepts.", blog="Blog", home="Home", back="← All articles", related="More articles", cta1="Request a pilot", cta2="Investor deck", lang_note="", og_alt="CALIBER+ autonomous blueberry harvesting robot by TPF Labs"),
+    "nl": dict(idx_title="Blog: blauwe bessen oogsten & oogstrobots | TPF Labs", idx_desc="Artikelen over oogstmachines en plukrobots voor blauwe bessen, kosten per kilo en arbeid op bessenbedrijven.", foot_l="TPF Labs — divisie autonome robotica van TPFtechnology.", foot_r="CALIBER+ is in preproductie. Foto's tonen ontwerpconcepten.", blog="Blog", home="Home", back="← Alle artikelen", related="Meer artikelen", cta1="Pilot aanvragen", cta2="Investeerdersdeck", lang_note="Onze artikelen zijn voorlopig in het Engels beschikbaar.", og_alt="CALIBER+ autonome oogstrobot voor blauwe bessen van TPF Labs"),
     "ru": dict(idx_title="Блог: машины и роботы для сбора голубики | TPF Labs", idx_desc="Статьи о комбайнах и роботах для сбора голубики, стоимости уборки за килограмм и нехватке сборщиков в ягодных хозяйствах.", foot_l="TPF Labs — дивизион автономной робототехники TPFtechnology.", foot_r="CALIBER+ находится в стадии подготовки к производству. Изображения — дизайнерские концепты.", blog="Блог", home="Главная", back="← Все статьи", related="Другие статьи", cta1="Запросить пилот", cta2="Инвесторская дека", lang_note="Статьи пока доступны на английском языке.", og_alt="CALIBER+ — автономный робот для сбора голубики от TPF Labs"),
     "pl": dict(idx_title="Blog: kombajny i roboty do zbioru borówki | TPF Labs", idx_desc="Artykuły o kombajnach i robotach do zbioru borówki amerykańskiej, koszcie zbioru za kilogram i braku rąk do pracy na plantacjach.", foot_l="TPF Labs — dział autonomicznej robotyki TPFtechnology.", foot_r="CALIBER+ jest na etapie przygotowania do produkcji. Zdjęcia przedstawiają koncepcje projektowe.", blog="Blog", home="Strona główna", back="← Wszystkie artykuły", related="Więcej artykułów", cta1="Zgłoś się do pilotażu", cta2="Prezentacja dla inwestorów", lang_note="Artykuły są na razie dostępne w języku angielskim.", og_alt="CALIBER+ — autonomiczny robot do zbioru borówki od TPF Labs"),
     "zh": dict(idx_title="博客：蓝莓采摘机与农业机器人 | TPF Labs", idx_desc="关于蓝莓采摘机、采摘机器人、每公斤采收成本和浆果农场劳动力的文章。", foot_l="TPF Labs — TPFtechnology 旗下自主机器人部门。", foot_r="CALIBER+ 处于量产准备阶段。图片为设计概念图。", blog="博客", home="首页", back="← 所有文章", related="更多文章", cta1="申请试点", cta2="投资人资料", lang_note="文章暂时仅提供英文版本。", og_alt="TPF Labs 的 CALIBER+ 自主蓝莓采摘机器人"),
 }
 MAIL = "orders@tpf-technology.com"
+
+
+def alternates_html(pairs):
+    """hreflang cluster: one link per language plus x-default on the English page."""
+    if not pairs:
+        return ""
+    out = [f'<link rel="alternate" hreflang="{hl}" href="{url}">' for hl, url in pairs]
+    default = dict(pairs).get("en") or pairs[0][1]
+    out.append(f'<link rel="alternate" hreflang="x-default" href="{default}">')
+    return "\n".join(out)
+
+
+GROUPS = {}
 
 # H1 and intro paragraph on each blog index
 INTRO = {'en': ('Blueberry harvesting machines and robots: costs, types and field economics', 'Guides for fresh-market blueberry growers: what each kind of harvesting machine costs per kilogram, where selective picking robots stand today and how to test one on your own rows before you commit.'), 'ru': ('Машины и роботы для сбора голубики: цены, виды и экономика уборки', 'Материалы для хозяйств, выращивающих голубику на свежий рынок: сколько стоит машинная уборка за килограмм, чем селективный робот отличается от комбайна и как проверить его на своём поле.'), 'nl': ('Oogstmachines en plukrobots voor blauwe bessen: kosten en soorten', 'Gidsen voor telers van verse blauwe bessen: wat elk type oogstmachine per kilo kost, waar selectieve plukrobots nu staan en hoe u er een op uw eigen rijen test.'), 'pl': ('Kombajny i roboty do zbioru borówki: ceny, rodzaje i ekonomika zbioru', 'Poradniki dla plantatorów borówki amerykańskiej na rynek świeży: ile kosztuje zbiór maszynowy w przeliczeniu na kilogram, czym robot selektywny różni się od kombajnu i jak sprawdzić go na własnej plantacji.'), 'zh': ('蓝莓采摘机与采摘机器人：价格、类型与采收经济性', '面向鲜果蓝莓种植者的指南：各类采摘机每公斤成本、选择性采摘机器人的现状，以及如何在自己的果园先行测试。')}
@@ -266,7 +279,13 @@ def article_page(meta: dict, related: list[dict]) -> str:
     art_meta = (f'<meta property="article:published_time" content="{meta["date"]}">\n'
                 f'<meta property="article:modified_time" content="{meta.get("updated", meta["date"])}">\n'
                 '<meta property="article:author" content="TPF Labs">')
-    alt = f'<link rel="alternate" hreflang="{lang}" href="{canon}">'
+    group = meta.get("group")
+    siblings = GROUPS.get(group, []) if group else []
+    if siblings:
+        pairs = [(m["lang"], f"{BASE}/blog/{m['lang']}/{m['slug']}/") for m in sorted(siblings, key=lambda m: m["lang"])]
+    else:
+        pairs = [(lang, canon)]
+    alt = alternates_html(pairs)
     return f'''{head(lang, meta.get("seo_title", meta["title"]), meta["description"], canon, json.dumps(ld, ensure_ascii=False), "article", alternates=alt, extra_meta=art_meta)}
 {nav_html(lang)}
 <main class="wrap article">
@@ -294,7 +313,8 @@ def index_page(lang: str, arts: list[dict], all_en: list[dict]) -> str:
     ld = json.dumps({"@context": "https://schema.org", "@type": "Blog", "name": "TPF Labs Blog",
                      "url": canon, "inLanguage": lang}, ensure_ascii=False)
     robots = "index,follow" if arts else "noindex,follow"
-    return f'''{head(lang, ui["idx_title"], ui["idx_desc"], canon, ld, robots=robots)}
+    idx_pairs = [(l, f"{BASE}/blog/{'' if l == 'en' else l + '/'}") for l, _ in LANGS]
+    return f'''{head(lang, ui["idx_title"], ui["idx_desc"], canon, ld, robots=robots, alternates=alternates_html(idx_pairs))}
 {nav_html(lang)}
 <main class="wrap article">
   <h1>{INTRO[lang][0]}</h1>
@@ -312,6 +332,10 @@ def main() -> None:
             continue
         arts[lang_dir.name] = [parse(p) for p in sorted(lang_dir.glob("*.md"))]
     all_en = arts.get("en", [])
+    for lang_arts in arts.values():
+        for m in lang_arts:
+            if m.get("group"):
+                GROUPS.setdefault(m["group"], []).append(m)
     sitemap_rows = []
     (ROOT / "blog").mkdir(exist_ok=True)
     for lang in [l for l, _ in LANGS]:
