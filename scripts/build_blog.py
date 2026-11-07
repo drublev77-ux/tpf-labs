@@ -34,6 +34,15 @@ UI = {
 }
 MAIL = "orders@tpf-technology.com"
 
+HOME_LINKS = {
+    "en": ("What the machine costs and how a pilot works:", "pricing", "pilot program"),
+    "ru": ("Сколько стоит машина и как проходит пилот:", "цены", "пилотная программа"),
+    "nl": ("Wat de machine kost en hoe een pilot werkt:", "prijzen", "pilotprogramma"),
+    "pl": ("Ile kosztuje maszyna i jak wygląda pilotaż:", "ceny", "program pilotażowy"),
+    "zh": ("机器价格与试点流程：", "价格", "试点计划"),
+}
+
+
 
 def alternates_html(pairs):
     """hreflang cluster: one link per language plus x-default on the English page."""
@@ -275,6 +284,11 @@ def article_page(meta: dict, related: list[dict]) -> str:
     if faq:
         ld["@graph"].append({"@type": "FAQPage", "inLanguage": lang, "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
+    _onpage, _price, _pilot = HOME_LINKS[lang]
+    _home = "/" if lang == "en" else f"/{lang}/"
+    links_html = (f'<p class="sub" style="margin-top:28px">{_onpage} '
+                  f'<a href="{_home}#price">{_price}</a> · '
+                  f'<a href="{_home}#pilot">{_pilot}</a></p>')
     rel = "".join(f'<li><a href="/blog/{lang}/{r["slug"]}/">{html.escape(r["title"])}</a></li>' for r in related)
     art_meta = (f'<meta property="article:published_time" content="{meta["date"]}">\n'
                 f'<meta property="article:modified_time" content="{meta.get("updated", meta["date"])}">\n'
@@ -293,6 +307,7 @@ def article_page(meta: dict, related: list[dict]) -> str:
   <h1>{html.escape(meta["title"])}</h1>
   <p class="meta"><time datetime="{meta["date"]}">{meta["date"]}</time> · TPF Labs</p>
   {body_html}
+  {links_html}
   <div class="cta-row" style="margin-top:36px">
     <a class="btn pri" href="mailto:{MAIL}?subject=CALIBER%2B%20pilot%20request">{ui["cta1"]}</a>
     <a class="btn sec" href="/caliber-investor-deck.pdf" target="_blank" rel="noopener">{ui["cta2"]}</a>
