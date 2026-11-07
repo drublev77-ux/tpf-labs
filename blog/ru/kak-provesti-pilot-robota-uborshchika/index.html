@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070b14">
+<title>Пилот робота-сборщика на своём поле: что он должен доказать</title>
+<meta name="description" content="Как хозяйству выстроить пилот робота для сбора голубики: требования к участку, схема 30/60/90 дней, какие данные собирать и какие ошибки убивают пилот.">
+<meta property="og:title" content="Пилот робота-сборщика на своём поле: что он должен доказать">
+<meta property="og:description" content="Как хозяйству выстроить пилот робота для сбора голубики: требования к участку, схема 30/60/90 дней, какие данные собирать и какие ошибки убивают пилот.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tpflabs.com/blog/ru/kak-provesti-pilot-robota-uborshchika/">
+<meta property="og:image" content="https://tpflabs.com/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CALIBER+ — автономный робот для сбора голубики от TPF Labs">
+<meta property="og:site_name" content="TPF Labs">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-11-07">
+<meta property="article:modified_time" content="2026-11-07">
+<meta property="article:author" content="TPF Labs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Пилот робота-сборщика на своём поле: что он должен доказать">
+<meta name="twitter:description" content="Как хозяйству выстроить пилот робота для сбора голубики: требования к участку, схема 30/60/90 дней, какие данные собирать и какие ошибки убивают пилот.">
+<meta name="twitter:image" content="https://tpflabs.com/img/og.png">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="canonical" href="https://tpflabs.com/blog/ru/kak-provesti-pilot-robota-uborshchika/">
+<link rel="alternate" hreflang="en" href="https://tpflabs.com/blog/en/harvesting-robot-pilot-how-to-test/">
+<link rel="alternate" hreflang="ru" href="https://tpflabs.com/blog/ru/kak-provesti-pilot-robota-uborshchika/">
+<link rel="alternate" hreflang="x-default" href="https://tpflabs.com/blog/en/harvesting-robot-pilot-how-to-test/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Пилот робота-сборщика на своём поле: что он должен доказать", "description": "Как хозяйству выстроить пилот робота для сбора голубики: требования к участку, схема 30/60/90 дней, какие данные собирать и какие ошибки убивают пилот.", "datePublished": "2026-11-07", "dateModified": "2026-11-07", "inLanguage": "ru", "image": ["https://tpflabs.com/img/og.png", "https://tpflabs.com/img/hero.jpg"], "author": {"@type": "Organization", "@id": "https://tpflabs.com/#org", "name": "TPF Labs", "url": "https://tpflabs.com/"}, "publisher": {"@type": "Organization", "@id": "https://tpflabs.com/#org", "name": "TPF Labs", "logo": {"@type": "ImageObject", "url": "https://tpflabs.com/apple-touch-icon.png", "width": 180, "height": 180}}, "about": {"@id": "https://tpflabs.com/#caliber"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tpflabs.com/blog/ru/kak-provesti-pilot-robota-uborshchika/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://tpflabs.com/ru/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tpflabs.com/blog/ru/"}, {"@type": "ListItem", "position": 3, "name": "Пилот робота-сборщика на своём поле: что он должен доказать"}]}]}</script>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/img/favicon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/"><img src="/img/logo-icon.png" alt="TPF Labs logo"> TPF<b>labs</b></a>
+    <div class="links">
+      <a href="/ru/#tech">Технологии</a><a href="/ru/#pilot">Пилот</a><a href="/ru/#price">Цены</a><a href="/blog/ru/">Блог</a>
+    </div>
+    <div class="langs"><a href="/">EN</a><a href="/ru/" class="on">RU</a><a href="/nl/">NL</a><a href="/pl/">PL</a><a href="/zh/">中文</a></div>
+  </div>
+</header>
+<main class="wrap article">
+  <p class="crumb"><a href="/blog/ru/">← Все статьи</a></p>
+  <h1>Пилот робота-сборщика на своём поле: что он должен доказать</h1>
+  <p class="meta"><time datetime="2026-11-07">2026-11-07</time> · TPF Labs</p>
+  <p>Демонстрация показывает, что машина умеет на чужих рядах, на чужой ягоде и в хороший день. Пилот показывает, что она делает на ваших рядах, в ваш сезон, когда рядом стоят ваши сборщики. Разница между этими двумя вещами и решает, появится ли машина в плане уборки, поэтому пилот стоит выстроить до подписания любого заказа.</p>
+<p>Ниже схема, по которой мы проводим собственные пилоты. Она годится для любой машины селективного сбора, не только для нашей.</p>
+<h2 id="">Начинайте с вопроса, а не с машины</h2>
+<p>Пилот без записанного вопроса превращается в долгую демонстрацию. До приезда машины уложите вопрос на одну страницу: какое число решает исход? Для хозяйства на свежий рынок это обычно одно из трёх.</p>
+<p>Стоимость килограмма убранной ягоды со всеми издержками, включая простои и ягоду, которую машина не взяла. Килограммы в час на вашей схеме посадки, а не на демонстрационной. Или доля урожая, которую машина вообще может тронуть без повреждений, то есть выход товарной ягоды.</p>
+<p>Выберите один показатель как главный и запишите порог, при котором пилот считается успешным. Остальные измерения станут подтверждением.</p>
+<h2 id="">Что проверить на участке до приезда техники</h2>
+<p>Большинство провалов пилота — это провалы участка, обнаруженные слишком поздно. Проверьте рулеткой заранее.</p>
+<p>Ширина междурядья и форма куста. Машина под ряд 3,0 м не войдёт в посадку 2,4 м, а при посадке в бороздах корона может оказаться ниже линии колёс.</p>
+<p>Грунт и уклон. Мягкая земля после дождя и уклон больше нескольких градусов меняют и сцепление, и вылет руки.</p>
+<p>Разворот в конце ряда. Обычно ограничивает не сам ряд, а площадка для разворота.</p>
+<p>Питание и зарядка. Если машина работает смену на батарее, место под зарядку важнее ёмкости батареи.</p>
+<p>Как висит ягода. Ягода внутри кроны и плотный листовой аппарат меняют темп сбора сильнее, чем любые цифры из паспорта.</p>
+<h2 id="30-60-90">Схема 30 / 60 / 90 дней</h2>
+<p>Первые тридцать дней: машина собирает заданную выборку под присмотром, на небольшом блоке. Цель не выработка, а правда о темпе, доле повреждений и отказах. Считайте вмешательства: каждый раз, когда человек останавливает машину, чтобы освободить ягоду, разобрать захват или перезапустить её, это точка данных, а не случайность.</p>
+<p>Шестьдесят дней: машина работает обычную смену вместе с бригадой, и бригада относится к ней как к ещё одному работнику, который просто медленнее. Здесь важно не темп машины, а изменение темпа бригады: они делят концы рядов, контейнеры и трактор.</p>
+<p>Девяносто дней: машина работает по плану смен, и вы сравниваете стоимость килограмма с ручным сбором на том же блоке. Если пилот дожил до этой точки, решение становится арифметикой, а не мнением.</p>
+<h2 id="">Какие данные собирать</h2>
+<p>Список должен быть настолько коротким, чтобы его действительно заполняли.</p>
+<p>Килограммы на машиночас с разделением на чистую ягоду и отбраковку, с причиной отбраковки. Индекс повреждений по фиксированной выборке каждый день и одним и тем же человеком. Минуты простоя и причина своими словами. Трудозатраты вокруг машины, включая оператора и того, кто разбирает заторы. Ягода, оставшаяся на кусте после прохода, по помеченным растениям. Энергия за смену, если машина электрическая.</p>
+<p>Пять колонок, одна таблица, один ответственный.</p>
+<h2 id="">Ошибки, которые заканчивают пилот досрочно</h2>
+<p>Повреждения обнаруживаются на линии упаковки, а не в поле, поэтому выборку на повреждения надо мерить ежедневно, а не в конце.</p>
+<p>Пилот идёт только в идеальную погоду и не видит ни росы, ни пыли, ни мокрой кроны, и тогда он не говорит ничего о реальном сезоне.</p>
+<p>Нет базы сравнения: если стоимость ручного килограмма не замерена на том же блоке в ту же неделю, сравнение на девяностый день — догадка.</p>
+<p>Улучшения машины приезжают посреди пилота. Пилот измеряет одну конфигурацию; если поставщик меняет захват на середине, девяносто дней начинаются заново.</p>
+<h2 id="">Что должен дать добросовестный поставщик</h2>
+<p>Письменный план пилота с этими метриками, инженера, который отвечает в сезон, комплект расходников и честно записанные ограничения машины до первого дня. Поставщик, который не готов записать ограничения, ещё не испытывал машину в реальном сезоне.</p>
+<p>Наша программа пилотов построена по этой же схеме с этапами 30, 60 и 90 дней и теми же пятью метриками. Если хотите понять, подходит ли ваш блок, требования и текущая доступность указаны на странице пилота.</p>
+<h2 id="">Источники</h2>
+<p>Публичные данные, на которые опираются отраслевые цифры, перечислены в блоке источников ниже. Каждую стоимость из статьи можно воспроизвести по ним; то, что мы не смогли проследить, в текст не попало.</p>
+  <div class="sources" style="margin-top:32px">
+    <h2>Источники и данные под цифрами</h2>
+    <ul><li><a href="https://ilvo.vlaanderen.be/en" target="_blank" rel="noopener">ILVO — Institute for Agricultural, Fisheries and Food Research</a></li><li><a href="https://agrifoodtef.eu/" target="_blank" rel="noopener">AgriFoodTEF — EU test and experimentation facilities for agri-food</a></li><li><a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener">Eurostat — agricultural labour input and income indicators</a></li><li><a href="https://www.fao.org/home/en" target="_blank" rel="noopener">FAO — agricultural labour and harvest mechanisation</a></li></ul>
+    <p class="sub">Расчёты стоимости в статье — наши собственные. Отраслевые вводные взяты из этих публичных источников, и каждую цифру можно воспроизвести по ним.</p>
+  </div>
+  <p class="sub" style="margin-top:28px">Сколько стоит машина и как проходит пилот: <a href="/ru/#price">цены</a> · <a href="/ru/#pilot">пилотная программа</a></p>
+  <div class="cta-row" style="margin-top:36px">
+    <a class="btn pri" href="mailto:orders@tpf-technology.com?subject=CALIBER%2B%20pilot%20request">Запросить пилот</a>
+    <a class="btn sec" href="/caliber-investor-deck.pdf" target="_blank" rel="noopener">Инвесторская дека</a>
+  </div>
+  <h2>Другие статьи</h2><ul class="rel"><li><a href="/blog/ru/kombajn-dlya-sbora-golubiki-cena-2026/">Комбайн для сбора голубики: сколько стоит в 2026 году и что выгоднее?</a></li></ul>
+</main>
+<footer>
+  <div class="wrap">
+  <a class="logo foot-logo" href="/"><img src="/img/logo-icon.png" alt="TPF Labs logo" loading="lazy" decoding="async"> TPF<b>labs</b></a>
+  <div class="frow"><span>TPF Labs — дивизион автономной робототехники TPFtechnology.</span><span>CALIBER+ находится в стадии подготовки к производству. Изображения — дизайнерские концепты.</span></div>
+  </div>
+</footer>
+<script src="/consent.js" defer></script>
+</body>
+</html>
