@@ -5,6 +5,7 @@ description: "Cena kombajnu do borówki, koszt zbioru za kg i robot w dzierżawi
 date: 2026-11-03
 lang: pl
 slug: kombajn-do-zbioru-borowki-cena-2026
+group: price-2026
 cluster: machines
 ---
 

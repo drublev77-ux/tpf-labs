@@ -1,6 +1,6 @@
 ---
 title: "Blueberry picking robot: how selective harvesting works, and when it pays"
-seo_title: "Blueberry picking robot: how it works and what it costs (2026)"
+seo_title: "Blueberry picking robot: how it works, what it costs"
 description: "How a blueberry picking robot finds, grips and grades ripe berries, what it means for crew size and cost per kilogram, and how to test one on your farm."
 date: 2026-11-03
 lang: en
