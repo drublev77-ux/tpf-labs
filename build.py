@@ -338,7 +338,7 @@ TPL = """<!DOCTYPE html>
 <body>
 <header>
   <div class="wrap nav">
-    <a class="logo" href="/"><img src="/img/logo-icon.png" alt="TPF Labs logo"> TPF<b>labs</b></a>
+    <a class="logo" href="/"><picture><source srcset="/img/logo-icon.webp" type="image/webp"><img src="/img/logo-icon.png" alt="TPF Labs logo" width="96" height="96" decoding="async"></picture> TPF<b>labs</b></a>
     <div class="links">
       <a href="#tech">{nav_tech}</a><a href="#pilot">{nav_pilot}</a><a href="#price">{nav_price}</a><a href="#invest">{nav_inv}</a><a href="#faq">FAQ</a><a href="{blog_url}">{nav_blog}</a><a href="#contact">{nav_contact}</a>
     </div>
@@ -368,7 +368,7 @@ TPL = """<!DOCTYPE html>
     <span class="over">{film_over}</span><br><h2>{film_h}</h2>
     <p class="sub">{film_s}</p>
     <div class="film-frame">
-      <video class="film-video" title="{film_h}" controls playsinline preload="metadata" poster="/img/film-poster.jpg" width="1920" height="1080">
+      <video class="film-video" title="{film_h}" controls playsinline preload="none" poster="/img/film-poster.webp" width="1920" height="1080">
         <source src="/video/caliber-plus-film-en-16x9.mp4" type="video/mp4">
         Your browser does not support the video tag. <a href="/video/caliber-plus-film-en-16x9.mp4">Download the film</a>.
       </video>
@@ -425,7 +425,7 @@ TPL = """<!DOCTYPE html>
 </section>
 <footer>
   <div class="wrap">
-  <a class="logo foot-logo" href="/"><img src="/img/logo-icon.png" alt="TPF Labs logo" loading="lazy" decoding="async"> TPF<b>labs</b></a>
+  <a class="logo foot-logo" href="/"><picture><source srcset="/img/logo-icon.webp" type="image/webp"><img src="/img/logo-icon.png" alt="TPF Labs logo" width="96" height="96" loading="lazy" decoding="async"></picture> TPF<b>labs</b></a>
   <div class="frow">
     <span>{foot_l}</span><span>{foot_r}</span>
   </div>
