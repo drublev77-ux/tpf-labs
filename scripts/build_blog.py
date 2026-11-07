@@ -34,6 +34,29 @@ UI = {
 }
 MAIL = "orders@tpf-technology.com"
 
+# Public sources behind the sector figures. Labels are localised, URLs are shared.
+SOURCE_HEAD = {
+    "en": "Sources and data behind the figures",
+    "ru": "Источники и данные под цифрами",
+    "nl": "Bronnen en cijfers achter de cijfers",
+    "pl": "Źródła i dane stojące za liczbami",
+    "zh": "数据来源与依据",
+}
+SOURCE_NOTE = {
+    "en": "Cost models in this article are TPF Labs calculations. Sector inputs come from these public sources; each cost figure is reproducible from them.",
+    "ru": "Расчёты стоимости в статье — наши собственные. Отраслевые вводные взяты из этих публичных источников, и каждую цифру можно воспроизвести по ним.",
+    "nl": "De kostenmodellen in dit artikel zijn berekeningen van TPF Labs. Sectorgegevens komen uit deze openbare bronnen; elk kostencijfer is daaruit te reproduceren.",
+    "pl": "Modele kosztowe w tym artykule to obliczenia TPF Labs. Dane sektorowe pochodzą z tych publicznych źródeł i każdą kwotę można na ich podstawie odtworzyć.",
+    "zh": "本文的成本模型为 TPF Labs 自行计算，行业数据取自以下公开来源，每一项成本均可据此复核。",
+}
+SOURCES = [
+    ("ILVO — Institute for Agricultural, Fisheries and Food Research", "https://ilvo.vlaanderen.be/en"),
+    ("AgriFoodTEF — EU test and experimentation facilities for agri-food", "https://agrifoodtef.eu/"),
+    ("Eurostat — agricultural labour input and income indicators", "https://ec.europa.eu/eurostat"),
+    ("FAO — agricultural labour and harvest mechanisation", "https://www.fao.org/home/en"),
+]
+
+
 HOME_LINKS = {
     "en": ("What the machine costs and how a pilot works:", "pricing", "pilot program"),
     "ru": ("Сколько стоит машина и как проходит пилот:", "цены", "пилотная программа"),
@@ -285,6 +308,9 @@ def article_page(meta: dict, related: list[dict]) -> str:
         ld["@graph"].append({"@type": "FAQPage", "inLanguage": lang, "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
     _onpage, _price, _pilot = HOME_LINKS[lang]
+    sources_list = "".join(
+        f'<li><a href="{url}" target="_blank" rel="noopener">{label}</a></li>'
+        for label, url in SOURCES)
     _home = "/" if lang == "en" else f"/{lang}/"
     links_html = (f'<p class="sub" style="margin-top:28px">{_onpage} '
                   f'<a href="{_home}#price">{_price}</a> · '
@@ -307,6 +333,11 @@ def article_page(meta: dict, related: list[dict]) -> str:
   <h1>{html.escape(meta["title"])}</h1>
   <p class="meta"><time datetime="{meta["date"]}">{meta["date"]}</time> · TPF Labs</p>
   {body_html}
+  <div class="sources" style="margin-top:32px">
+    <h2>{SOURCE_HEAD[lang]}</h2>
+    <ul>{sources_list}</ul>
+    <p class="sub">{SOURCE_NOTE[lang]}</p>
+  </div>
   {links_html}
   <div class="cta-row" style="margin-top:36px">
     <a class="btn pri" href="mailto:{MAIL}?subject=CALIBER%2B%20pilot%20request">{ui["cta1"]}</a>
