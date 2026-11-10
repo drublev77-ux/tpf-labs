@@ -17,6 +17,7 @@ from __future__ import annotations
 import html
 import json
 import re
+import unicodedata
 from datetime import date
 from pathlib import Path
 
@@ -109,6 +110,27 @@ def inline(t: str) -> str:
     return t
 
 
+# Cyrillic → Latin, so a Russian heading still gets a usable ASCII anchor instead of
+# slugging to "" (which produced invalid, duplicated <h2 id=""> in the RU articles).
+CYR = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+LAT = ["a", "b", "v", "g", "d", "e", "e", "zh", "z", "i", "y", "k", "l", "m", "n", "o",
+       "p", "r", "s", "t", "u", "f", "kh", "ts", "ch", "sh", "shch", "", "y", "", "e", "yu", "ya"]
+TRANSLIT = dict(zip(CYR, LAT))
+
+
+def anchor(text: str, used: set[str]) -> str:
+    """ASCII, stable and unique-within-page id for a heading."""
+    t = "".join(TRANSLIT.get(ch, ch) for ch in text.lower())
+    t = "".join(ch for ch in unicodedata.normalize("NFKD", t) if not unicodedata.combining(ch))
+    slug = re.sub(r"[^a-z0-9]+", "-", t).strip("-") or "section"
+    base, n = slug, 2
+    while slug in used:
+        slug = f"{base}-{n}"
+        n += 1
+    used.add(slug)
+    return slug
+
+
 def md_to_html(md: str) -> tuple[str, list[tuple[str, str]]]:
     """Returns (html, faq). Questions under an H2 'FAQ' (bold line + answer) are rendered
     as visible <details> blocks and also returned for FAQPage JSON-LD."""
@@ -120,6 +142,7 @@ def md_to_html(md: str) -> tuple[str, list[tuple[str, str]]]:
     lst_tag: str | None = None
     in_faq = False
     pending_q: str | None = None
+    used_ids: set[str] = set()
 
     def flush_para():
         nonlocal para
@@ -174,7 +197,7 @@ def md_to_html(md: str) -> tuple[str, list[tuple[str, str]]]:
             flush_all(); flush_faq()
             title = s[3:].strip()
             in_faq = title.upper().startswith("FAQ")
-            out.append(f'<h2 id="{re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")}">{inline(title)}</h2>')
+            out.append(f'<h2 id="{anchor(title, used_ids)}">{inline(title)}</h2>')
             continue
         if s.startswith("### "):
             flush_all(); out.append(f"<h3>{inline(s[4:])}</h3>"); continue
